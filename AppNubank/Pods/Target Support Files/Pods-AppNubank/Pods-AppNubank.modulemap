@@ -1,0 +1,6 @@
+framework module Pods_AppNubank {
+  umbrella header "Pods-AppNubank-umbrella.h"
+
+  export *
+  module * { export * }
+}

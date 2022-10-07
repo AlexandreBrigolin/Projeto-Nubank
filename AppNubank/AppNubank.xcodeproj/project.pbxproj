@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0697E1DD40A2D753A0C1E52E /* Pods_AppNubank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F0140EE9B5EDEAE0E9E9EB3 /* Pods_AppNubank.framework */; };
 		3F595EE228F064AF00CD9C08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F595EE128F064AF00CD9C08 /* AppDelegate.swift */; };
 		3F595EE428F064AF00CD9C08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F595EE328F064AF00CD9C08 /* SceneDelegate.swift */; };
 		3F595EE628F064AF00CD9C08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F595EE528F064AF00CD9C08 /* ViewController.swift */; };
@@ -15,6 +16,8 @@
 		3F595EF928F064B100CD9C08 /* AppNubankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F595EF828F064B100CD9C08 /* AppNubankTests.swift */; };
 		3F595F0328F064B100CD9C08 /* AppNubankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F595F0228F064B100CD9C08 /* AppNubankUITests.swift */; };
 		3F595F0528F064B100CD9C08 /* AppNubankUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F595F0428F064B100CD9C08 /* AppNubankUITestsLaunchTests.swift */; };
+		7C309CA757C88BF76EC1AD34 /* Pods_AppNubank_AppNubankUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227BB31EC95E1BE65BC57DF8 /* Pods_AppNubank_AppNubankUITests.framework */; };
+		A8E7522CA096214B78CB5649 /* Pods_AppNubankTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FFF850FA52D79A0864C146 /* Pods_AppNubankTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		227BB31EC95E1BE65BC57DF8 /* Pods_AppNubank_AppNubankUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppNubank_AppNubankUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		242210DC5F5F0C6361002351 /* Pods-AppNubank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppNubank.debug.xcconfig"; path = "Target Support Files/Pods-AppNubank/Pods-AppNubank.debug.xcconfig"; sourceTree = "<group>"; };
 		3F595EDE28F064AF00CD9C08 /* AppNubank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppNubank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F595EE128F064AF00CD9C08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F595EE328F064AF00CD9C08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +52,13 @@
 		3F595EFE28F064B100CD9C08 /* AppNubankUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppNubankUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F595F0228F064B100CD9C08 /* AppNubankUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNubankUITests.swift; sourceTree = "<group>"; };
 		3F595F0428F064B100CD9C08 /* AppNubankUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNubankUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		560F61D88076C62FAECBF47E /* Pods-AppNubank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppNubank.release.xcconfig"; path = "Target Support Files/Pods-AppNubank/Pods-AppNubank.release.xcconfig"; sourceTree = "<group>"; };
+		5E5F8A7BFCBAC46E142B2F14 /* Pods-AppNubankTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppNubankTests.debug.xcconfig"; path = "Target Support Files/Pods-AppNubankTests/Pods-AppNubankTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6F0140EE9B5EDEAE0E9E9EB3 /* Pods_AppNubank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppNubank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		877C039AC1517B4D5C39AE3A /* Pods-AppNubank-AppNubankUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppNubank-AppNubankUITests.debug.xcconfig"; path = "Target Support Files/Pods-AppNubank-AppNubankUITests/Pods-AppNubank-AppNubankUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9A08BBADE48B55797A6DC8E6 /* Pods-AppNubank-AppNubankUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppNubank-AppNubankUITests.release.xcconfig"; path = "Target Support Files/Pods-AppNubank-AppNubankUITests/Pods-AppNubank-AppNubankUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A5FFF850FA52D79A0864C146 /* Pods_AppNubankTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppNubankTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF1D8A25FEEC3838B10CBDE9 /* Pods-AppNubankTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppNubankTests.release.xcconfig"; path = "Target Support Files/Pods-AppNubankTests/Pods-AppNubankTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0697E1DD40A2D753A0C1E52E /* Pods_AppNubank.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8E7522CA096214B78CB5649 /* Pods_AppNubankTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C309CA757C88BF76EC1AD34 /* Pods_AppNubank_AppNubankUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,8 @@
 				3F595EF728F064B100CD9C08 /* AppNubankTests */,
 				3F595F0128F064B100CD9C08 /* AppNubankUITests */,
 				3F595EDF28F064AF00CD9C08 /* Products */,
+				56CED716C68C1D646FB9D68B /* Pods */,
+				F30FD6B73CDB2F3048BBEE82 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +141,30 @@
 			path = AppNubankUITests;
 			sourceTree = "<group>";
 		};
+		56CED716C68C1D646FB9D68B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				242210DC5F5F0C6361002351 /* Pods-AppNubank.debug.xcconfig */,
+				560F61D88076C62FAECBF47E /* Pods-AppNubank.release.xcconfig */,
+				877C039AC1517B4D5C39AE3A /* Pods-AppNubank-AppNubankUITests.debug.xcconfig */,
+				9A08BBADE48B55797A6DC8E6 /* Pods-AppNubank-AppNubankUITests.release.xcconfig */,
+				5E5F8A7BFCBAC46E142B2F14 /* Pods-AppNubankTests.debug.xcconfig */,
+				FF1D8A25FEEC3838B10CBDE9 /* Pods-AppNubankTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F30FD6B73CDB2F3048BBEE82 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F0140EE9B5EDEAE0E9E9EB3 /* Pods_AppNubank.framework */,
+				227BB31EC95E1BE65BC57DF8 /* Pods_AppNubank_AppNubankUITests.framework */,
+				A5FFF850FA52D79A0864C146 /* Pods_AppNubankTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -131,9 +172,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F595F0828F064B100CD9C08 /* Build configuration list for PBXNativeTarget "AppNubank" */;
 			buildPhases = (
+				11E75F9755E9344FB6232BC4 /* [CP] Check Pods Manifest.lock */,
 				3F595EDA28F064AF00CD9C08 /* Sources */,
 				3F595EDB28F064AF00CD9C08 /* Frameworks */,
 				3F595EDC28F064AF00CD9C08 /* Resources */,
+				E7BBADE6D642AE6E4B756917 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -148,6 +191,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F595F0B28F064B100CD9C08 /* Build configuration list for PBXNativeTarget "AppNubankTests" */;
 			buildPhases = (
+				E34048C562DDD695D650064F /* [CP] Check Pods Manifest.lock */,
 				3F595EF028F064B100CD9C08 /* Sources */,
 				3F595EF128F064B100CD9C08 /* Frameworks */,
 				3F595EF228F064B100CD9C08 /* Resources */,
@@ -166,9 +210,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F595F0E28F064B100CD9C08 /* Build configuration list for PBXNativeTarget "AppNubankUITests" */;
 			buildPhases = (
+				0052ED9CC476A58A2A272CE9 /* [CP] Check Pods Manifest.lock */,
 				3F595EFA28F064B100CD9C08 /* Sources */,
 				3F595EFB28F064B100CD9C08 /* Frameworks */,
 				3F595EFC28F064B100CD9C08 /* Resources */,
+				8FF21CB8340F115B24F9607F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -248,6 +294,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0052ED9CC476A58A2A272CE9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AppNubank-AppNubankUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		11E75F9755E9344FB6232BC4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AppNubank-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8FF21CB8340F115B24F9607F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppNubank-AppNubankUITests/Pods-AppNubank-AppNubankUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppNubank-AppNubankUITests/Pods-AppNubank-AppNubankUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppNubank-AppNubankUITests/Pods-AppNubank-AppNubankUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E34048C562DDD695D650064F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AppNubankTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7BBADE6D642AE6E4B756917 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppNubank/Pods-AppNubank-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppNubank/Pods-AppNubank-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppNubank/Pods-AppNubank-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3F595EDA28F064AF00CD9C08 /* Sources */ = {
@@ -420,6 +569,7 @@
 		};
 		3F595F0928F064B100CD9C08 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 242210DC5F5F0C6361002351 /* Pods-AppNubank.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -451,6 +601,7 @@
 		};
 		3F595F0A28F064B100CD9C08 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 560F61D88076C62FAECBF47E /* Pods-AppNubank.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -482,6 +633,7 @@
 		};
 		3F595F0C28F064B100CD9C08 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E5F8A7BFCBAC46E142B2F14 /* Pods-AppNubankTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -501,6 +653,7 @@
 		};
 		3F595F0D28F064B100CD9C08 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF1D8A25FEEC3838B10CBDE9 /* Pods-AppNubankTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -520,6 +673,7 @@
 		};
 		3F595F0F28F064B100CD9C08 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 877C039AC1517B4D5C39AE3A /* Pods-AppNubank-AppNubankUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -537,6 +691,7 @@
 		};
 		3F595F1028F064B100CD9C08 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A08BBADE48B55797A6DC8E6 /* Pods-AppNubank-AppNubankUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
