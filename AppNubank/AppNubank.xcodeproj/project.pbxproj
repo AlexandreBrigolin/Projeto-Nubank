@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		03B02DFF28F20722008E2ECA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03B02DFE28F20722008E2ECA /* GoogleService-Info.plist */; };
 		03B02E0228F207C4008E2ECA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 03B02E0128F207C4008E2ECA /* FirebaseAuth */; };
+		03B02E0728F49C3D008E2ECA /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B02E0628F49C3D008E2ECA /* LoginScreen.swift */; };
 		0697E1DD40A2D753A0C1E52E /* Pods_AppNubank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F0140EE9B5EDEAE0E9E9EB3 /* Pods_AppNubank.framework */; };
 		3F595EE228F064AF00CD9C08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F595EE128F064AF00CD9C08 /* AppDelegate.swift */; };
 		3F595EE428F064AF00CD9C08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F595EE328F064AF00CD9C08 /* SceneDelegate.swift */; };
-		3F595EE628F064AF00CD9C08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F595EE528F064AF00CD9C08 /* ViewController.swift */; };
+		3F595EE628F064AF00CD9C08 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F595EE528F064AF00CD9C08 /* LoginVC.swift */; };
 		3F595EEB28F064B100CD9C08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F595EEA28F064B100CD9C08 /* Assets.xcassets */; };
 		3F595EEE28F064B100CD9C08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F595EEC28F064B100CD9C08 /* LaunchScreen.storyboard */; };
 		3F595EF928F064B100CD9C08 /* AppNubankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F595EF828F064B100CD9C08 /* AppNubankTests.swift */; };
@@ -41,12 +42,13 @@
 
 /* Begin PBXFileReference section */
 		03B02DFE28F20722008E2ECA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		03B02E0628F49C3D008E2ECA /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		227BB31EC95E1BE65BC57DF8 /* Pods_AppNubank_AppNubankUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppNubank_AppNubankUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		242210DC5F5F0C6361002351 /* Pods-AppNubank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppNubank.debug.xcconfig"; path = "Target Support Files/Pods-AppNubank/Pods-AppNubank.debug.xcconfig"; sourceTree = "<group>"; };
 		3F595EDE28F064AF00CD9C08 /* AppNubank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppNubank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F595EE128F064AF00CD9C08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F595EE328F064AF00CD9C08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3F595EE528F064AF00CD9C08 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3F595EE528F064AF00CD9C08 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		3F595EEA28F064B100CD9C08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F595EED28F064B100CD9C08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F595EEF28F064B100CD9C08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -93,6 +95,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03B02E0328F49B76008E2ECA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				03B02E0528F49B99008E2ECA /* Screen */,
+				03B02E0428F49B84008E2ECA /* VC */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		03B02E0428F49B84008E2ECA /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				3F595EE528F064AF00CD9C08 /* LoginVC.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		03B02E0528F49B99008E2ECA /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				03B02E0628F49C3D008E2ECA /* LoginScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
 		3F595ED528F064AF00CD9C08 = {
 			isa = PBXGroup;
 			children = (
@@ -118,9 +145,9 @@
 		3F595EE028F064AF00CD9C08 /* AppNubank */ = {
 			isa = PBXGroup;
 			children = (
+				03B02E0328F49B76008E2ECA /* Login */,
 				3F595EE128F064AF00CD9C08 /* AppDelegate.swift */,
 				3F595EE328F064AF00CD9C08 /* SceneDelegate.swift */,
-				3F595EE528F064AF00CD9C08 /* ViewController.swift */,
 				3F595EEA28F064B100CD9C08 /* Assets.xcassets */,
 				3F595EEC28F064B100CD9C08 /* LaunchScreen.storyboard */,
 				3F595EEF28F064B100CD9C08 /* Info.plist */,
@@ -414,7 +441,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F595EE628F064AF00CD9C08 /* ViewController.swift in Sources */,
+				3F595EE628F064AF00CD9C08 /* LoginVC.swift in Sources */,
+				03B02E0728F49C3D008E2ECA /* LoginScreen.swift in Sources */,
 				3F595EE228F064AF00CD9C08 /* AppDelegate.swift in Sources */,
 				3F595EE428F064AF00CD9C08 /* SceneDelegate.swift in Sources */,
 			);
