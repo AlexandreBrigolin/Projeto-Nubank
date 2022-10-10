@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03B02DFF28F20722008E2ECA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03B02DFE28F20722008E2ECA /* GoogleService-Info.plist */; };
+		03B02E0228F207C4008E2ECA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 03B02E0128F207C4008E2ECA /* FirebaseAuth */; };
 		0697E1DD40A2D753A0C1E52E /* Pods_AppNubank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F0140EE9B5EDEAE0E9E9EB3 /* Pods_AppNubank.framework */; };
 		3F595EE228F064AF00CD9C08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F595EE128F064AF00CD9C08 /* AppDelegate.swift */; };
 		3F595EE428F064AF00CD9C08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F595EE328F064AF00CD9C08 /* SceneDelegate.swift */; };
@@ -38,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03B02DFE28F20722008E2ECA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		227BB31EC95E1BE65BC57DF8 /* Pods_AppNubank_AppNubankUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppNubank_AppNubankUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		242210DC5F5F0C6361002351 /* Pods-AppNubank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppNubank.debug.xcconfig"; path = "Target Support Files/Pods-AppNubank/Pods-AppNubank.debug.xcconfig"; sourceTree = "<group>"; };
 		3F595EDE28F064AF00CD9C08 /* AppNubank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppNubank.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +70,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0697E1DD40A2D753A0C1E52E /* Pods_AppNubank.framework in Frameworks */,
+				03B02E0228F207C4008E2ECA /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +124,7 @@
 				3F595EEA28F064B100CD9C08 /* Assets.xcassets */,
 				3F595EEC28F064B100CD9C08 /* LaunchScreen.storyboard */,
 				3F595EEF28F064B100CD9C08 /* Info.plist */,
+				03B02DFE28F20722008E2ECA /* GoogleService-Info.plist */,
 			);
 			path = AppNubank;
 			sourceTree = "<group>";
@@ -151,7 +156,6 @@
 				5E5F8A7BFCBAC46E142B2F14 /* Pods-AppNubankTests.debug.xcconfig */,
 				FF1D8A25FEEC3838B10CBDE9 /* Pods-AppNubankTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -183,6 +187,9 @@
 			dependencies = (
 			);
 			name = AppNubank;
+			packageProductDependencies = (
+				03B02E0128F207C4008E2ECA /* FirebaseAuth */,
+			);
 			productName = AppNubank;
 			productReference = 3F595EDE28F064AF00CD9C08 /* AppNubank.app */;
 			productType = "com.apple.product-type.application";
@@ -258,6 +265,9 @@
 				Base,
 			);
 			mainGroup = 3F595ED528F064AF00CD9C08;
+			packageReferences = (
+				03B02E0028F207C4008E2ECA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 3F595EDF28F064AF00CD9C08 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -275,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F595EEE28F064B100CD9C08 /* LaunchScreen.storyboard in Resources */,
+				03B02DFF28F20722008E2ECA /* GoogleService-Info.plist in Resources */,
 				3F595EEB28F064B100CD9C08 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -747,6 +758,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		03B02E0028F207C4008E2ECA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		03B02E0128F207C4008E2ECA /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 03B02E0028F207C4008E2ECA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3F595ED628F064AF00CD9C08 /* Project object */;
 }
