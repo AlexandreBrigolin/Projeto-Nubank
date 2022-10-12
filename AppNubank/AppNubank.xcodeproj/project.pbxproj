@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		038921C928F74BC000311F61 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038921C828F74BC000311F61 /* LoginViewModel.swift */; };
+		038921CD28F755CE00311F61 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038921CC28F755CE00311F61 /* RegisterVC.swift */; };
+		038921CF28F755F000311F61 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038921CE28F755F000311F61 /* HomeVC.swift */; };
 		03B02DFF28F20722008E2ECA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03B02DFE28F20722008E2ECA /* GoogleService-Info.plist */; };
 		03B02E0228F207C4008E2ECA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 03B02E0128F207C4008E2ECA /* FirebaseAuth */; };
 		03B02E0728F49C3D008E2ECA /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B02E0628F49C3D008E2ECA /* LoginScreen.swift */; };
@@ -41,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		038921C828F74BC000311F61 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		038921CC28F755CE00311F61 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		038921CE28F755F000311F61 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		03B02DFE28F20722008E2ECA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		03B02E0628F49C3D008E2ECA /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		227BB31EC95E1BE65BC57DF8 /* Pods_AppNubank_AppNubankUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppNubank_AppNubankUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,8 +111,25 @@
 		038921C628F7128600311F61 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				038921C828F74BC000311F61 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		038921CA28F7554400311F61 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				038921CC28F755CE00311F61 /* RegisterVC.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		038921CB28F7555000311F61 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				038921CE28F755F000311F61 /* HomeVC.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		03B02E0328F49B76008E2ECA /* Login */ = {
@@ -161,6 +184,8 @@
 		3F595EE028F064AF00CD9C08 /* AppNubank */ = {
 			isa = PBXGroup;
 			children = (
+				038921CB28F7555000311F61 /* Home */,
+				038921CA28F7554400311F61 /* Register */,
 				03B02E0328F49B76008E2ECA /* Login */,
 				3F595EE128F064AF00CD9C08 /* AppDelegate.swift */,
 				3F595EE328F064AF00CD9C08 /* SceneDelegate.swift */,
@@ -458,8 +483,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F595EE628F064AF00CD9C08 /* LoginVC.swift in Sources */,
+				038921CF28F755F000311F61 /* HomeVC.swift in Sources */,
 				03B02E0728F49C3D008E2ECA /* LoginScreen.swift in Sources */,
 				3F595EE228F064AF00CD9C08 /* AppDelegate.swift in Sources */,
+				038921CD28F755CE00311F61 /* RegisterVC.swift in Sources */,
+				038921C928F74BC000311F61 /* LoginViewModel.swift in Sources */,
 				3F595EE428F064AF00CD9C08 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

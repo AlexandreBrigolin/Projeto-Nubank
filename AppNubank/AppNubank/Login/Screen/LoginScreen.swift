@@ -19,7 +19,7 @@ class LoginScreen: UIView {
     func delegate(delegate: LoginScreenProtocol) {
         self.delegate = delegate
     }
-    
+
     lazy var sentenceLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -64,6 +64,7 @@ class LoginScreen: UIView {
         button.clipsToBounds = true
         button.layer.cornerRadius = 7.5
         button.backgroundColor = .purple
+        button.addTarget(self, action: #selector(self.tappedLoginButton), for: .touchUpInside)
         return button
     }()
 
@@ -73,6 +74,7 @@ class LoginScreen: UIView {
         button.setTitle("Não tem conta? Cadastre-se", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         button.setTitleColor(.white, for: .normal)
+        button.addTarget(self, action: #selector(self.tappedRegisterButton), for: .touchUpInside)
         return button
     }()
     
@@ -95,6 +97,19 @@ class LoginScreen: UIView {
         self.addSubview(self.loginButton)
         self.addSubview(self.registerButton)
         
+    }
+    
+    public func configTextField(delegate: UITextFieldDelegate) {
+        self.cpfTextfield.delegate = delegate
+        self.passwordTextfield.delegate = delegate
+    }
+    
+    @objc private func tappedLoginButton() {
+        self.delegate?.actionLoginButton()
+    }
+    
+    @objc private func tappedRegisterButton() {
+        self.delegate?.actionRegisterButton()
     }
 
     

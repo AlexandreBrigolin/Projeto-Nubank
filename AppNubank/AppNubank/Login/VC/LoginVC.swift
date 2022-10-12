@@ -20,6 +20,8 @@ class LoginVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.loginScreen?.delegate(delegate: self)
+        self.loginScreen?.configTextField(delegate: self)
         self.auth = Auth.auth()
         
     }
@@ -27,3 +29,33 @@ class LoginVC: UIViewController {
 
 }
 
+extension LoginVC: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        print("textFieldDidBeginEditing")
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        print("textFieldDidEndEditing")
+    }
+}
+
+
+extension LoginVC: LoginScreenProtocol {
+    
+    func actionLoginButton() {
+        let vc: HomeVC = HomeVC()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func actionRegisterButton() {
+        let vc: RegisterVC = RegisterVC()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
+}
