@@ -6,11 +6,12 @@
 //
 
 import UIKit
-
+import Firebase
 
 class LoginVC: UIViewController {
     
     var loginScreen: LoginScreen?
+    var auth: Auth?
     
     override func loadView() {
         self.loginScreen = LoginScreen()
@@ -19,6 +20,7 @@ class LoginVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.auth = Auth.auth()
         
     }
 

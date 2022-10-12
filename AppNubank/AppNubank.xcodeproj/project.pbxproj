@@ -95,9 +95,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		038921C528F7127E00311F61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		038921C628F7128600311F61 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		03B02E0328F49B76008E2ECA /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				038921C628F7128600311F61 /* ViewModel */,
+				038921C528F7127E00311F61 /* Model */,
 				03B02E0528F49B99008E2ECA /* Screen */,
 				03B02E0428F49B84008E2ECA /* VC */,
 			);

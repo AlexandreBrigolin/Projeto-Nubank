@@ -7,7 +7,18 @@
 
 import UIKit
 
+protocol LoginScreenProtocol: AnyObject {
+    func actionLoginButton()
+    func actionRegisterButton()
+}
+
 class LoginScreen: UIView {
+    
+    private weak var delegate: LoginScreenProtocol?
+    
+    func delegate(delegate: LoginScreenProtocol) {
+        self.delegate = delegate
+    }
     
     lazy var sentenceLabel: UILabel = {
         let label = UILabel()
@@ -85,6 +96,7 @@ class LoginScreen: UIView {
         self.addSubview(self.registerButton)
         
     }
+
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -98,8 +110,7 @@ class LoginScreen: UIView {
             self.sentenceLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             self.sentenceLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
             
-            self.cpfTextfield.topAnchor.constraint(equalTo: self.sentenceLabel
-                .bottomAnchor, constant: 20),
+            self.cpfTextfield.topAnchor.constraint(equalTo: self.sentenceLabel.bottomAnchor, constant: 20),
             self.cpfTextfield.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             self.cpfTextfield.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
             self.cpfTextfield.heightAnchor.constraint(equalToConstant: 45),
@@ -118,7 +129,7 @@ class LoginScreen: UIView {
             self.registerButton.leadingAnchor.constraint(equalTo: self.loginButton.leadingAnchor),
             self.registerButton.trailingAnchor.constraint(equalTo: self.loginButton.trailingAnchor ),
             self.registerButton.heightAnchor.constraint(equalTo: self.loginButton.heightAnchor),
-        
+            
         ])
     }
     
@@ -126,19 +137,3 @@ class LoginScreen: UIView {
 
 
 
-//            self.backgroundImageView.topAnchor.constraint(equalTo: self.topAnchor),
-//            self.backgroundImageView.leftAnchor.constraint(equalTo: self.leftAnchor),
-//            self.backgroundImageView.rightAnchor.constraint(equalTo: self.rightAnchor),
-//            self.backgroundImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-
-
-//        self.addSubview(self.backgroundImageView)
-
-
-//    lazy var backgroundImageView: UIImageView = {
-//        let image = UIImageView()
-//        image.translatesAutoresizingMaskIntoConstraints = false
-//        image.image = UIImage(named: "nubankImage")
-//        image.contentMode = .scaleAspectFit
-//        return image
-//    }()
