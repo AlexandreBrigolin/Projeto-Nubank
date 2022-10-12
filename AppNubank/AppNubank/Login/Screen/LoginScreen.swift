@@ -105,34 +105,33 @@ class LoginScreen: UIView {
     private func setUpConstrains() {
         
         NSLayoutConstraint.activate([
+            
+                self.registerButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -5),
+                self.registerButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+                self.registerButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+                self.registerButton.heightAnchor.constraint(equalToConstant: 45),
 
-            self.sentenceLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 30),
-            self.sentenceLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            self.sentenceLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-            
-            self.cpfTextfield.topAnchor.constraint(equalTo: self.sentenceLabel.bottomAnchor, constant: 20),
-            self.cpfTextfield.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            self.cpfTextfield.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-            self.cpfTextfield.heightAnchor.constraint(equalToConstant: 45),
-            
-            self.passwordTextfield.topAnchor.constraint(equalTo: self.cpfTextfield.bottomAnchor, constant: 20),
-            self.passwordTextfield.leadingAnchor.constraint(equalTo: self.cpfTextfield.leadingAnchor),
-            self.passwordTextfield.trailingAnchor.constraint(equalTo: self.cpfTextfield.trailingAnchor),
-            self.passwordTextfield.heightAnchor.constraint(equalTo: self.cpfTextfield.heightAnchor),
-            
-            self.loginButton.topAnchor.constraint(equalTo: self.passwordTextfield.bottomAnchor, constant: 15),
-            self.loginButton.leadingAnchor.constraint(equalTo: self.passwordTextfield.leadingAnchor),
-            self.loginButton.trailingAnchor.constraint(equalTo: self.passwordTextfield.trailingAnchor ),
-            self.loginButton.heightAnchor.constraint(equalTo: self.passwordTextfield.heightAnchor),
-            
-            self.registerButton.topAnchor.constraint(equalTo: self.loginButton.bottomAnchor, constant: 15),
-            self.registerButton.leadingAnchor.constraint(equalTo: self.loginButton.leadingAnchor),
-            self.registerButton.trailingAnchor.constraint(equalTo: self.loginButton.trailingAnchor ),
-            self.registerButton.heightAnchor.constraint(equalTo: self.loginButton.heightAnchor),
-            
+                self.loginButton.bottomAnchor.constraint(equalTo: self.registerButton.topAnchor, constant: -15),
+                self.loginButton.leadingAnchor.constraint(equalTo: self.registerButton.leadingAnchor),
+                self.loginButton.trailingAnchor.constraint(equalTo: self.registerButton.trailingAnchor ),
+                self.loginButton.heightAnchor.constraint(equalTo: self.registerButton.heightAnchor),
+
+                self.passwordTextfield.bottomAnchor.constraint(equalTo: self.loginButton.topAnchor, constant: -20),
+                self.passwordTextfield.leadingAnchor.constraint(equalTo: self.loginButton.leadingAnchor),
+                self.passwordTextfield.trailingAnchor.constraint(equalTo: self.loginButton.trailingAnchor),
+                self.passwordTextfield.heightAnchor.constraint(equalTo: self.loginButton.heightAnchor),
+
+                self.cpfTextfield.bottomAnchor.constraint(equalTo: self.passwordTextfield.topAnchor, constant: -20),
+                self.cpfTextfield.leadingAnchor.constraint(equalTo: self.passwordTextfield.leadingAnchor),
+                self.cpfTextfield.trailingAnchor.constraint(equalTo: self.passwordTextfield.trailingAnchor),
+                self.cpfTextfield.heightAnchor.constraint(equalTo: self.passwordTextfield.heightAnchor),
+                
+                self.sentenceLabel.bottomAnchor.constraint(equalTo: self.cpfTextfield.topAnchor, constant: -30),
+                self.sentenceLabel.leadingAnchor.constraint(equalTo: self.cpfTextfield.leadingAnchor),
+                self.sentenceLabel.trailingAnchor.constraint(equalTo: self.cpfTextfield.trailingAnchor)
+                
         ])
     }
-    
 }
 
 
