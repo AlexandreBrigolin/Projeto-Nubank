@@ -8,13 +8,14 @@
 import UIKit
 
 class CustomTableViewCell: UITableViewCell {
-
+    
     static let identifier: String = "CustomTableViewCell"
     
     lazy var registerLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Cadastrar"
+        label.font = UIFont.boldSystemFont(ofSize: 40)
         label.textColor = .black
         
         return label
@@ -90,6 +91,20 @@ class CustomTableViewCell: UITableViewCell {
         return textfield
     }()
     
+    lazy var cpfTextField: UITextField = {
+        let textfield = UITextField()
+        textfield.translatesAutoresizingMaskIntoConstraints = false
+        textfield.autocorrectionType = .no
+        textfield.backgroundColor = .white
+        textfield.borderStyle = .roundedRect
+        textfield.keyboardType = .emailAddress
+        textfield.placeholder = "Digite seu CPF:"
+        //        tf.font = UIFont.systemFont(ofSize: 14)
+        textfield.textColor = .darkGray
+        
+        return textfield
+    }()
+    
     lazy var passwordTextField: UITextField = {
         let textfield = UITextField()
         textfield.translatesAutoresizingMaskIntoConstraints = false
@@ -111,7 +126,7 @@ class CustomTableViewCell: UITableViewCell {
         textfield.backgroundColor = .white
         textfield.borderStyle = .roundedRect
         textfield.keyboardType = .emailAddress
-        textfield.placeholder = "Repetir senha"
+        textfield.placeholder = "Repetir senha:"
         //        tf.font = UIFont.systemFont(ofSize: 14)
         textfield.textColor = .darkGray
         
@@ -125,7 +140,7 @@ class CustomTableViewCell: UITableViewCell {
         button.setTitleColor(.white, for: .normal)
         button.clipsToBounds = true
         button.layer.cornerRadius = 7.5
-        button.backgroundColor =  UIColor(red: 3/255, green: 58/255, blue: 51/255, alpha: 1.0)
+        button.backgroundColor = .purple
         //        button.addTarget(self, action: #selector(self.tappedRegisterButton), for: .touchUpInside)
         
         return button
@@ -136,6 +151,8 @@ class CustomTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.addSubView()
+        self.setUpConstraints()
+        
     }
     
     required init?(coder: NSCoder) {
@@ -150,6 +167,7 @@ class CustomTableViewCell: UITableViewCell {
         self.contentView.addSubview(self.ageTextField)
         self.contentView.addSubview(self.phoneTextField)
         self.contentView.addSubview(self.addressTextField)
+        self.contentView.addSubview(self.cpfTextField)
         self.contentView.addSubview(self.passwordTextField)
         self.contentView.addSubview(self.repeatPasswordTextField)
         self.contentView.addSubview(self.registerButton)
@@ -158,12 +176,64 @@ class CustomTableViewCell: UITableViewCell {
     
     private func setUpConstraints(){
         NSLayoutConstraint.activate([
-        
+            
             self.registerLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 20),
-            self.registerLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            self.registerLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            self.registerLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             self.registerLabel.heightAnchor.constraint(equalToConstant: 45),
             
+            self.nameTextField.topAnchor.constraint(equalTo: self.registerLabel.bottomAnchor, constant: 10),
+            self.nameTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            self.nameTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            self.nameTextField.heightAnchor.constraint(equalToConstant: 45),
+            
+            
+            self.emailTextField.topAnchor.constraint(equalTo: self.nameTextField.bottomAnchor, constant: 20),
+            self.emailTextField.leadingAnchor.constraint(equalTo: self.nameTextField.leadingAnchor),
+            self.emailTextField.trailingAnchor.constraint(equalTo: self.nameTextField.trailingAnchor),
+            self.emailTextField.heightAnchor.constraint(equalToConstant: 45),
+            
+            
+            self.ageTextField.topAnchor.constraint(equalTo: self.emailTextField.bottomAnchor, constant: 20),
+            self.ageTextField.leadingAnchor.constraint(equalTo: self.emailTextField.leadingAnchor),
+            self.ageTextField.trailingAnchor.constraint(equalTo: self.emailTextField.trailingAnchor),
+            self.ageTextField.heightAnchor.constraint(equalToConstant: 45),
+            
+            
+            self.phoneTextField.topAnchor.constraint(equalTo: self.ageTextField.bottomAnchor, constant: 20),
+            self.phoneTextField.leadingAnchor.constraint(equalTo: self.ageTextField.leadingAnchor),
+            self.phoneTextField.trailingAnchor.constraint(equalTo: self.ageTextField.trailingAnchor),
+            self.phoneTextField.heightAnchor.constraint(equalToConstant: 45),
+            
+            
+            self.addressTextField.topAnchor.constraint(equalTo: self.phoneTextField.bottomAnchor, constant: 20),
+            self.addressTextField.leadingAnchor.constraint(equalTo: self.phoneTextField.leadingAnchor),
+            self.addressTextField.trailingAnchor.constraint(equalTo: self.phoneTextField.trailingAnchor),
+            self.addressTextField.heightAnchor.constraint(equalToConstant: 45),
+            
+            
+            self.cpfTextField.topAnchor.constraint(equalTo: self.addressTextField.bottomAnchor, constant: 20),
+            self.cpfTextField.leadingAnchor.constraint(equalTo: self.addressTextField.leadingAnchor),
+            self.cpfTextField.trailingAnchor.constraint(equalTo: self.addressTextField.trailingAnchor),
+            self.cpfTextField.heightAnchor.constraint(equalToConstant: 45),
+            
+            
+            self.passwordTextField.topAnchor.constraint(equalTo: self.cpfTextField.bottomAnchor, constant: 20),
+            self.passwordTextField.leadingAnchor.constraint(equalTo: self.cpfTextField.leadingAnchor),
+            self.passwordTextField.trailingAnchor.constraint(equalTo: self.cpfTextField.trailingAnchor),
+            self.passwordTextField.heightAnchor.constraint(equalToConstant: 45),
+            
+            
+            self.repeatPasswordTextField.topAnchor.constraint(equalTo: self.passwordTextField.bottomAnchor, constant: 20),
+            self.repeatPasswordTextField.leadingAnchor.constraint(equalTo: self.passwordTextField.leadingAnchor),
+            self.repeatPasswordTextField.trailingAnchor.constraint(equalTo: self.passwordTextField.trailingAnchor),
+            self.repeatPasswordTextField.heightAnchor.constraint(equalToConstant: 45),
+            
+            
+            self.registerButton.topAnchor.constraint(equalTo: self.repeatPasswordTextField.bottomAnchor, constant: 20),
+            self.registerButton.leadingAnchor.constraint(equalTo: self.repeatPasswordTextField.leadingAnchor),
+            self.registerButton.trailingAnchor.constraint(equalTo: self.repeatPasswordTextField.trailingAnchor),
+            self.registerButton.heightAnchor.constraint(equalToConstant: 45),
+                        
         ])
     }
     
