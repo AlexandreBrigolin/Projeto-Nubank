@@ -10,6 +10,7 @@
 		038921C928F74BC000311F61 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038921C828F74BC000311F61 /* LoginViewModel.swift */; };
 		038921CD28F755CE00311F61 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038921CC28F755CE00311F61 /* RegisterVC.swift */; };
 		038921CF28F755F000311F61 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038921CE28F755F000311F61 /* HomeVC.swift */; };
+		038921D228F79BF500311F61 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038921D128F79BF500311F61 /* Alert.swift */; };
 		03B02DFF28F20722008E2ECA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03B02DFE28F20722008E2ECA /* GoogleService-Info.plist */; };
 		03B02E0228F207C4008E2ECA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 03B02E0128F207C4008E2ECA /* FirebaseAuth */; };
 		03B02E0728F49C3D008E2ECA /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B02E0628F49C3D008E2ECA /* LoginScreen.swift */; };
@@ -47,6 +48,7 @@
 		038921C828F74BC000311F61 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		038921CC28F755CE00311F61 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		038921CE28F755F000311F61 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		038921D128F79BF500311F61 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		03B02DFE28F20722008E2ECA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		03B02E0628F49C3D008E2ECA /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		227BB31EC95E1BE65BC57DF8 /* Pods_AppNubank_AppNubankUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppNubank_AppNubankUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,13 +103,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		038921C528F7127E00311F61 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		038921C628F7128600311F61 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,11 +127,18 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		038921D028F79BE200311F61 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				038921D128F79BF500311F61 /* Alert.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		03B02E0328F49B76008E2ECA /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				038921C628F7128600311F61 /* ViewModel */,
-				038921C528F7127E00311F61 /* Model */,
 				03B02E0528F49B99008E2ECA /* Screen */,
 				03B02E0428F49B84008E2ECA /* VC */,
 			);
@@ -184,6 +186,7 @@
 		3F595EE028F064AF00CD9C08 /* AppNubank */ = {
 			isa = PBXGroup;
 			children = (
+				038921D028F79BE200311F61 /* Alert */,
 				038921CB28F7555000311F61 /* Home */,
 				038921CA28F7554400311F61 /* Register */,
 				03B02E0328F49B76008E2ECA /* Login */,
@@ -488,6 +491,7 @@
 				3F595EE228F064AF00CD9C08 /* AppDelegate.swift in Sources */,
 				038921CD28F755CE00311F61 /* RegisterVC.swift in Sources */,
 				038921C928F74BC000311F61 /* LoginViewModel.swift in Sources */,
+				038921D228F79BF500311F61 /* Alert.swift in Sources */,
 				3F595EE428F064AF00CD9C08 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

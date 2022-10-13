@@ -36,7 +36,7 @@ class LoginScreen: UIView {
         tf.autocorrectionType = .no
         tf.backgroundColor = .white
         tf.borderStyle = .roundedRect
-        tf.keyboardType = .emailAddress
+        tf.keyboardType = .default
         tf.placeholder = "Digite seu CPF"
         tf.textColor = .darkGray
         return tf
@@ -83,6 +83,7 @@ class LoginScreen: UIView {
         self.configBackGround()
         self.configSuperView()
         self.setUpConstrains()
+        self.configButtonEnable(false)
     }
     
     private func configBackGround(){
@@ -99,7 +100,7 @@ class LoginScreen: UIView {
         
     }
     
-    public func configTextField(delegate: UITextFieldDelegate) {
+    public func configTextFieldDelegate(delegate: UITextFieldDelegate) {
         self.cpfTextfield.delegate = delegate
         self.passwordTextfield.delegate = delegate
     }
@@ -111,11 +112,45 @@ class LoginScreen: UIView {
     @objc private func tappedRegisterButton() {
         self.delegate?.actionRegisterButton()
     }
+    
+    public func validaTextField() {
+        let cpf: String = self.cpfTextfield.text ?? ""
+        let password: String = self.passwordTextfield.text ?? ""
+        
+        if !cpf.isEmpty && !password.isEmpty {
+            self.configButtonEnable(true)
+        }else{
+            self.configButtonEnable(false)
+        }
+        
+    }
 
+    private func configButtonEnable(_ enanle: Bool) {
+        if enanle{
+            self.loginButton.setTitleColor(.white, for: .normal)
+            self.loginButton.isEnabled = true
+        }else{
+            self.loginButton.setTitleColor(.lightGray, for: .normal)
+            self.loginButton.isEnabled = false
+        }
+    }
+    
+    public func getCPF() -> String {
+        
+        return self.cpfTextfield.text ?? ""
+    }
+    
+    public func getPassword() -> String {
+        return self.passwordTextfield.text ?? ""
+    }
+    
+
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     
     private func setUpConstrains() {
         
