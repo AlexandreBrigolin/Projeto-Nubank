@@ -155,6 +155,37 @@ class CustomTableViewCell: UITableViewCell {
         
     }
     
+    public func validaTextField() {
+        
+        let name: String = self.nameTextField.text ?? ""
+        let email: String = self.emailTextField.text ?? ""
+        let age: String = self.ageTextField.text ?? ""
+        let phone: String = self.phoneTextField.text ?? ""
+        let address: String = self.addressTextField.text ?? ""
+        let cpf: String = self.cpfTextField.text ?? ""
+        let password: String = self.passwordTextField.text ?? ""
+        let repeatPassWord: String = self.repeatPasswordTextField.text ?? ""
+        
+        if !name.isEmpty && !email.isEmpty && !age.isEmpty && !phone.isEmpty && !address.isEmpty && !cpf.isEmpty && !password.isEmpty && !repeatPassWord.isEmpty {
+            self.configButtonEnable(true)
+        }else{
+            self.configButtonEnable(false)
+            
+        }
+    }
+
+    
+    private func configButtonEnable(_ enable: Bool){
+        
+        if enable {
+            self.registerButton.setTitleColor(.white, for: .normal)
+            self.registerButton.isEnabled = true
+        }else{
+            self.registerButton.setTitleColor(.lightGray, for: .normal)
+            self.registerButton.isEnabled = false
+        }
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -172,6 +203,18 @@ class CustomTableViewCell: UITableViewCell {
         self.contentView.addSubview(self.repeatPasswordTextField)
         self.contentView.addSubview(self.registerButton)
         
+    }
+    
+    public func configTextFieldDelegate(delegate: UITextFieldDelegate){
+
+        self.nameTextField.delegate = delegate
+        self.emailTextField.delegate = delegate
+        self.ageTextField.delegate = delegate
+        self.phoneTextField.delegate = delegate
+        self.addressTextField.delegate = delegate
+        self.cpfTextField.delegate = delegate
+        self.passwordTextField.delegate = delegate
+        self.repeatPasswordTextField.delegate = delegate
     }
     
     private func setUpConstraints(){

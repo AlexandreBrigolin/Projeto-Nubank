@@ -20,6 +20,7 @@
 		3F595F0528F064B100CD9C08 /* AppNubankUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F595F0428F064B100CD9C08 /* AppNubankUITestsLaunchTests.swift */; };
 		3F7D382528F7010600D452A5 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7D382428F7010600D452A5 /* RegisterScreen.swift */; };
 		3F7D382828F74CA700D452A5 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7D382728F74CA700D452A5 /* CustomTableViewCell.swift */; };
+		3F7D382B28F8895F00D452A5 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7D382A28F8895F00D452A5 /* Alert.swift */; };
 		7C309CA757C88BF76EC1AD34 /* Pods_AppNubank_AppNubankUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227BB31EC95E1BE65BC57DF8 /* Pods_AppNubank_AppNubankUITests.framework */; };
 		A8E7522CA096214B78CB5649 /* Pods_AppNubankTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FFF850FA52D79A0864C146 /* Pods_AppNubankTests.framework */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,7 @@
 		3F595F0428F064B100CD9C08 /* AppNubankUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNubankUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3F7D382428F7010600D452A5 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		3F7D382728F74CA700D452A5 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		3F7D382A28F8895F00D452A5 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		560F61D88076C62FAECBF47E /* Pods-AppNubank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppNubank.release.xcconfig"; path = "Target Support Files/Pods-AppNubank/Pods-AppNubank.release.xcconfig"; sourceTree = "<group>"; };
 		5E5F8A7BFCBAC46E142B2F14 /* Pods-AppNubankTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppNubankTests.debug.xcconfig"; path = "Target Support Files/Pods-AppNubankTests/Pods-AppNubankTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6F0140EE9B5EDEAE0E9E9EB3 /* Pods_AppNubank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppNubank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,6 +155,7 @@
 		3F7D382128F6FDB000D452A5 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
+				3F7D382928F8865600D452A5 /* Alert */,
 				3F7D382628F74C3F00D452A5 /* Cell */,
 				3F7D382228F6FFA100D452A5 /* Screen */,
 			);
@@ -182,6 +185,14 @@
 				3F7D382728F74CA700D452A5 /* CustomTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		3F7D382928F8865600D452A5 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				3F7D382A28F8895F00D452A5 /* Alert.swift */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 		56CED716C68C1D646FB9D68B /* Pods */ = {
@@ -452,6 +463,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F7D382B28F8895F00D452A5 /* Alert.swift in Sources */,
 				3F7D382528F7010600D452A5 /* RegisterScreen.swift in Sources */,
 				3F7D382828F74CA700D452A5 /* CustomTableViewCell.swift in Sources */,
 				3F595EE628F064AF00CD9C08 /* RegisterVC.swift in Sources */,

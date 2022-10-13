@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import Firebase
 
 
-class RegisterVC: UIViewController {
+class RegisterVC: UIViewController  {
 
     var registerScreen: RegisterScreen?
+    var auth: Auth?
+    var alert: Alert?
     
     override func loadView() {
         self.registerScreen = RegisterScreen()
@@ -21,6 +24,10 @@ class RegisterVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerScreen?.configTableViewProtocols(delegate: self, datasource: self)
+        self.registerScreen?.cell.configTextFieldDelegate(delegate: self)
+        self.auth = Auth.auth()
+        self.alert = Alert(controller: self)
+        
     }
     
 }
@@ -42,6 +49,23 @@ extension RegisterVC: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier, for: indexPath) as? CustomTableViewCell
         
         return cell ?? CustomTableViewCell()
+    }
+    
+}
+
+extension RegisterVC: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        print(textFieldDidBeginEditing)
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        print(textFieldDidEndEditing)
+        self.registerScreen?.cell.validaTextField()
     }
     
 }

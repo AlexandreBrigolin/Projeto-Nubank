@@ -7,7 +7,19 @@
 
 import UIKit
 
+protocol RegisterScreenProtocol: AnyObject{
+    func actionRegisterButton()
+}
+
 class RegisterScreen: UIView {
+    
+    var cell: CustomTableViewCell = CustomTableViewCell()
+    
+    weak private var delegate: RegisterScreenProtocol?
+    func delegate(delegate: RegisterScreenProtocol) {        
+        self.delegate = delegate
+    }
+    
     
     lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -18,16 +30,7 @@ class RegisterScreen: UIView {
         return tableView
     }()
     
-//    lazy var backButton: UIButton = {
-//        let button = UIButton()
-//        button.translatesAutoresizingMaskIntoConstraints = false
-//        button.setImage(UIImage(named: "back"), for: .normal)
-//                button.addTarget(self, action: #selector(tappedBackButton), for: .touchUpInside)
-//
-//        return button
-//    }()
-    
-   
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.configBackGround()
@@ -50,14 +53,12 @@ class RegisterScreen: UIView {
     }
     
     private func configSuperView() {
-        
         self.addSubview(self.tableView)
-//        self.addSubview(self.backButton)
+
     }
     
-    public func configTextFieldDelegate(){
-        
-    }
+
+
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
