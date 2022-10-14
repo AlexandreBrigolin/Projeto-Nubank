@@ -32,7 +32,6 @@ class RegisterVC: UIViewController  {
     }
     
     func configKeyoard(){
-            
             NotificationCenter.default.addObserver(self, selector: #selector(keyboardSubir(notification:)), name:UIResponder.keyboardWillShowNotification, object: nil)
             
             NotificationCenter.default.addObserver(self, selector: #selector(keyboardOriginal(notification:)), name:UIResponder.keyboardWillHideNotification, object: nil)
@@ -89,16 +88,43 @@ extension RegisterVC: UITableViewDataSource {
 extension RegisterVC: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+       return textField.resignFirstResponder()
+        
+        
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        print(textFieldDidBeginEditing)
+        print("textFieldDidBeginEditing")
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        print(textFieldDidEndEditing)
+        print("textFieldDidEndEditing")
         self.registerScreen?.cell.validaTextField()
+        
     }
     
 }
+
+extension RegisterVC: RegisterScreenProtocol {
+    
+    
+    func actionRegisterButton() {
+        
+        guard let register = self.registerScreen?.cell else { return }
+        
+        self.auth?.createUser(withEmail: register.getEmail(), password: register.getPassword(), completion: { result, error in
+            if error == nil {
+                self.alert?.getAlert(title: "Atenção", message: "Dados incorretos, verifique seus dados")
+            }else{
+                if result == nil {
+                    self.alert?.getAlert(title: "Atenção", message: "Tivemos um problema inesperado, tente novamente")
+                }else {
+                    print("Cadastro realizado com sucesso!")
+                }
+            }
+        })
+        
+    }
+    
+}
+

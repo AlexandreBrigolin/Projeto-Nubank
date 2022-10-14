@@ -7,7 +7,18 @@
 
 import UIKit
 
+protocol RegisterScreenProtocol: AnyObject{
+    func actionRegisterButton()
+}
+
 class CustomTableViewCell: UITableViewCell {
+    
+    
+    weak private var delegate: RegisterScreenProtocol?
+    
+    func delegate(delegate: RegisterScreenProtocol) {
+        self.delegate = delegate
+    }
     
     static let identifier: String = "CustomTableViewCell"
     
@@ -142,7 +153,7 @@ class CustomTableViewCell: UITableViewCell {
         button.clipsToBounds = true
         button.layer.cornerRadius = 7.5
         button.backgroundColor = .purple
-        //        button.addTarget(self, action: #selector(self.tappedRegisterButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(self.tappedRegisterButton), for: .touchUpInside)
         
         return button
     }()
@@ -151,47 +162,17 @@ class CustomTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.contentView.backgroundColor = UIColor(red: 126/255, green: 26/255, blue: 183/255, alpha: 1.0)
+        self.configBackGround()
         self.addSubView()
         self.setUpConstraints()
+        self.configButtonEnable(false)
         
     }
     
-    public func validaTextField() {
-        
-        let name: String = self.nameTextField.text ?? ""
-        let email: String = self.emailTextField.text ?? ""
-        let age: String = self.ageTextField.text ?? ""
-        let phone: String = self.phoneTextField.text ?? ""
-        let address: String = self.addressTextField.text ?? ""
-        let cpf: String = self.cpfTextField.text ?? ""
-        let password: String = self.passwordTextField.text ?? ""
-//        let repeatPassWord: String = self.repeatPasswordTextField.text ?? ""
-        
-        if !name.isEmpty && !email.isEmpty && !age.isEmpty && !phone.isEmpty && !address.isEmpty && !cpf.isEmpty && !password.isEmpty  {
-            self.configButtonEnable(true)
-        }else{
-            self.configButtonEnable(false)
-            
-        }
+    private func configBackGround() {
+        self.contentView.backgroundColor = UIColor(red: 126/255, green: 26/255, blue: 183/255, alpha: 1.0)
     }
 
-    
-    private func configButtonEnable(_ enable: Bool){
-        
-        if enable {
-            self.registerButton.setTitleColor(.white, for: .normal)
-            self.registerButton.isEnabled = true
-        }else{
-            self.registerButton.setTitleColor(.lightGray, for: .normal)
-            self.registerButton.isEnabled = false
-        }
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     func addSubView(){
         self.contentView.addSubview(self.registerLabel)
         self.contentView.addSubview(self.nameTextField)
@@ -201,7 +182,6 @@ class CustomTableViewCell: UITableViewCell {
         self.contentView.addSubview(self.addressTextField)
         self.contentView.addSubview(self.cpfTextField)
         self.contentView.addSubview(self.passwordTextField)
-//        self.contentView.addSubview(self.repeatPasswordTextField)
         self.contentView.addSubview(self.registerButton)
         
     }
@@ -216,6 +196,49 @@ class CustomTableViewCell: UITableViewCell {
         self.cpfTextField.delegate = delegate
         self.passwordTextField.delegate = delegate
 //        self.repeatPasswordTextField.delegate = delegate
+    }
+    
+    @objc private func tappedRegisterButton() {
+        self.delegate?.actionRegisterButton()
+    }
+    
+    
+     public func validaTextField() {
+         let email: String = self.emailTextField.text ?? ""
+         let password: String = self.passwordTextField.text ?? ""
+ 
+         if !email.isEmpty && !password.isEmpty {
+             
+             self.configButtonEnable(true)
+         }else{
+             self.configButtonEnable(false)
+         }
+     }
+
+     private func configButtonEnable(_ enable: Bool){
+         
+         if enable {
+             self.registerButton.setTitleColor(.white, for: .normal)
+             self.registerButton.isEnabled = true
+         }else{
+             self.registerButton.setTitleColor(.lightGray, for: .normal)
+             self.registerButton.isEnabled = false
+         }
+     }
+   
+    public func getEmail() -> String {
+        
+        return self.emailTextField.text ?? ""
+    }
+    
+    public func getPassword() -> String {
+        
+        return self.passwordTextField.text ?? ""
+    }
+    
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     private func setUpConstraints(){
@@ -282,3 +305,11 @@ class CustomTableViewCell: UITableViewCell {
     }
     
 }
+
+
+//        let name: String = self.nameTextField.text ?? ""
+//        let age: String = self.ageTextField.text ?? ""
+//        let phone: String = self.phoneTextField.text ?? ""
+//        let address: String = self.addressTextField.text ?? ""
+//        let cpf: String = self.cpfTextField.text ?? ""
+//        let repeatPassWord: String = self.repeatPasswordTextField.text ?? ""

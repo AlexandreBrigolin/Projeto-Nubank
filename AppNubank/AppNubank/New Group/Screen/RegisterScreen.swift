@@ -7,18 +7,13 @@
 
 import UIKit
 
-protocol RegisterScreenProtocol: AnyObject{
-    func actionRegisterButton()
-}
+
 
 class RegisterScreen: UIView {
     
     var cell: CustomTableViewCell = CustomTableViewCell()
     
-    weak private var delegate: RegisterScreenProtocol?
-    func delegate(delegate: RegisterScreenProtocol) {        
-        self.delegate = delegate
-    }
+
     
     
     lazy var tableView: UITableView = {
