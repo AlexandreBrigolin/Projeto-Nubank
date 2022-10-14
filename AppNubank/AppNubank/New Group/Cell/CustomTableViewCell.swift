@@ -125,6 +125,7 @@ class CustomTableViewCell: UITableViewCell {
         textfield.borderStyle = .roundedRect
         textfield.keyboardType = .emailAddress
         textfield.placeholder = "Digite sua senha:"
+        textfield.isSecureTextEntry = true
         //        tf.font = UIFont.systemFont(ofSize: 14)
         textfield.textColor = .darkGray
         
