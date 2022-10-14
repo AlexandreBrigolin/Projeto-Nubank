@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		038921C928F74BC000311F61 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038921C828F74BC000311F61 /* LoginViewModel.swift */; };
 		038921CD28F755CE00311F61 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038921CC28F755CE00311F61 /* RegisterVC.swift */; };
 		038921CF28F755F000311F61 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038921CE28F755F000311F61 /* HomeVC.swift */; };
 		038921D228F79BF500311F61 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038921D128F79BF500311F61 /* Alert.swift */; };
@@ -45,7 +44,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		038921C828F74BC000311F61 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		038921CC28F755CE00311F61 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		038921CE28F755F000311F61 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		038921D128F79BF500311F61 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
@@ -103,14 +101,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		038921C628F7128600311F61 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				038921C828F74BC000311F61 /* LoginViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		038921CA28F7554400311F61 /* Register */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,7 +128,6 @@
 		03B02E0328F49B76008E2ECA /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				038921C628F7128600311F61 /* ViewModel */,
 				03B02E0528F49B99008E2ECA /* Screen */,
 				03B02E0428F49B84008E2ECA /* VC */,
 			);
@@ -490,7 +479,6 @@
 				03B02E0728F49C3D008E2ECA /* LoginScreen.swift in Sources */,
 				3F595EE228F064AF00CD9C08 /* AppDelegate.swift in Sources */,
 				038921CD28F755CE00311F61 /* RegisterVC.swift in Sources */,
-				038921C928F74BC000311F61 /* LoginViewModel.swift in Sources */,
 				038921D228F79BF500311F61 /* Alert.swift in Sources */,
 				3F595EE428F064AF00CD9C08 /* SceneDelegate.swift in Sources */,
 			);

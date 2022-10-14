@@ -30,14 +30,14 @@ class LoginScreen: UIView {
         return label
     }()
     
-    lazy var cpfTextfield: UITextField = {
+    lazy var emailTextfield: UITextField = {
         let tf = UITextField()
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.autocorrectionType = .no
         tf.backgroundColor = .white
         tf.borderStyle = .roundedRect
         tf.keyboardType = .default
-        tf.placeholder = "Digite seu CPF"
+        tf.placeholder = "Digite seu Email"
         tf.textColor = .darkGray
         return tf
     }()
@@ -47,10 +47,11 @@ class LoginScreen: UIView {
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.autocorrectionType = .no
         tf.backgroundColor = .white
+        
         tf.borderStyle = .roundedRect
         tf.keyboardType = .default
         tf.isSecureTextEntry = true
-        tf.placeholder = "Digite sua senha"
+        tf.placeholder = "Digite sua Senha"
         tf.textColor = .darkGray
         return tf
     }()
@@ -91,9 +92,8 @@ class LoginScreen: UIView {
     }
     
     private func configSuperView() {
-
         self.addSubview(self.sentenceLabel)
-        self.addSubview(self.cpfTextfield)
+        self.addSubview(self.emailTextfield)
         self.addSubview(self.passwordTextfield)
         self.addSubview(self.loginButton)
         self.addSubview(self.registerButton)
@@ -101,7 +101,7 @@ class LoginScreen: UIView {
     }
     
     public func configTextFieldDelegate(delegate: UITextFieldDelegate) {
-        self.cpfTextfield.delegate = delegate
+        self.emailTextfield.delegate = delegate
         self.passwordTextfield.delegate = delegate
     }
     
@@ -114,10 +114,10 @@ class LoginScreen: UIView {
     }
     
     public func validaTextField() {
-        let cpf: String = self.cpfTextfield.text ?? ""
+        let email: String = self.emailTextfield.text ?? ""
         let password: String = self.passwordTextfield.text ?? ""
         
-        if !cpf.isEmpty && !password.isEmpty {
+        if !email.isEmpty && !password.isEmpty {
             self.configButtonEnable(true)
         }else{
             self.configButtonEnable(false)
@@ -135,18 +135,15 @@ class LoginScreen: UIView {
         }
     }
     
-    public func getCPF() -> String {
+    public func getEmail() -> String {
         
-        return self.cpfTextfield.text ?? ""
+        return self.emailTextfield.text ?? ""
     }
     
     public func getPassword() -> String {
         return self.passwordTextfield.text ?? ""
     }
-    
 
-    
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -156,7 +153,7 @@ class LoginScreen: UIView {
         
         NSLayoutConstraint.activate([
             
-                self.registerButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -5),
+                self.registerButton.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -5),
                 self.registerButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
                 self.registerButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
                 self.registerButton.heightAnchor.constraint(equalToConstant: 45),
@@ -171,14 +168,14 @@ class LoginScreen: UIView {
                 self.passwordTextfield.trailingAnchor.constraint(equalTo: self.loginButton.trailingAnchor),
                 self.passwordTextfield.heightAnchor.constraint(equalTo: self.loginButton.heightAnchor),
 
-                self.cpfTextfield.bottomAnchor.constraint(equalTo: self.passwordTextfield.topAnchor, constant: -20),
-                self.cpfTextfield.leadingAnchor.constraint(equalTo: self.passwordTextfield.leadingAnchor),
-                self.cpfTextfield.trailingAnchor.constraint(equalTo: self.passwordTextfield.trailingAnchor),
-                self.cpfTextfield.heightAnchor.constraint(equalTo: self.passwordTextfield.heightAnchor),
+                self.emailTextfield.bottomAnchor.constraint(equalTo: self.passwordTextfield.topAnchor, constant: -20),
+                self.emailTextfield.leadingAnchor.constraint(equalTo: self.passwordTextfield.leadingAnchor),
+                self.emailTextfield.trailingAnchor.constraint(equalTo: self.passwordTextfield.trailingAnchor),
+                self.emailTextfield.heightAnchor.constraint(equalTo: self.passwordTextfield.heightAnchor),
                 
-                self.sentenceLabel.bottomAnchor.constraint(equalTo: self.cpfTextfield.topAnchor, constant: -30),
-                self.sentenceLabel.leadingAnchor.constraint(equalTo: self.cpfTextfield.leadingAnchor),
-                self.sentenceLabel.trailingAnchor.constraint(equalTo: self.cpfTextfield.trailingAnchor)
+                self.sentenceLabel.bottomAnchor.constraint(equalTo: self.emailTextfield.topAnchor, constant: -30),
+                self.sentenceLabel.leadingAnchor.constraint(equalTo: self.emailTextfield.leadingAnchor),
+                self.sentenceLabel.trailingAnchor.constraint(equalTo: self.emailTextfield.trailingAnchor)
                 
         ])
     }

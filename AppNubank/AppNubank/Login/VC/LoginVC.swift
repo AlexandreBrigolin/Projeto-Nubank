@@ -24,13 +24,12 @@ class LoginVC: UIViewController {
         self.loginScreen?.delegate(delegate: self)
         self.loginScreen?.configTextFieldDelegate(delegate: self)
         self.auth = Auth.auth()
+        self.cadastroTest()
         self.alert = Alert(controller: self)
         self.configKeyoard()
     }
     
-    
-    func configKeyoard(){
-        
+    func configKeyoard() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardSubir(notification:)), name:UIResponder.keyboardWillShowNotification, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardOriginal(notification:)), name:UIResponder.keyboardWillHideNotification, object: nil)
@@ -58,12 +57,17 @@ class LoginVC: UIViewController {
         view.frame.origin.y = 0
         
     }
-    
-    
+    func cadastroTest() {
+        
+        self.auth?.createUser(withEmail: "bah@hotmail.com", password: "1234567", completion: { authResult , error in
+            if error == nil {
+                print("sucesso ")
+            }else{
+                print("falha \(error?.localizedDescription ?? "")")
+            }
+        })
+    }
 }
-
-
-
 
 extension LoginVC: UITextFieldDelegate {
     
@@ -87,19 +91,22 @@ extension LoginVC: LoginScreenProtocol {
     
     func actionLoginButton() {
         
- guard let login = self.loginScreen else {return}
+        let vc: HomeVC = HomeVC()
+        
+        
+   guard let login = self.loginScreen else {return}
 
-        self.auth?.signIn(withEmail: login.getCPF(), password: login.getPassword(), completion: { user, error in
+        self.auth?.signIn(withEmail: login.getEmail(), password: login.getPassword(), completion: { user, error in
 
      if error != nil {
          self.alert?.getAlert(title: "Atenção", message: "Dados incorretos, verifique seus dados")
      }else{
          if user == nil{
+             print("falha \(error?.localizedDescription ?? "")")
              self.alert?.getAlert(title: "Atenção", message: "Tivemos um problema inesperado, tente novamente mais tarde")
          }else{
              print("Login realizado com sucesso")
-
-             self.performSegue(withIdentifier: "RegisterVC", sender: nil)
+             self.navigationController?.pushViewController(vc, animated: true)
          }
      }
   })
