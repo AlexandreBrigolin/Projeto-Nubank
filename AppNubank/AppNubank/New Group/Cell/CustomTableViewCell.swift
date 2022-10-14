@@ -11,6 +11,7 @@ class CustomTableViewCell: UITableViewCell {
     
     static let identifier: String = "CustomTableViewCell"
     
+    
     lazy var registerLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -119,19 +120,19 @@ class CustomTableViewCell: UITableViewCell {
         return textfield
     }()
     
-    lazy var repeatPasswordTextField: UITextField = {
-        let textfield = UITextField()
-        textfield.translatesAutoresizingMaskIntoConstraints = false
-        textfield.autocorrectionType = .no
-        textfield.backgroundColor = .white
-        textfield.borderStyle = .roundedRect
-        textfield.keyboardType = .emailAddress
-        textfield.placeholder = "Repetir senha:"
-        //        tf.font = UIFont.systemFont(ofSize: 14)
-        textfield.textColor = .darkGray
-        
-        return textfield
-    }()
+//    lazy var repeatPasswordTextField: UITextField = {
+//        let textfield = UITextField()
+//        textfield.translatesAutoresizingMaskIntoConstraints = false
+//        textfield.autocorrectionType = .no
+//        textfield.backgroundColor = .white
+//        textfield.borderStyle = .roundedRect
+//        textfield.keyboardType = .emailAddress
+//        textfield.placeholder = "Repetir senha:"
+//        //        tf.font = UIFont.systemFont(ofSize: 14)
+//        textfield.textColor = .darkGray
+//
+//        return textfield
+//    }()
     
     lazy var registerButton: UIButton = {
         let button = UIButton()
@@ -150,6 +151,7 @@ class CustomTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.contentView.backgroundColor = UIColor(red: 126/255, green: 26/255, blue: 183/255, alpha: 1.0)
         self.addSubView()
         self.setUpConstraints()
         
@@ -164,9 +166,9 @@ class CustomTableViewCell: UITableViewCell {
         let address: String = self.addressTextField.text ?? ""
         let cpf: String = self.cpfTextField.text ?? ""
         let password: String = self.passwordTextField.text ?? ""
-        let repeatPassWord: String = self.repeatPasswordTextField.text ?? ""
+//        let repeatPassWord: String = self.repeatPasswordTextField.text ?? ""
         
-        if !name.isEmpty && !email.isEmpty && !age.isEmpty && !phone.isEmpty && !address.isEmpty && !cpf.isEmpty && !password.isEmpty && !repeatPassWord.isEmpty {
+        if !name.isEmpty && !email.isEmpty && !age.isEmpty && !phone.isEmpty && !address.isEmpty && !cpf.isEmpty && !password.isEmpty  {
             self.configButtonEnable(true)
         }else{
             self.configButtonEnable(false)
@@ -191,7 +193,6 @@ class CustomTableViewCell: UITableViewCell {
     }
     
     func addSubView(){
-        
         self.contentView.addSubview(self.registerLabel)
         self.contentView.addSubview(self.nameTextField)
         self.contentView.addSubview(self.emailTextField)
@@ -200,7 +201,7 @@ class CustomTableViewCell: UITableViewCell {
         self.contentView.addSubview(self.addressTextField)
         self.contentView.addSubview(self.cpfTextField)
         self.contentView.addSubview(self.passwordTextField)
-        self.contentView.addSubview(self.repeatPasswordTextField)
+//        self.contentView.addSubview(self.repeatPasswordTextField)
         self.contentView.addSubview(self.registerButton)
         
     }
@@ -214,7 +215,7 @@ class CustomTableViewCell: UITableViewCell {
         self.addressTextField.delegate = delegate
         self.cpfTextField.delegate = delegate
         self.passwordTextField.delegate = delegate
-        self.repeatPasswordTextField.delegate = delegate
+//        self.repeatPasswordTextField.delegate = delegate
     }
     
     private func setUpConstraints(){
@@ -266,15 +267,15 @@ class CustomTableViewCell: UITableViewCell {
             self.passwordTextField.heightAnchor.constraint(equalToConstant: 45),
             
             
-            self.repeatPasswordTextField.topAnchor.constraint(equalTo: self.passwordTextField.bottomAnchor, constant: 20),
-            self.repeatPasswordTextField.leadingAnchor.constraint(equalTo: self.passwordTextField.leadingAnchor),
-            self.repeatPasswordTextField.trailingAnchor.constraint(equalTo: self.passwordTextField.trailingAnchor),
-            self.repeatPasswordTextField.heightAnchor.constraint(equalToConstant: 45),
+//            self.repeatPasswordTextField.topAnchor.constraint(equalTo: self.passwordTextField.bottomAnchor, constant: 20),
+//            self.repeatPasswordTextField.leadingAnchor.constraint(equalTo: self.passwordTextField.leadingAnchor),
+//            self.repeatPasswordTextField.trailingAnchor.constraint(equalTo: self.passwordTextField.trailingAnchor),
+//            self.repeatPasswordTextField.heightAnchor.constraint(equalToConstant: 45),
             
             
-            self.registerButton.topAnchor.constraint(equalTo: self.repeatPasswordTextField.bottomAnchor, constant: 20),
-            self.registerButton.leadingAnchor.constraint(equalTo: self.repeatPasswordTextField.leadingAnchor),
-            self.registerButton.trailingAnchor.constraint(equalTo: self.repeatPasswordTextField.trailingAnchor),
+            self.registerButton.topAnchor.constraint(equalTo: self.passwordTextField.bottomAnchor, constant: 20),
+            self.registerButton.leadingAnchor.constraint(equalTo: self.passwordTextField.leadingAnchor),
+            self.registerButton.trailingAnchor.constraint(equalTo: self.passwordTextField.trailingAnchor),
             self.registerButton.heightAnchor.constraint(equalToConstant: 45),
                         
         ])
