@@ -8,12 +8,12 @@
 import UIKit
 
 protocol RegisterScreenProtocol: AnyObject{
-    func actionRegisterButton()
+    func actionRegisterButton(user: User)
 }
 
 class CustomTableViewCell: UITableViewCell {
     
-    
+    private var viewModel: CustomTableViewCellViewModel = CustomTableViewCellViewModel()
     weak private var delegate: RegisterScreenProtocol?
     
     func delegate(delegate: RegisterScreenProtocol) {
@@ -43,7 +43,7 @@ class CustomTableViewCell: UITableViewCell {
         textfield.placeholder = "Digite seu nome:"
         //        tf.font = UIFont.systemFont(ofSize: 14)
         textfield.textColor = .darkGray
-        
+        textfield.delegate = self
         return textfield
     }()
     
@@ -57,7 +57,7 @@ class CustomTableViewCell: UITableViewCell {
         textfield.placeholder = "Digite seu Email:"
         //        tf.font = UIFont.systemFont(ofSize: 14)
         textfield.textColor = .darkGray
-        
+        textfield.delegate = self
         return textfield
     }()
     
@@ -71,7 +71,7 @@ class CustomTableViewCell: UITableViewCell {
         textfield.placeholder = "Digite sua idade:"
         //        tf.font = UIFont.systemFont(ofSize: 14)
         textfield.textColor = .darkGray
-        
+        textfield.delegate = self
         return textfield
     }()
     
@@ -85,7 +85,7 @@ class CustomTableViewCell: UITableViewCell {
         textfield.placeholder = "Digite seu telefone:"
         //        tf.font = UIFont.systemFont(ofSize: 14)
         textfield.textColor = .darkGray
-        
+        textfield.delegate = self
         return textfield
     }()
     
@@ -99,7 +99,7 @@ class CustomTableViewCell: UITableViewCell {
         textfield.placeholder = "Digite seu endereço:"
         //        tf.font = UIFont.systemFont(ofSize: 14)
         textfield.textColor = .darkGray
-        
+        textfield.delegate = self
         return textfield
     }()
     
@@ -113,7 +113,7 @@ class CustomTableViewCell: UITableViewCell {
         textfield.placeholder = "Digite seu CPF:"
         //        tf.font = UIFont.systemFont(ofSize: 14)
         textfield.textColor = .darkGray
-        
+        textfield.delegate = self
         return textfield
     }()
     
@@ -128,7 +128,7 @@ class CustomTableViewCell: UITableViewCell {
         textfield.isSecureTextEntry = true
         //        tf.font = UIFont.systemFont(ofSize: 14)
         textfield.textColor = .darkGray
-        
+        textfield.delegate = self
         return textfield
     }()
     
@@ -187,20 +187,8 @@ class CustomTableViewCell: UITableViewCell {
         
     }
     
-    public func configTextFieldDelegate(delegate: UITextFieldDelegate){
-
-        self.nameTextField.delegate = delegate
-        self.emailTextField.delegate = delegate
-        self.ageTextField.delegate = delegate
-        self.phoneTextField.delegate = delegate
-        self.addressTextField.delegate = delegate
-        self.cpfTextField.delegate = delegate
-        self.passwordTextField.delegate = delegate
-//        self.repeatPasswordTextField.delegate = delegate
-    }
-    
     @objc private func tappedRegisterButton() {
-        self.delegate?.actionRegisterButton()
+        self.delegate?.actionRegisterButton(user: User(name: nameTextField.text ?? "", email: emailTextField.text ?? "", age: ageTextField.text ?? "", phone: phoneTextField.text ?? "", address: addressTextField.text ?? "", cpf: cpfTextField.text ?? "", password: passwordTextField.text ?? ""))
     }
     
     
@@ -226,17 +214,6 @@ class CustomTableViewCell: UITableViewCell {
              self.registerButton.isEnabled = false
          }
      }
-   
-    public func getEmail() -> String {
-        
-        return self.emailTextField.text ?? ""
-    }
-    
-    public func getPassword() -> String {
-        
-        return self.passwordTextField.text ?? ""
-    }
-    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -308,9 +285,20 @@ class CustomTableViewCell: UITableViewCell {
 }
 
 
-//        let name: String = self.nameTextField.text ?? ""
-//        let age: String = self.ageTextField.text ?? ""
-//        let phone: String = self.phoneTextField.text ?? ""
-//        let address: String = self.addressTextField.text ?? ""
-//        let cpf: String = self.cpfTextField.text ?? ""
-//        let repeatPassWord: String = self.repeatPasswordTextField.text ?? ""
+extension CustomTableViewCell: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+       return textField.resignFirstResponder()
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        print("textFieldDidBeginEditing")
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        // TODA A LOGICA DEVE SER FEITA NO DID END (LOGICA DE VALIDACAO)
+        print("textFieldDidEndEditing")
+        self.validaTextField()
+    }
+    
+}
