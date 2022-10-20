@@ -67,7 +67,7 @@ class CustomTableViewCell: UITableViewCell {
         textfield.autocorrectionType = .no
         textfield.backgroundColor = .white
         textfield.borderStyle = .roundedRect
-        textfield.keyboardType = .emailAddress
+        textfield.keyboardType = .numberPad
         textfield.placeholder = "Digite sua idade:"
         //        tf.font = UIFont.systemFont(ofSize: 14)
         textfield.textColor = .darkGray
@@ -81,7 +81,7 @@ class CustomTableViewCell: UITableViewCell {
         textfield.autocorrectionType = .no
         textfield.backgroundColor = .white
         textfield.borderStyle = .roundedRect
-        textfield.keyboardType = .emailAddress
+        textfield.keyboardType = .numberPad
         textfield.placeholder = "Digite seu telefone:"
         //        tf.font = UIFont.systemFont(ofSize: 14)
         textfield.textColor = .darkGray
@@ -109,7 +109,7 @@ class CustomTableViewCell: UITableViewCell {
         textfield.autocorrectionType = .no
         textfield.backgroundColor = .white
         textfield.borderStyle = .roundedRect
-        textfield.keyboardType = .emailAddress
+        textfield.keyboardType = .numberPad
         textfield.placeholder = "Digite seu CPF:"
         //        tf.font = UIFont.systemFont(ofSize: 14)
         textfield.textColor = .darkGray
@@ -195,8 +195,15 @@ class CustomTableViewCell: UITableViewCell {
      public func validaTextField() {
          let email: String = self.emailTextField.text ?? ""
          let password: String = self.passwordTextField.text ?? ""
+         let name: String = self.nameTextField.text ?? ""
+         let age: String = self.ageTextField.text ?? ""
+         let phone: String = self.phoneTextField.text ?? ""
+         let address: String = self.addressTextField.text ?? ""
+         let cpf: String = self.cpfTextField.text ?? ""
+         
+         
  
-         if !email.isEmpty && !password.isEmpty {
+         if !email.isEmpty && !password.isEmpty && !age.isEmpty && !phone.isEmpty && !address.isEmpty && !cpf.isEmpty && !name.isEmpty {
              
              self.configButtonEnable(true)
          }else{
@@ -222,11 +229,11 @@ class CustomTableViewCell: UITableViewCell {
     private func setUpConstraints(){
         NSLayoutConstraint.activate([
             
-            self.registerLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 20),
+            self.registerLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 70),
             self.registerLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             self.registerLabel.heightAnchor.constraint(equalToConstant: 45),
             
-            self.nameTextField.topAnchor.constraint(equalTo: self.registerLabel.bottomAnchor, constant: 10),
+            self.nameTextField.topAnchor.constraint(equalTo: self.registerLabel.bottomAnchor, constant: 30),
             self.nameTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             self.nameTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
             self.nameTextField.heightAnchor.constraint(equalToConstant: 45),
