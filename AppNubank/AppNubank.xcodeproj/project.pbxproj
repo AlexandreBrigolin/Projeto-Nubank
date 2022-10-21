@@ -11,7 +11,6 @@
 		03B02E0228F207C4008E2ECA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 03B02E0128F207C4008E2ECA /* FirebaseAuth */; };
 		0697E1DD40A2D753A0C1E52E /* Pods_AppNubank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F0140EE9B5EDEAE0E9E9EB3 /* Pods_AppNubank.framework */; };
 		3424F16C2900691500CA0B6A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3424F16B2900691500CA0B6A /* User.swift */; };
-		3424F16F29006B0A00CA0B6A /* CustomTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3424F16E29006B0A00CA0B6A /* CustomTableViewCellViewModel.swift */; };
 		3F595EE228F064AF00CD9C08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F595EE128F064AF00CD9C08 /* AppDelegate.swift */; };
 		3F595EE428F064AF00CD9C08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F595EE328F064AF00CD9C08 /* SceneDelegate.swift */; };
 		3F595EE628F064AF00CD9C08 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F595EE528F064AF00CD9C08 /* RegisterVC.swift */; };
@@ -23,6 +22,7 @@
 		3F7D382528F7010600D452A5 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7D382428F7010600D452A5 /* RegisterScreen.swift */; };
 		3F7D382828F74CA700D452A5 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7D382728F74CA700D452A5 /* CustomTableViewCell.swift */; };
 		3F7D382B28F8895F00D452A5 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7D382A28F8895F00D452A5 /* Alert.swift */; };
+		3F7D382E2902F40D00D452A5 /* ScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7D382D2902F40D00D452A5 /* ScreenTableViewCell.swift */; };
 		7C309CA757C88BF76EC1AD34 /* Pods_AppNubank_AppNubankUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227BB31EC95E1BE65BC57DF8 /* Pods_AppNubank_AppNubankUITests.framework */; };
 		A8E7522CA096214B78CB5649 /* Pods_AppNubankTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FFF850FA52D79A0864C146 /* Pods_AppNubankTests.framework */; };
 /* End PBXBuildFile section */
@@ -49,7 +49,6 @@
 		227BB31EC95E1BE65BC57DF8 /* Pods_AppNubank_AppNubankUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppNubank_AppNubankUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		242210DC5F5F0C6361002351 /* Pods-AppNubank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppNubank.debug.xcconfig"; path = "Target Support Files/Pods-AppNubank/Pods-AppNubank.debug.xcconfig"; sourceTree = "<group>"; };
 		3424F16B2900691500CA0B6A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		3424F16E29006B0A00CA0B6A /* CustomTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		3F595EDE28F064AF00CD9C08 /* AppNubank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppNubank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F595EE128F064AF00CD9C08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F595EE328F064AF00CD9C08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +64,7 @@
 		3F7D382428F7010600D452A5 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		3F7D382728F74CA700D452A5 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		3F7D382A28F8895F00D452A5 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		3F7D382D2902F40D00D452A5 /* ScreenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTableViewCell.swift; sourceTree = "<group>"; };
 		560F61D88076C62FAECBF47E /* Pods-AppNubank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppNubank.release.xcconfig"; path = "Target Support Files/Pods-AppNubank/Pods-AppNubank.release.xcconfig"; sourceTree = "<group>"; };
 		5E5F8A7BFCBAC46E142B2F14 /* Pods-AppNubankTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppNubankTests.debug.xcconfig"; path = "Target Support Files/Pods-AppNubankTests/Pods-AppNubankTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6F0140EE9B5EDEAE0E9E9EB3 /* Pods_AppNubank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppNubank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,14 +109,6 @@
 				3424F16B2900691500CA0B6A /* User.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		3424F16D29006AF700CA0B6A /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				3424F16E29006B0A00CA0B6A /* CustomTableViewCellViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		3F595ED528F064AF00CD9C08 = {
@@ -203,8 +195,8 @@
 		3F7D382628F74C3F00D452A5 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				3424F16D29006AF700CA0B6A /* ViewModel */,
-				3F7D382728F74CA700D452A5 /* CustomTableViewCell.swift */,
+				3F7D382F2902F45300D452A5 /* CustomCellVM */,
+				3F7D382C2902F36300D452A5 /* CustomViewScreen */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -215,6 +207,22 @@
 				3F7D382A28F8895F00D452A5 /* Alert.swift */,
 			);
 			path = Alert;
+			sourceTree = "<group>";
+		};
+		3F7D382C2902F36300D452A5 /* CustomViewScreen */ = {
+			isa = PBXGroup;
+			children = (
+				3F7D382D2902F40D00D452A5 /* ScreenTableViewCell.swift */,
+			);
+			path = CustomViewScreen;
+			sourceTree = "<group>";
+		};
+		3F7D382F2902F45300D452A5 /* CustomCellVM */ = {
+			isa = PBXGroup;
+			children = (
+				3F7D382728F74CA700D452A5 /* CustomTableViewCell.swift */,
+			);
+			path = CustomCellVM;
 			sourceTree = "<group>";
 		};
 		56CED716C68C1D646FB9D68B /* Pods */ = {
@@ -488,11 +496,11 @@
 				3F7D382B28F8895F00D452A5 /* Alert.swift in Sources */,
 				3F7D382528F7010600D452A5 /* RegisterScreen.swift in Sources */,
 				3F7D382828F74CA700D452A5 /* CustomTableViewCell.swift in Sources */,
-				3424F16F29006B0A00CA0B6A /* CustomTableViewCellViewModel.swift in Sources */,
 				3F595EE628F064AF00CD9C08 /* RegisterVC.swift in Sources */,
 				3F595EE228F064AF00CD9C08 /* AppDelegate.swift in Sources */,
 				3F595EE428F064AF00CD9C08 /* SceneDelegate.swift in Sources */,
 				3424F16C2900691500CA0B6A /* User.swift in Sources */,
+				3F7D382E2902F40D00D452A5 /* ScreenTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

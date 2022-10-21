@@ -14,6 +14,7 @@ class RegisterVC: UIViewController  {
     var registerScreen: RegisterScreen?
     var auth: Auth?
     var alert: Alert?
+    var Custom: CustomTableViewCell?
     
     override func loadView() {
         self.registerScreen = RegisterScreen()
@@ -26,6 +27,8 @@ class RegisterVC: UIViewController  {
         self.auth = Auth.auth()
         self.alert = Alert(controller: self)
         self.configKeyoard()
+        self.Custom = CustomTableViewCell()
+        
         
     }
     
@@ -75,7 +78,7 @@ extension RegisterVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier, for: indexPath) as? CustomTableViewCell
-        cell?.delegate(delegate: self)
+        cell?.screenCell.delegate(delegate: self)
         return cell ?? CustomTableViewCell()
     }
     
@@ -86,6 +89,15 @@ extension RegisterVC: RegisterScreenProtocol {
     func actionRegisterButton(user: User) {
         print(#function)
         print(user)
+     
+    }
+    
+    
+        
+        
+        
+        
+        
         //        self.auth?.createUser(withEmail: user.email, password: user.password, completion: { result, error in
         //            if error == nil {
         //                self.alert?.getAlert(title: "Atenção", message: "Dados incorretos, verifique seus dados")
@@ -94,11 +106,26 @@ extension RegisterVC: RegisterScreenProtocol {
         //                    self.alert?.getAlert(title: "Atenção", message: "Tivemos um problema inesperado, tente novamente")
         //                }else {
         //                    print("Cadastro realizado com sucesso!")
-        //                }
+  
+    //                }
         //            }
         //        })
         
     }
     
-}
 
+
+extension UITextField {
+    
+    func validateEmail()->Bool{
+        let emailRegex: String = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+//.[A-Za-z]{2,64}"
+        let validadteRegex = NSPredicate(format: "SELF MATCHES %@", emailRegex)
+        return validadteRegex.evaluate(with: self.text)
+    }
+    
+    func validatePassword()->Bool{
+        let passwordRegex: String = ".{6,}"
+        let validadteRegex = NSPredicate(format: "SELF MATCHES %@", passwordRegex)
+        return validadteRegex.evaluate(with: self.text)
+    }
+}
