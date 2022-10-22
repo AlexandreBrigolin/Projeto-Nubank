@@ -18,6 +18,7 @@ class CustomTableViewCell: UITableViewCell {
     
     lazy var screenCell: ScreenTableViewCell = {
         let view = ScreenTableViewCell()
+        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
