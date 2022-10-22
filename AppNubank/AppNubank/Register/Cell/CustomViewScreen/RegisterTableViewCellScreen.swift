@@ -7,14 +7,17 @@
 
 import UIKit
 
-class ScreenTableViewCell: UIView, UITextFieldDelegate {
+protocol RegisterTableViewCellScreenProtocol: AnyObject {
+    func tappedRegisterButton()
+}
 
-    weak private var delegate: RegisterScreenProtocol?
+class RegisterTableViewCellScreen: UIView {
+
+    weak private var delegate: RegisterTableViewCellScreenProtocol?
     
-    func delegate(delegate: RegisterScreenProtocol) {
+    func delegate(delegate: RegisterTableViewCellScreenProtocol?) {
         self.delegate = delegate
     }
-    
     
     lazy var registerLabel: UILabel = {
         let label = UILabel()
@@ -36,7 +39,6 @@ class ScreenTableViewCell: UIView, UITextFieldDelegate {
         textfield.placeholder = "Digite seu nome:"
         //        tf.font = UIFont.systemFont(ofSize: 14)
         textfield.textColor = .darkGray
-        textfield.delegate = self
         return textfield
     }()
     
@@ -50,7 +52,6 @@ class ScreenTableViewCell: UIView, UITextFieldDelegate {
         textfield.placeholder = "Digite seu Email:"
         //        tf.font = UIFont.systemFont(ofSize: 14)
         textfield.textColor = .darkGray
-        textfield.delegate = self
         return textfield
     }()
     
@@ -64,7 +65,6 @@ class ScreenTableViewCell: UIView, UITextFieldDelegate {
         textfield.placeholder = "Digite sua idade:"
         //        tf.font = UIFont.systemFont(ofSize: 14)
         textfield.textColor = .darkGray
-        textfield.delegate = self
         return textfield
     }()
     
@@ -78,7 +78,6 @@ class ScreenTableViewCell: UIView, UITextFieldDelegate {
         textfield.placeholder = "Digite seu telefone:"
         //        tf.font = UIFont.systemFont(ofSize: 14)
         textfield.textColor = .darkGray
-        textfield.delegate = self
         return textfield
     }()
     
@@ -92,7 +91,6 @@ class ScreenTableViewCell: UIView, UITextFieldDelegate {
         textfield.placeholder = "Digite seu endereço:"
         //        tf.font = UIFont.systemFont(ofSize: 14)
         textfield.textColor = .darkGray
-        textfield.delegate = self
         return textfield
     }()
     
@@ -106,7 +104,6 @@ class ScreenTableViewCell: UIView, UITextFieldDelegate {
         textfield.placeholder = "Digite seu CPF:"
         //        tf.font = UIFont.systemFont(ofSize: 14)
         textfield.textColor = .darkGray
-        textfield.delegate = self
         return textfield
     }()
     
@@ -121,23 +118,8 @@ class ScreenTableViewCell: UIView, UITextFieldDelegate {
         textfield.isSecureTextEntry = true
         //        tf.font = UIFont.systemFont(ofSize: 14)
         textfield.textColor = .darkGray
-        textfield.delegate = self
         return textfield
     }()
-    
-//    lazy var repeatPasswordTextField: UITextField = {
-//        let textfield = UITextField()
-//        textfield.translatesAutoresizingMaskIntoConstraints = false
-//        textfield.autocorrectionType = .no
-//        textfield.backgroundColor = .white
-//        textfield.borderStyle = .roundedRect
-//        textfield.keyboardType = .emailAddress
-//        textfield.placeholder = "Repetir senha:"
-//        //        tf.font = UIFont.systemFont(ofSize: 14)
-//        textfield.textColor = .darkGray
-//
-//        return textfield
-//    }()
     
     lazy var registerButton: UIButton = {
         let button = UIButton()
@@ -148,13 +130,12 @@ class ScreenTableViewCell: UIView, UITextFieldDelegate {
         button.layer.cornerRadius = 7.5
         button.backgroundColor = .purple
         button.addTarget(self, action: #selector(self.tappedRegisterButton), for: .touchUpInside)
-        
         return button
     }()
     
     
     @objc private func tappedRegisterButton() {
-        self.delegate?.actionRegisterButton(user: User(name: nameTextField.text ?? "", email: emailTextField.text ?? "", age: ageTextField.text ?? "", phone: phoneTextField.text ?? "", address: addressTextField.text ?? "", cpf: cpfTextField.text ?? "", password: passwordTextField.text ?? ""))
+        delegate?.tappedRegisterButton()
     }
     
     
@@ -162,7 +143,6 @@ class ScreenTableViewCell: UIView, UITextFieldDelegate {
         super.init(frame: frame)
         self.addSubView()
         self.setUpConstraints()
-        self.configButtonEnable(false)
 
     }
     
@@ -170,40 +150,7 @@ class ScreenTableViewCell: UIView, UITextFieldDelegate {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func validaTextField() {
-        
-        let email: String = self.emailTextField.text ?? ""
-        let password: String = self.passwordTextField.text ?? ""
-        let name: String = self.nameTextField.text ?? ""
-        let age: String = self.ageTextField.text ?? ""
-        let phone: String = self.phoneTextField.text ?? ""
-        let address: String = self.addressTextField.text ?? ""
-        let cpf: String = self.cpfTextField.text ?? ""
-        
-        
-
-        if !email.isEmpty && !password.isEmpty && !age.isEmpty && !phone.isEmpty && !address.isEmpty && !cpf.isEmpty && !name.isEmpty {
-            
-            self.configButtonEnable(true)
-        }else{
-            self.configButtonEnable(false)
-        }
-    }
-
-    private func configButtonEnable(_ enable: Bool){
-        
-        if enable {
-            self.registerButton.setTitleColor(.white, for: .normal)
-            self.registerButton.isEnabled = true
-        }else{
-            self.registerButton.setTitleColor(.lightGray, for: .normal)
-            self.registerButton.isEnabled = false
-        }
-    }
-    
-    
-    
-    func addSubView(){
+    private func addSubView(){
         self.addSubview(self.registerLabel)
         self.addSubview(self.nameTextField)
         self.addSubview(self.emailTextField)
@@ -213,7 +160,6 @@ class ScreenTableViewCell: UIView, UITextFieldDelegate {
         self.addSubview(self.cpfTextField)
         self.addSubview(self.passwordTextField)
         self.addSubview(self.registerButton)
-        
     }
     
     private func setUpConstraints(){
@@ -272,9 +218,5 @@ class ScreenTableViewCell: UIView, UITextFieldDelegate {
                         
         ])
     }
-
-    
-   
-    
 
 }
