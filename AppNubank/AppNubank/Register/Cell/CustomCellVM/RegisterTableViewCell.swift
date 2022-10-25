@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import TLCustomMask
 
 protocol RegisterTableViewCellProtocol: AnyObject{
     func actionRegisterButton(user: User)
@@ -14,6 +15,9 @@ protocol RegisterTableViewCellProtocol: AnyObject{
 class RegisterTableViewCell: UITableViewCell {
     
     static let identifier: String = "RegisterTableViewCell"
+    
+    var cpfMask: TLCustomMask?
+    var phoneMask: TLCustomMask?
     
     weak private var delegate: RegisterTableViewCellProtocol?
 
@@ -33,11 +37,21 @@ class RegisterTableViewCell: UITableViewCell {
         self.configBackGround()
         self.addSubView()
         self.setUpConstraintsScreenCell()
-        configTextFieldDelegate()
+        self.configTextFieldDelegate()
+        self.configCustomMask()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    public func configCustomMask(){
+        screenCell.cpfTextField.delegate = self
+        cpfMask = TLCustomMask(formattingPattern: "$$$.$$$.$$$-$$")
+        
+        screenCell.phoneTextField.delegate = self
+        phoneMask = TLCustomMask(formattingPattern: "($$)$$$$$-$$$$")
+        
     }
     
     private func configBackGround() {
@@ -125,13 +139,24 @@ extension RegisterTableViewCell: UITextFieldDelegate {
         case self.screenCell.cpfTextField:
             
             // logica para verificar o CPF
-            // se for verdadeiro
-//            screenCell.cpfTextField.layer.borderWidth = 0
-            // se for falso
-//            screenCell.cpfTextField.layer.borderWidth = 1.5
-//            screenCell.cpfTextField.layer.borderColor = UIColor.red.cgColor
+            if  screenCell.cpfTextField.text?.count == 14 {
+                screenCell.cpfTextField.layer.borderWidth = 0
+            } else {
+                screenCell.cpfTextField.layer.borderWidth = 1.5
+                screenCell.cpfTextField.layer.borderColor = UIColor.red.cgColor
+            }
+            
+           
             break
         case self.screenCell.emailTextField:
+            
+            // logica para validar password
+            if (self.screenCell.passwordTextField.text ?? "").isValid(validType: .password) {
+                screenCell.passwordTextField.layer.borderWidth = 0
+            } else {
+                screenCell.passwordTextField.layer.borderWidth = 1.5
+                screenCell.passwordTextField.layer.borderColor = UIColor.red.cgColor
+            }
             
             // logica para verificar o Email
             if (self.screenCell.emailTextField.text ?? "").isValid(validType: .email) {
@@ -144,7 +169,7 @@ extension RegisterTableViewCell: UITextFieldDelegate {
         case self.screenCell.phoneTextField:
             // logica para verificar o Phone
             
-            if  screenCell.phoneTextField.text?.count == 15 {
+            if  screenCell.phoneTextField.text?.count == 14 {
                 screenCell.phoneTextField.layer.borderWidth = 0
             } else {
                 screenCell.phoneTextField.layer.borderWidth = 1.5
@@ -159,6 +184,30 @@ extension RegisterTableViewCell: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
        return textField.resignFirstResponder()
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        switch textField {
+            
+        case screenCell.cpfTextField:
+            if let text: String = cpfMask?.formatStringWithRange(range: range, string: string){
+                self.screenCell.cpfTextField.text = text
+                return false
+            }else{
+                return true
+            }
+            
+            
+        case screenCell.phoneTextField:
+            if let text: String = phoneMask?.formatStringWithRange(range: range, string: string){
+                self.screenCell.phoneTextField.text = text
+                return false
+            }else{
+                return true
+            }
+        default:
+            return true
+        }
     }
     
 }
