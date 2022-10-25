@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (5.6.2)
   - lottie-ios (3.4.3)
+  - TLCustomMask (2.0.0)
 
 DEPENDENCIES:
   - Alamofire
   - lottie-ios
+  - TLCustomMask
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - lottie-ios
+    - TLCustomMask
 
 SPEC CHECKSUMS:
   Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
   lottie-ios: 9ae750cdc7820fecbd3c2f0cfc493038208fcdc4
+  TLCustomMask: 32bcd873851167c2d2a3726b048766b737873710
 
-PODFILE CHECKSUM: 9631277475d9f7ac01209e359216fbff399a6a2b
+PODFILE CHECKSUM: f5adc1abdddd30a68f04e61c96a4ce829e5bb7da
 
 COCOAPODS: 1.11.3
