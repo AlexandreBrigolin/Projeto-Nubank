@@ -88,22 +88,35 @@ extension RegisterVC: RegisterTableViewCellProtocol {
         print(#function)
         print(user)
         
-        //        self.auth?.createUser(withEmail: user.email, password: user.password, completion: { result, error in
-        //            if error == nil {
-        //                self.alert?.getAlert(title: "Atenção", message: "Dados incorretos, verifique seus dados")
-        //            }else{
-        //                if result == nil {
-        //                    self.alert?.getAlert(title: "Atenção", message: "Tivemos um problema inesperado, tente novamente")
-        //                }else {
-        //                    print("Cadastro realizado com sucesso!")
         
-        //                }
-        //            }
-        //        })
+                self.auth?.createUser(withEmail: user.email, password: user.password, completion: { result, error in
+                    if error != nil {
+                        self.alert?.getAlert(title: "Atenção", message: "Dados incorretos, verifique seus dados")
+                    }else{
+                        if result == nil {
+                            self.alert?.getAlert(title: "Atenção", message: "Tivemos um problema inesperado, tente novamente")
+                        }else {
+                            self.alert?.getAlert(title: "Parabéns", message: "Usuário cadastrado com sucesso!")
+                        }
+                    }
+                })
+        
+        let vc: VC = VC()
+        self.navigationController?.pushViewController(vc, animated: true)
         
         
-    }
-    
+  }
 }
     
+//extension RegisterVC: RegisterTableViewCellScreenProtocol {
+//    func tappedRegisterButton() {
+//        print("Sucess")
+//        let vc: Vc = Vc()
+//        self.navigationController?.pushViewController(vc, animated: true)
+//    }
+//    
+//   
+//    
+//    
+//}
 

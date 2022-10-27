@@ -93,10 +93,7 @@ class RegisterTableViewCell: UITableViewCell {
         let address: String = screenCell.addressTextField.text ?? ""
         let cpf: String = screenCell.cpfTextField.text ?? ""
         
-
-        // validar o cpf!!!!!!!!
-        
-        if !email.isEmpty && !password.isEmpty && !age.isEmpty && !phone.isEmpty && !address.isEmpty && !cpf.isEmpty && !name.isEmpty && (self.screenCell.emailTextField.text ?? "").isValid(validType: .email) && self.screenCell.phoneTextField.text?.count == 15 {
+        if !email.isEmpty && !password.isEmpty && !age.isEmpty && !phone.isEmpty && !address.isEmpty && !cpf.isEmpty && !name.isEmpty && (self.screenCell.emailTextField.text ?? "").isValid(validType: .email) && self.screenCell.phoneTextField.text?.count == 14 {
             
             self.configButtonEnable(true)
         }else{
@@ -104,9 +101,10 @@ class RegisterTableViewCell: UITableViewCell {
         }
     }
 
+    
     private func configButtonEnable(_ enable: Bool){
         if enable {
-            screenCell.registerButton.setTitleColor(.white, for: .normal)
+            screenCell.registerButton.setTitleColor(.black, for: .normal)
             screenCell.registerButton.isEnabled = true
         }else{
             screenCell.registerButton.setTitleColor(.lightGray, for: .normal)
@@ -145,10 +143,9 @@ extension RegisterTableViewCell: UITextFieldDelegate {
                 screenCell.cpfTextField.layer.borderWidth = 1.5
                 screenCell.cpfTextField.layer.borderColor = UIColor.red.cgColor
             }
-            
-           
+                       
             break
-        case self.screenCell.emailTextField:
+        case self.screenCell.passwordTextField:
             
             // logica para validar password
             if (self.screenCell.passwordTextField.text ?? "").isValid(validType: .password) {
@@ -158,6 +155,7 @@ extension RegisterTableViewCell: UITextFieldDelegate {
                 screenCell.passwordTextField.layer.borderColor = UIColor.red.cgColor
             }
             
+        case self.screenCell.emailTextField:
             // logica para verificar o Email
             if (self.screenCell.emailTextField.text ?? "").isValid(validType: .email) {
                 screenCell.emailTextField.layer.borderWidth = 0
@@ -215,6 +213,9 @@ extension RegisterTableViewCell: UITextFieldDelegate {
 extension RegisterTableViewCell: RegisterTableViewCellScreenProtocol {
     func tappedRegisterButton() {
         print(#function)
+        
+      
+        
         self.delegate?.actionRegisterButton(user: User(name: screenCell.nameTextField.text ?? "", email: screenCell.emailTextField.text ?? "", age: screenCell.ageTextField.text ?? "", phone: screenCell.phoneTextField.text ?? "", address: screenCell.addressTextField.text ?? "", cpf: screenCell.cpfTextField.text ?? "", password: screenCell.passwordTextField.text ?? ""))
     }
 }
