@@ -18,6 +18,6 @@ target 'AppNubank' do
 
 pod 'lottie-ios'
 pod 'Alamofire'
-
+pod "TLCustomMask" 
 
 end
