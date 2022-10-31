@@ -91,18 +91,24 @@ extension RegisterVC: RegisterTableViewCellProtocol {
         
                 self.auth?.createUser(withEmail: user.email, password: user.password, completion: { result, error in
                     if error != nil {
+                        // Siginifica que realmente deu erro no login
                         self.alert?.getAlert(title: "Atenção", message: "Dados incorretos, verifique seus dados")
-                    }else{
+                    } else {
                         if result == nil {
+                            // Dupla verificação se os dados do usuario realmente estão corretos
                             self.alert?.getAlert(title: "Atenção", message: "Tivemos um problema inesperado, tente novamente")
                         }else {
-                            self.alert?.getAlert(title: "Parabéns", message: "Usuário cadastrado com sucesso!")
+                            // Deu tudo certo! SUCESSO!!!
+                            let vc: VC = VC()
+                            self.navigationController?.pushViewController(vc, animated: true)
                         }
                     }
                 })
         
-        let vc: VC = VC()
-        self.navigationController?.pushViewController(vc, animated: true)
+        // METODOS SINCRONOS -> RESULTADO IMEDIATO
+        // METODOS ASSINCRONOS -> TEMPO DE RESULTADO INDETERMINADO
+        
+     
         
         
   }
