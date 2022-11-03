@@ -96,8 +96,8 @@ extension RegisterVC: RegisterTableViewCellProtocol {
                 if result == nil {
                     self.alert?.getAlert(title: "Atenção", message: "Tivemos um problema inesperado, tente novamente")
                 }else {
-//                    let vc: VC = VC()
-//                    self.navigationController?.pushViewController(vc, animated: true)
+                    let vc: VC = VC()
+                    self.navigationController?.pushViewController(vc, animated: true)
                     
                 }
             }

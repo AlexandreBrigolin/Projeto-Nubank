@@ -202,12 +202,10 @@ extension RegisterTableViewCell: UITextFieldDelegate {
         }else {
             self.screenCell.passwordTextField.resignFirstResponder()
         }
-            
-        
-        
-        
+  
        return textField.resignFirstResponder()
     }
+    
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         switch textField {
@@ -239,8 +237,7 @@ extension RegisterTableViewCell: RegisterTableViewCellScreenProtocol {
     func tappedRegisterButton() {
         print(#function)
         
-      
-        
+ 
         self.delegate?.actionRegisterButton(user: User(name: screenCell.nameTextField.text ?? "", email: screenCell.emailTextField.text ?? "", age: screenCell.ageTextField.text ?? "", phone: screenCell.phoneTextField.text ?? "", address: screenCell.addressTextField.text ?? "", cpf: screenCell.cpfTextField.text ?? "", password: screenCell.passwordTextField.text ?? ""))
     }
 }
