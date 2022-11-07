@@ -73,7 +73,12 @@ extension LoginVC: UITextFieldDelegate {
     
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+        if textField.isEqual(self.loginScreen?.emailTextfield){
+            self.loginScreen?.passwordTextfield.becomeFirstResponder()
+        }else{
+            self.loginScreen?.passwordTextfield.resignFirstResponder()
+        }
+       return textField.resignFirstResponder()
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -84,6 +89,10 @@ extension LoginVC: UITextFieldDelegate {
         print("textFieldDidEndEditing")
         self.loginScreen?.validaTextField()
     }
+    
+   
+
+    
 }
 
 
