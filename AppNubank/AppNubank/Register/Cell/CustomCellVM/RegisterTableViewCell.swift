@@ -181,8 +181,31 @@ extension RegisterTableViewCell: UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField.isEqual(self.screenCell.nameTextField){
+            self.screenCell.emailTextField.becomeFirstResponder()
+            
+        }else if textField.isEqual(self.screenCell.emailTextField){
+            self.screenCell.ageTextField.becomeFirstResponder()
+            
+        }else if textField.isEqual(self.screenCell.ageTextField){
+            self.screenCell.phoneTextField.becomeFirstResponder()
+            
+        }else if textField.isEqual(self.screenCell.phoneTextField){
+            self.screenCell.addressTextField.becomeFirstResponder()
+            
+        }else if textField.isEqual(self.screenCell.addressTextField){
+            self.screenCell.cpfTextField.becomeFirstResponder()
+            
+        }else if textField.isEqual(self.screenCell.cpfTextField){
+            self.screenCell.passwordTextField.becomeFirstResponder()
+            
+        }else {
+            self.screenCell.passwordTextField.resignFirstResponder()
+        }
+  
        return textField.resignFirstResponder()
     }
+    
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         switch textField {
@@ -214,8 +237,7 @@ extension RegisterTableViewCell: RegisterTableViewCellScreenProtocol {
     func tappedRegisterButton() {
         print(#function)
         
-      
-        
+ 
         self.delegate?.actionRegisterButton(user: User(name: screenCell.nameTextField.text ?? "", email: screenCell.emailTextField.text ?? "", age: screenCell.ageTextField.text ?? "", phone: screenCell.phoneTextField.text ?? "", address: screenCell.addressTextField.text ?? "", cpf: screenCell.cpfTextField.text ?? "", password: screenCell.passwordTextField.text ?? ""))
     }
 }
