@@ -260,6 +260,7 @@ extension RegisterVC: RegisterTableViewCellProtocol {
             } else {
                 let vc: VC = VC()
                 self.navigationController?.pushViewController(vc, animated: true)
+//                self.present(vc, animated: true)
             }
         }
 
