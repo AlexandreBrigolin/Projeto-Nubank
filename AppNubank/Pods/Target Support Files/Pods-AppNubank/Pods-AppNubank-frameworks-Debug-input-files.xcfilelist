@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-AppNubank/Pods-AppNubank-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/CPF-CNPJ-Validator/CPF_CNPJ_Validator.framework
 ${BUILT_PRODUCTS_DIR}/TLCustomMask/TLCustomMask.framework
 ${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework

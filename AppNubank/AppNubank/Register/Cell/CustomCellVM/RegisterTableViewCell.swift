@@ -7,6 +7,8 @@
 
 import UIKit
 import TLCustomMask
+import CPF_CNPJ_Validator
+
 
 protocol RegisterTableViewCellProtocol: AnyObject{
     func actionRegisterButton(user: User)
@@ -102,7 +104,7 @@ class RegisterTableViewCell: UITableViewCell {
     }
 
     
-    private func configButtonEnable(_ enable: Bool){
+    private func configButtonEnable(_ enable: Bool) {
         if enable {
             screenCell.registerButton.setTitleColor(.black, for: .normal)
             screenCell.registerButton.isEnabled = true
@@ -112,6 +114,7 @@ class RegisterTableViewCell: UITableViewCell {
         }
     }
     
+
     
 }
 
@@ -125,6 +128,14 @@ extension RegisterTableViewCell: UITextFieldDelegate {
         // TODA A LOGICA DEVE SER FEITA NO DID END (LOGICA DE VALIDACAO)
         print("textFieldDidEndEditing")
         
+//        if BooleanValidator().validate(cpf: screenCell.cpfTextField.text ?? ""){
+//            print("CPF validado!")
+//        } else {
+//
+//            print("CPF invalido, tente novamente")
+//        }
+        
+        
         if textField.text?.isEmpty ?? false {
             textField.layer.borderWidth = 1.5
             textField.layer.borderColor = UIColor.red.cgColor
@@ -136,12 +147,14 @@ extension RegisterTableViewCell: UITextFieldDelegate {
         switch textField {
         case self.screenCell.cpfTextField:
             
-            // logica para verificar o CPF
-            if  screenCell.cpfTextField.text?.count == 14 {
+//             logica para verificar o CPF
+            if  screenCell.cpfTextField.text?.count == 14 && BooleanValidator().validate(cpf: screenCell.cpfTextField.text ?? "") {
                 screenCell.cpfTextField.layer.borderWidth = 0
+                print("CPF valido!")
             } else {
                 screenCell.cpfTextField.layer.borderWidth = 1.5
                 screenCell.cpfTextField.layer.borderColor = UIColor.red.cgColor
+                print("CPF invalido")
             }
                        
             break
@@ -234,6 +247,11 @@ extension RegisterTableViewCell: UITextFieldDelegate {
 }
 
 extension RegisterTableViewCell: RegisterTableViewCellScreenProtocol {
+    
+    func actionBackButton() {
+        print("cliquei no back button")
+    }
+    
     func tappedRegisterButton() {
         print(#function)
         

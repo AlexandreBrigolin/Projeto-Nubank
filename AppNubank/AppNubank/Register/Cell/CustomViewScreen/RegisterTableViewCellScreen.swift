@@ -8,6 +8,7 @@
 import UIKit
 
 protocol RegisterTableViewCellScreenProtocol: AnyObject {
+    func actionBackButton()
     func tappedRegisterButton()
 }
 
@@ -35,7 +36,7 @@ class RegisterTableViewCellScreen: UIView {
         textfield.autocorrectionType = .no
         textfield.backgroundColor = .white
         textfield.borderStyle = .roundedRect
-        textfield.keyboardType = .emailAddress
+        textfield.keyboardType = .default
         textfield.placeholder = "Digite seu nome:"
         //        tf.font = UIFont.systemFont(ofSize: 14)
         textfield.textColor = .darkGray
@@ -87,7 +88,7 @@ class RegisterTableViewCellScreen: UIView {
         textfield.autocorrectionType = .no
         textfield.backgroundColor = .white
         textfield.borderStyle = .roundedRect
-        textfield.keyboardType = .emailAddress
+        textfield.keyboardType = .default
         textfield.placeholder = "Digite seu endereço:"
         //        tf.font = UIFont.systemFont(ofSize: 14)
         textfield.textColor = .darkGray
@@ -113,7 +114,7 @@ class RegisterTableViewCellScreen: UIView {
         textfield.autocorrectionType = .no
         textfield.backgroundColor = .white
         textfield.borderStyle = .roundedRect
-        textfield.keyboardType = .emailAddress
+        textfield.keyboardType = .default
         textfield.placeholder = "Digite sua senha:"
         textfield.isSecureTextEntry = true
         //        tf.font = UIFont.systemFont(ofSize: 14)
@@ -133,9 +134,23 @@ class RegisterTableViewCellScreen: UIView {
         return button
     }()
     
+    lazy var backButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(UIImage(named: "Botão Back"), for: .normal)
+        button.addTarget(self, action: #selector(self.tappedBackButton), for: .touchUpInside)
+        return button
+    }()
+    
     
     @objc private func tappedRegisterButton() {
         delegate?.tappedRegisterButton()
+    }
+    
+    
+    @objc private func tappedBackButton() {
+        
+        self.delegate?.actionBackButton()
     }
     
     
@@ -160,14 +175,19 @@ class RegisterTableViewCellScreen: UIView {
         self.addSubview(self.cpfTextField)
         self.addSubview(self.passwordTextField)
         self.addSubview(self.registerButton)
+        self.addSubview(self.backButton)
     }
     
     private func setUpConstraints(){
         NSLayoutConstraint.activate([
             
-            self.registerLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 70),
+            self.registerLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 10),
             self.registerLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             self.registerLabel.heightAnchor.constraint(equalToConstant: 45),
+            
+            
+            self.backButton.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+            self.backButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             
             self.nameTextField.topAnchor.constraint(equalTo: self.registerLabel.bottomAnchor, constant: 30),
             self.nameTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
