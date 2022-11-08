@@ -8,6 +8,7 @@
 import UIKit
 
 protocol RegisterTableViewCellScreenProtocol: AnyObject {
+    func actionBackButton()
     func tappedRegisterButton()
 }
 
@@ -133,9 +134,23 @@ class RegisterTableViewCellScreen: UIView {
         return button
     }()
     
+    lazy var backButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(UIImage(named: "Botão Back"), for: .normal)
+        button.addTarget(self, action: #selector(self.tappedBackButton), for: .touchUpInside)
+        return button
+    }()
+    
     
     @objc private func tappedRegisterButton() {
         delegate?.tappedRegisterButton()
+    }
+    
+    
+    @objc private func tappedBackButton() {
+        
+        self.delegate?.actionBackButton()
     }
     
     
@@ -160,6 +175,7 @@ class RegisterTableViewCellScreen: UIView {
         self.addSubview(self.cpfTextField)
         self.addSubview(self.passwordTextField)
         self.addSubview(self.registerButton)
+        self.addSubview(self.backButton)
     }
     
     private func setUpConstraints(){
@@ -168,6 +184,10 @@ class RegisterTableViewCellScreen: UIView {
             self.registerLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 70),
             self.registerLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             self.registerLabel.heightAnchor.constraint(equalToConstant: 45),
+            
+            
+            self.backButton.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+            self.backButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             
             self.nameTextField.topAnchor.constraint(equalTo: self.registerLabel.bottomAnchor, constant: 30),
             self.nameTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),

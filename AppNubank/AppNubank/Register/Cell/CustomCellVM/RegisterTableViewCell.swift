@@ -234,6 +234,11 @@ extension RegisterTableViewCell: UITextFieldDelegate {
 }
 
 extension RegisterTableViewCell: RegisterTableViewCellScreenProtocol {
+    
+    func actionBackButton() {
+        print("cliquei no back button")
+    }
+    
     func tappedRegisterButton() {
         print(#function)
         
