@@ -181,7 +181,7 @@ class RegisterTableViewCellScreen: UIView {
     private func setUpConstraints(){
         NSLayoutConstraint.activate([
             
-            self.registerLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 70),
+            self.registerLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 10),
             self.registerLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             self.registerLabel.heightAnchor.constraint(equalToConstant: 45),
             

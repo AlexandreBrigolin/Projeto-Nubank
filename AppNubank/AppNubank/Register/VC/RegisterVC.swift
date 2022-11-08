@@ -47,15 +47,15 @@ class RegisterVC: UIViewController  {
     
     @objc func keyboardSubir(notification:Notification){
         
-        print("O teclado mostrará: \(notification.name.rawValue)")
+//        print("O teclado mostrará: \(notification.name.rawValue)")
         
-        view.frame.origin.y = -80
+        view.frame.origin.y = -140
         
     }
     
     @objc func keyboardOriginal(notification:Notification){
         
-        print("O teclado mostrará: \(notification.name.rawValue)")
+//        print("O teclado mostrará: \(notification.name.rawValue)")
         
         view.frame.origin.y = 0
     }
