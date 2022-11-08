@@ -14,6 +14,11 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
+		<key>CPF-CNPJ-Validator.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 		<key>Pods-AppNubank-AppNubankUITests.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
