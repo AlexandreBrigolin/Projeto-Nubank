@@ -258,8 +258,8 @@ extension RegisterVC: RegisterTableViewCellProtocol {
                 let err = error as NSError
                 self.alert?.getAlert(title: "Atenção", message: self.alertUser(of: AuthErrorCode(_nsError: err)))
             } else {
-                let vc: VC = VC()
-                self.navigationController?.pushViewController(vc, animated: true)
+//                let vc: LoginVC = LoginVC()
+                self.navigationController?.popViewController(animated: true)
 //                self.present(vc, animated: true)
             }
         }
