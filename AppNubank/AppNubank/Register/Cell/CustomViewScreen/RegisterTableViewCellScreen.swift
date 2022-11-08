@@ -35,7 +35,7 @@ class RegisterTableViewCellScreen: UIView {
         textfield.autocorrectionType = .no
         textfield.backgroundColor = .white
         textfield.borderStyle = .roundedRect
-        textfield.keyboardType = .emailAddress
+        textfield.keyboardType = .default
         textfield.placeholder = "Digite seu nome:"
         //        tf.font = UIFont.systemFont(ofSize: 14)
         textfield.textColor = .darkGray
@@ -87,7 +87,7 @@ class RegisterTableViewCellScreen: UIView {
         textfield.autocorrectionType = .no
         textfield.backgroundColor = .white
         textfield.borderStyle = .roundedRect
-        textfield.keyboardType = .emailAddress
+        textfield.keyboardType = .default
         textfield.placeholder = "Digite seu endereço:"
         //        tf.font = UIFont.systemFont(ofSize: 14)
         textfield.textColor = .darkGray
@@ -113,7 +113,7 @@ class RegisterTableViewCellScreen: UIView {
         textfield.autocorrectionType = .no
         textfield.backgroundColor = .white
         textfield.borderStyle = .roundedRect
-        textfield.keyboardType = .emailAddress
+        textfield.keyboardType = .default
         textfield.placeholder = "Digite sua senha:"
         textfield.isSecureTextEntry = true
         //        tf.font = UIFont.systemFont(ofSize: 14)
