@@ -41,6 +41,7 @@ class RegisterTableViewCell: UITableViewCell {
         self.setUpConstraintsScreenCell()
         self.configTextFieldDelegate()
         self.configCustomMask()
+        self.configButtonEnable(false)
     }
     
     required init?(coder: NSCoder) {
@@ -113,8 +114,6 @@ class RegisterTableViewCell: UITableViewCell {
             screenCell.registerButton.isEnabled = false
         }
     }
-    
-
     
 }
 
