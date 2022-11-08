@@ -113,17 +113,7 @@ class LoginScreen: UIView {
         self.delegate?.actionRegisterButton()
     }
     
-    public func validaTextField() {
-        let email: String = self.emailTextfield.text ?? ""
-        let password: String = self.passwordTextfield.text ?? ""
-        
-        if !email.isEmpty && !password.isEmpty {
-            self.configButtonEnable(true)
-        }else{
-            self.configButtonEnable(false)
-        }
-        
-    }
+
 
     private func configButtonEnable(_ enanle: Bool) {
         if enanle{

@@ -24,7 +24,6 @@ class LoginVC: UIViewController {
         self.loginScreen?.delegate(delegate: self)
         self.loginScreen?.configTextFieldDelegate(delegate: self)
         self.auth = Auth.auth()
-        self.cadastroTest()
         self.alert = Alert(controller: self)
         self.configKeyoard()
     }
@@ -67,6 +66,28 @@ class LoginVC: UIViewController {
             }
         })
     }
+    
+    public func validaTextField() {
+        let email: String = self.loginScreen?.emailTextfield.text ?? ""
+        let password: String = self.loginScreen?.passwordTextfield.text ?? ""
+        
+        if !email.isEmpty && !password.isEmpty {
+            self.configButtonEnable(true)
+        }else{
+            self.configButtonEnable(false)
+        }
+        
+    }
+    
+    private func configButtonEnable(_ enanle: Bool) {
+        if enanle{
+            self.loginScreen?.loginButton.setTitleColor(.white, for: .normal)
+            self.loginScreen?.loginButton.isEnabled = true
+        }else{
+            self.loginScreen?.loginButton.setTitleColor(.lightGray, for: .normal)
+            self.loginScreen?.loginButton.isEnabled = false
+        }
+    }
 }
 
 extension LoginVC: UITextFieldDelegate {
@@ -83,16 +104,44 @@ extension LoginVC: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         print("textFieldDidBeginEditing")
+        
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         print("textFieldDidEndEditing")
-        self.loginScreen?.validaTextField()
+        
+        if textField.text?.isEmpty ?? false {
+            textField.layer.borderWidth = 1.5
+            textField.layer.borderColor = UIColor.red.cgColor
+        } else {
+            textField.layer.borderWidth = 0
+        }
+        
+        switch textField {
+    case self.loginScreen?.emailTextfield:
+            
+            if (self.loginScreen?.emailTextfield.text ?? "").isValid(validType: .email) {
+                self.loginScreen?.emailTextfield.layer.borderWidth = 0
+            } else {
+                self.loginScreen?.emailTextfield.layer.borderWidth = 1.5
+                self.loginScreen?.emailTextfield.layer.borderColor = UIColor.red.cgColor
+            }
+            
+            break
+        case self.loginScreen?.passwordTextfield:
+            
+            if (self.loginScreen?.passwordTextfield.text ?? "").isValid(validType: .password) {
+                self.loginScreen?.passwordTextfield.layer.borderWidth = 0
+            } else {
+                self.loginScreen?.passwordTextfield.layer.borderWidth = 1.5
+                self.loginScreen?.passwordTextfield.layer.borderColor = UIColor.red.cgColor
+            }
+        default:
+            break
+        }
+        self.validaTextField()
     }
-    
-   
-
-    
+ 
 }
 
 
