@@ -20,6 +20,7 @@ class RegisterTableViewCell: UITableViewCell {
     
     var cpfMask: TLCustomMask?
     var phoneMask: TLCustomMask?
+    var registerVC: RegisterVC?
     
     weak private var delegate: RegisterTableViewCellProtocol?
 
@@ -248,6 +249,7 @@ extension RegisterTableViewCell: UITextFieldDelegate {
 extension RegisterTableViewCell: RegisterTableViewCellScreenProtocol {
     
     func actionBackButton() {
+        self.registerVC?.navigationController?.popViewController(animated: true)
         print("cliquei no back button")
     }
     

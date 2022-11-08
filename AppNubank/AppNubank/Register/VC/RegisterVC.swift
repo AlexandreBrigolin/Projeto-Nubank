@@ -266,3 +266,15 @@ extension RegisterVC: RegisterTableViewCellProtocol {
 
     }
 }
+
+extension RegisterVC: RegisterTableViewCellScreenProtocol{
+    
+    func actionBackButton() {
+    }
+    
+    func tappedRegisterButton() {
+        print("teste")
+    }
+    
+    
+}
