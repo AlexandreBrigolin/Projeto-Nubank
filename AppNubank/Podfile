@@ -18,6 +18,8 @@ target 'AppNubank' do
 
 pod 'lottie-ios'
 pod 'Alamofire'
-pod "TLCustomMask" 
+pod "TLCustomMask"
+pod "CPF-CNPJ-Validator"
+
 
 end
