@@ -64,7 +64,8 @@ class LoginScreen: UIView {
         button.setTitleColor(.white, for: .normal)
         button.clipsToBounds = true
         button.layer.cornerRadius = 7.5
-        button.backgroundColor = .purple
+        button.backgroundColor = UIColor(red: 107/255, green: 18/255, blue: 147/255, alpha: 1.0)
+
         button.addTarget(self, action: #selector(self.tappedLoginButton), for: .touchUpInside)
         return button
     }()
