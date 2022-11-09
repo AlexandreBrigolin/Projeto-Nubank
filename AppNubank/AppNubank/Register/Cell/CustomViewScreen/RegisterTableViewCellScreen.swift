@@ -23,9 +23,9 @@ class RegisterTableViewCellScreen: UIView {
     lazy var registerLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Cadastrar"
-        label.font = UIFont.boldSystemFont(ofSize: 40)
-        label.textColor = .black
+        label.text = "Cadastre-se"
+        label.font = UIFont.boldSystemFont(ofSize: 45)
+        label.textColor = .white
         
         return label
     }()
@@ -187,6 +187,7 @@ class RegisterTableViewCellScreen: UIView {
             
             self.backButton.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
             self.backButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            self.backButton.heightAnchor.constraint(equalToConstant: 40),
             
             self.nameTextField.topAnchor.constraint(equalTo: self.registerLabel.bottomAnchor, constant: 30),
             self.nameTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
