@@ -12,6 +12,7 @@ protocol LoginScreenProtocol: AnyObject {
     func actionRegisterButton()
 }
 
+
 class LoginScreen: UIView {
     
     private weak var delegate: LoginScreenProtocol?

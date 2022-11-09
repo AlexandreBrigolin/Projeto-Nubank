@@ -108,7 +108,7 @@ class RegisterTableViewCell: UITableViewCell {
     
     private func configButtonEnable(_ enable: Bool) {
         if enable {
-            screenCell.registerButton.setTitleColor(.black, for: .normal)
+            screenCell.registerButton.setTitleColor(.white, for: .normal)
             screenCell.registerButton.isEnabled = true
         }else{
             screenCell.registerButton.setTitleColor(.lightGray, for: .normal)
