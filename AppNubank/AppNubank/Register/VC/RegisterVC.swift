@@ -49,7 +49,7 @@ class RegisterVC: UIViewController  {
         
 //        print("O teclado mostrará: \(notification.name.rawValue)")
         
-        view.frame.origin.y = -140
+        view.frame.origin.y = -90
         
     }
     

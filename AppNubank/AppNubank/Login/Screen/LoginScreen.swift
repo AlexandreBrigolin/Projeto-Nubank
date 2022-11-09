@@ -19,6 +19,13 @@ class LoginScreen: UIView {
     func delegate(delegate: LoginScreenProtocol) {
         self.delegate = delegate
     }
+    lazy var logoAppImageView: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.image = UIImage(named: "AppIconNubank")
+        image.contentMode = .scaleAspectFit
+        return image
+    }()
 
     lazy var sentenceLabel: UILabel = {
         let label = UILabel()
@@ -37,7 +44,7 @@ class LoginScreen: UIView {
         tf.backgroundColor = .white
         tf.borderStyle = .roundedRect
         tf.keyboardType = .default
-        tf.placeholder = "Digite seu Email"
+        tf.placeholder = "Digite seu Email:"
         tf.textColor = .darkGray
         return tf
     }()
@@ -51,7 +58,7 @@ class LoginScreen: UIView {
         tf.borderStyle = .roundedRect
         tf.keyboardType = .default
         tf.isSecureTextEntry = true
-        tf.placeholder = "Digite sua Senha"
+        tf.placeholder = "Digite sua Senha:"
         tf.textColor = .darkGray
         return tf
     }()
@@ -89,7 +96,7 @@ class LoginScreen: UIView {
     }
     
     private func configBackGround(){
-        self.backgroundColor = UIColor(red: 126/255, green: 26/255, blue: 183/255, alpha: 1.0)
+        self.backgroundColor = UIColor(red: 130/255, green: 26/255, blue: 201/255, alpha: 1.0)
     }
     
     private func configSuperView() {
@@ -98,6 +105,7 @@ class LoginScreen: UIView {
         self.addSubview(self.passwordTextfield)
         self.addSubview(self.loginButton)
         self.addSubview(self.registerButton)
+        self.addSubview(self.logoAppImageView)
         
     }
     
@@ -143,6 +151,12 @@ class LoginScreen: UIView {
     private func setUpConstrains() {
         
         NSLayoutConstraint.activate([
+            
+                self.logoAppImageView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 100),
+                self.logoAppImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 60),
+                self.logoAppImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -60),
+                self.logoAppImageView.heightAnchor.constraint(equalToConstant: 200),
+                
             
                 self.registerButton.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -5),
                 self.registerButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
