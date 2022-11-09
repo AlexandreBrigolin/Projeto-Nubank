@@ -149,7 +149,6 @@ class RegisterTableViewCellScreen: UIView {
     
     
     @objc private func tappedBackButton() {
-        
         self.delegate?.actionBackButton()
     }
     

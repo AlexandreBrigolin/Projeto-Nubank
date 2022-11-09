@@ -12,6 +12,7 @@ import CPF_CNPJ_Validator
 
 protocol RegisterTableViewCellProtocol: AnyObject{
     func actionRegisterButton(user: User)
+    func tappedBackButton()
 }
 
 class RegisterTableViewCell: UITableViewCell {
@@ -249,6 +250,7 @@ extension RegisterTableViewCell: RegisterTableViewCellScreenProtocol {
     
     func actionBackButton() {
         print("cliquei no back button")
+        delegate?.tappedBackButton()
     }
     
     func tappedRegisterButton() {

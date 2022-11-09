@@ -248,6 +248,11 @@ extension RegisterVC: UITableViewDataSource {
 
 extension RegisterVC: RegisterTableViewCellProtocol {
     
+    func tappedBackButton() {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    
     func actionRegisterButton(user: User) {
         print(#function)
         print(user)
