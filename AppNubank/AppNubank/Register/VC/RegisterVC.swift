@@ -27,8 +27,7 @@ class RegisterVC: UIViewController  {
         self.auth = Auth.auth()
         self.alert = Alert(controller: self)
         self.configKeyoard()
-        
-        
+        self.dismissKeyboard()
     }
     
     func configKeyoard(){
