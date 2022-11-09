@@ -74,3 +74,11 @@ extension String {
     
 }
 
+extension UIViewController {
+    
+    func dismissKeyboard() {
+        let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+}

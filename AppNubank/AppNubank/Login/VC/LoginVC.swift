@@ -26,6 +26,7 @@ class LoginVC: UIViewController {
         self.auth = Auth.auth()
         self.alert = Alert(controller: self)
         self.configKeyoard()
+        self.dismissKeyboard()
     }
     
     override func viewWillAppear(_ animated: Bool) {
