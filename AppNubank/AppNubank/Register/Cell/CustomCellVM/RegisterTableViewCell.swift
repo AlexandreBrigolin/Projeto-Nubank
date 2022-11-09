@@ -59,7 +59,7 @@ class RegisterTableViewCell: UITableViewCell {
     }
     
     private func configBackGround() {
-        self.contentView.backgroundColor = UIColor(red: 126/255, green: 26/255, blue: 183/255, alpha: 1.0)
+        self.contentView.backgroundColor = UIColor(red: 130/255, green: 26/255, blue: 201/255, alpha: 1.0)
     }
     
 
