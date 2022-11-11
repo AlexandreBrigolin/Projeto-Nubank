@@ -24,10 +24,10 @@
 		3F7D382828F74CA700D452A5 /* RegisterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7D382728F74CA700D452A5 /* RegisterTableViewCell.swift */; };
 		3F7D382B28F8895F00D452A5 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7D382A28F8895F00D452A5 /* Alert.swift */; };
 		3F7D382E2902F40D00D452A5 /* RegisterTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7D382D2902F40D00D452A5 /* RegisterTableViewCellScreen.swift */; };
-		3F81829A2908AE8600D69E55 /* VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8182992908AE8600D69E55 /* VC.swift */; };
 		3F8182A1290EE70400D69E55 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F81829E290EE70400D69E55 /* LoginVC.swift */; };
 		3F8182A2290EE70400D69E55 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8182A0290EE70400D69E55 /* LoginScreen.swift */; };
 		3F8182A5290EE7DB00D69E55 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8182A4290EE7DB00D69E55 /* HomeVC.swift */; };
+		3FB9335F291EDA33008D8872 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB9335E291EDA33008D8872 /* HomeScreen.swift */; };
 		7C309CA757C88BF76EC1AD34 /* Pods_AppNubank_AppNubankUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227BB31EC95E1BE65BC57DF8 /* Pods_AppNubank_AppNubankUITests.framework */; };
 		A8E7522CA096214B78CB5649 /* Pods_AppNubankTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FFF850FA52D79A0864C146 /* Pods_AppNubankTests.framework */; };
 /* End PBXBuildFile section */
@@ -71,10 +71,10 @@
 		3F7D382728F74CA700D452A5 /* RegisterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTableViewCell.swift; sourceTree = "<group>"; };
 		3F7D382A28F8895F00D452A5 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		3F7D382D2902F40D00D452A5 /* RegisterTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTableViewCellScreen.swift; sourceTree = "<group>"; };
-		3F8182992908AE8600D69E55 /* VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC.swift; sourceTree = "<group>"; };
 		3F81829E290EE70400D69E55 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		3F8182A0290EE70400D69E55 /* LoginScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		3F8182A4290EE7DB00D69E55 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		3FB9335E291EDA33008D8872 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		560F61D88076C62FAECBF47E /* Pods-AppNubank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppNubank.release.xcconfig"; path = "Target Support Files/Pods-AppNubank/Pods-AppNubank.release.xcconfig"; sourceTree = "<group>"; };
 		5E5F8A7BFCBAC46E142B2F14 /* Pods-AppNubankTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppNubankTests.debug.xcconfig"; path = "Target Support Files/Pods-AppNubankTests/Pods-AppNubankTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6F0140EE9B5EDEAE0E9E9EB3 /* Pods_AppNubank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppNubank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,17 +154,8 @@
 		3F595EE028F064AF00CD9C08 /* AppNubank */ = {
 			isa = PBXGroup;
 			children = (
-				3F8182A3290EE7DB00D69E55 /* Home */,
-				3F81829C290EE70400D69E55 /* Login */,
-				3F8182982908AD5000D69E55 /* SuccessScreen */,
-				3424F1B82904364400CA0B6A /* Extension */,
-				3424F16A290068FE00CA0B6A /* Model */,
-				3F7D382928F8865600D452A5 /* Alert */,
-				3F7D382128F6FDB000D452A5 /* Register */,
-				3F595EE128F064AF00CD9C08 /* AppDelegate.swift */,
-				3F595EE328F064AF00CD9C08 /* SceneDelegate.swift */,
-				3F595EEA28F064B100CD9C08 /* Assets.xcassets */,
-				3F595EEC28F064B100CD9C08 /* LaunchScreen.storyboard */,
+				3FB93360291EDADB008D8872 /* Sources */,
+				3FB93363291EDB8C008D8872 /* Resources */,
 				3F595EEF28F064B100CD9C08 /* Info.plist */,
 				03B02DFE28F20722008E2ECA /* GoogleService-Info.plist */,
 			);
@@ -247,22 +238,6 @@
 			path = CustomCellVM;
 			sourceTree = "<group>";
 		};
-		3F8182982908AD5000D69E55 /* SuccessScreen */ = {
-			isa = PBXGroup;
-			children = (
-				3F81829B2908AF3500D69E55 /* VC */,
-			);
-			path = SuccessScreen;
-			sourceTree = "<group>";
-		};
-		3F81829B2908AF3500D69E55 /* VC */ = {
-			isa = PBXGroup;
-			children = (
-				3F8182992908AE8600D69E55 /* VC.swift */,
-			);
-			path = VC;
-			sourceTree = "<group>";
-		};
 		3F81829C290EE70400D69E55 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,9 +266,74 @@
 		3F8182A3290EE7DB00D69E55 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				3F8182A4290EE7DB00D69E55 /* HomeVC.swift */,
+				3FB9335D291EDA00008D8872 /* VC */,
+				3FB9335C291ED9F2008D8872 /* Screen */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		3FB9335C291ED9F2008D8872 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				3FB9335E291EDA33008D8872 /* HomeScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		3FB9335D291EDA00008D8872 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				3F8182A4290EE7DB00D69E55 /* HomeVC.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		3FB93360291EDADB008D8872 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				3F81829C290EE70400D69E55 /* Login */,
+				3F8182A3290EE7DB00D69E55 /* Home */,
+				3F7D382128F6FDB000D452A5 /* Register */,
+				3F7D382928F8865600D452A5 /* Alert */,
+				3424F1B82904364400CA0B6A /* Extension */,
+				3424F16A290068FE00CA0B6A /* Model */,
+				3FB93364291EDC25008D8872 /* LaunchScreen */,
+				3FB93361291EDB25008D8872 /* AppDelegate */,
+				3FB93362291EDB3F008D8872 /* SceneDelegate */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		3FB93361291EDB25008D8872 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				3F595EE128F064AF00CD9C08 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		3FB93362291EDB3F008D8872 /* SceneDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				3F595EE328F064AF00CD9C08 /* SceneDelegate.swift */,
+			);
+			path = SceneDelegate;
+			sourceTree = "<group>";
+		};
+		3FB93363291EDB8C008D8872 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3F595EEA28F064B100CD9C08 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3FB93364291EDC25008D8872 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				3F595EEC28F064B100CD9C08 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
 		56CED716C68C1D646FB9D68B /* Pods */ = {
@@ -566,6 +606,7 @@
 			files = (
 				3F8182A1290EE70400D69E55 /* LoginVC.swift in Sources */,
 				3F7D382B28F8895F00D452A5 /* Alert.swift in Sources */,
+				3FB9335F291EDA33008D8872 /* HomeScreen.swift in Sources */,
 				3F7D382528F7010600D452A5 /* RegisterScreen.swift in Sources */,
 				3F7D382828F74CA700D452A5 /* RegisterTableViewCell.swift in Sources */,
 				3F8182A5290EE7DB00D69E55 /* HomeVC.swift in Sources */,
@@ -575,7 +616,6 @@
 				3F595EE428F064AF00CD9C08 /* SceneDelegate.swift in Sources */,
 				3424F16C2900691500CA0B6A /* User.swift in Sources */,
 				3F7D382E2902F40D00D452A5 /* RegisterTableViewCellScreen.swift in Sources */,
-				3F81829A2908AE8600D69E55 /* VC.swift in Sources */,
 				3424F1BA2904365900CA0B6A /* String + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
