@@ -83,8 +83,6 @@ enum AlertsFirebase: String {
     case alert73 = "Indica que o usuário tentou entrar com uma senha errada."
     case alert74 = "Indica uma falha geral durante um fluxo de login na web."
     case alert75 = "Ocorreu erro desconhecido"
-    
-
 }
 
 
@@ -142,161 +140,153 @@ class RegisterVC: UIViewController  {
         switch errorCode.code {
             
         case .accountExistsWithDifferentCredential:
-            return "0- Indicates account linking is required."
+            return AlertsFirebase.alert1.rawValue
         case .adminRestrictedOperation:
-            return "1- Indicates that the operation is admin restricted."
+            return AlertsFirebase.alert2.rawValue
         case .appNotAuthorized:
-            return "2- Indicates the App is not authorized to use Firebase Authentication with the provided API Key."
+            return AlertsFirebase.alert3.rawValue
         case .appNotVerified:
-            return "3- Indicates that the app could not be verified by Firebase during phone number authentication."
+            return AlertsFirebase.alert4.rawValue
         case .appVerificationUserInteractionFailure:
-            return "4- Indicates a general failure during the app verification flow."
+            return AlertsFirebase.alert5.rawValue
         case .captchaCheckFailed:
-            return "5- Indicates that the reCAPTCHA token is not valid."
+            return AlertsFirebase.alert6.rawValue
         case .credentialAlreadyInUse:
-            return "6- Indicates an attempt to link with a credential that has already been linked with a different Firebase account"
+            return AlertsFirebase.alert7.rawValue
         case .customTokenMismatch:
-            return "7- Indicates the service account and the API key belong to different projects."
+            return AlertsFirebase.alert8.rawValue
         case .dynamicLinkNotActivated:
-            return "8- Indicates that a Firebase Dynamic Link is not activated."
+            return AlertsFirebase.alert9.rawValue
         case .emailAlreadyInUse:
-            return "9- Indicates the email used to attempt a sign up is already in use."
+            return AlertsFirebase.alert10.rawValue
         case .emailChangeNeedsVerification:
-            return "10- Indicates that the a verifed email is required to changed to."
+            return AlertsFirebase.alert11.rawValue
         case .expiredActionCode:
-            return "11- Indicates the OOB code is expired."
+            return AlertsFirebase.alert12.rawValue
         case .gameKitNotLinked:
-            return "12- Indicates that the GameKit framework is not linked prior to attempting Game Center signin."
+            return AlertsFirebase.alert13.rawValue
         case .internalError:
-            return "13- Indicates an internal error occurred."
+            return AlertsFirebase.alert14.rawValue
         case .invalidActionCode:
-            return "15- Indicates the OOB code is invalid."
+            return AlertsFirebase.alert15.rawValue
         case .invalidAPIKey:
-            return "15- Indicates an invalid API key was supplied in the request."
+            return AlertsFirebase.alert17.rawValue
         case .invalidAppCredential:
-            return "16- Indicates that an invalid APNS device token was used in the verifyClient request."
+            return AlertsFirebase.alert18.rawValue
         case .invalidClientID:
-            return "17- Indicates that the clientID used to invoke a web flow is invalid."
+            return AlertsFirebase.alert19.rawValue
         case .invalidContinueURI:
-            return "18- Indicates that the domain specified in the continue URI is not valid."
+            return AlertsFirebase.alert20.rawValue
         case .invalidCredential:
-            return "19- Indicates the IDP token or requestUri is invalid."
+            return AlertsFirebase.alert21.rawValue
         case .invalidCustomToken:
-            return "20- Indicates a validation error with the custom token."
+            return AlertsFirebase.alert22.rawValue
         case .invalidDynamicLinkDomain:
-            return "21- Indicates that the Firebase Dynamic Link domain used is either not configured or is unauthorized for the current project."
+            return AlertsFirebase.alert23.rawValue
         case .invalidEmail:
-            return "22- Indicates the email is invalid."
+            return AlertsFirebase.alert24.rawValue
         case .invalidMessagePayload:
-            return "23- Indicates that there are invalid parameters in the payload during a 'send password reset email' attempt."
+            return AlertsFirebase.alert25.rawValue
         case .invalidMultiFactorSession:
-            return "24- Indicates that the multi factor session is invalid."
+            return AlertsFirebase.alert26.rawValue
         case .invalidPhoneNumber:
-            return "25- Indicates that an invalid phone number was provided in a call to verifyPhoneNumber:completion:."
+            return AlertsFirebase.alert27.rawValue
         case .invalidProviderID:
-            return "26- Represents the error code for when the given provider id for a web operation is invalid."
+            return AlertsFirebase.alert28.rawValue
         case .invalidRecipientEmail:
-            return "27- Indicates that the recipient email is invalid."
+            return AlertsFirebase.alert29.rawValue
         case .invalidSender:
-            return "28- Indicates that the sender email is invalid during a “send password reset email” attempt."
+            return AlertsFirebase.alert30.rawValue
         case .invalidUserToken:
-            return "29- Indicates user’s saved auth credential is invalid, the user needs to sign in again."
+            return AlertsFirebase.alert31.rawValue
         case .invalidVerificationCode:
-            return "30- Indicates that an invalid verification code was used in the verifyPhoneNumber request."
+            return AlertsFirebase.alert32.rawValue
         case .invalidVerificationID:
-            return "31- Indicates that an invalid verification ID was used in the verifyPhoneNumber request."
+            return AlertsFirebase.alert33.rawValue
         case .keychainError:
-            return "32- Indicates an error occurred while attempting to access the keychain."
+            return AlertsFirebase.alert34.rawValue
         case .localPlayerNotAuthenticated:
-            return "33- Indicates that the local player was not authenticated prior to attempting Game Center signin."
+            return AlertsFirebase.alert35.rawValue
         case .maximumSecondFactorCountExceeded:
-            return "34- Indicates that the maximum second factor count is exceeded."
+            return AlertsFirebase.alert36.rawValue
         case .malformedJWT:
-            return "35- Raised when a JWT fails to parse correctly. May be accompanied by an underlying error describing which step of the JWT parsing process failed."
+            return AlertsFirebase.alert37.rawValue
         case .missingAndroidPackageName:
-            return "36- Indicates that the android package name is missing when the androidInstallApp flag is set to true."
+            return AlertsFirebase.alert38.rawValue
         case .missingAppCredential:
-            return "37- Indicates that the APNS device token is missing in the verifyClient request."
+            return AlertsFirebase.alert39.rawValue
         case .missingAppToken:
-            return "38- Indicates that the APNs device token could not be obtained. The app may not have set up remote notification correctly, or may fail to forward the APNs device token to FIRAuth if app delegate swizzling is disabled."
+            return AlertsFirebase.alert40.rawValue
         case .missingContinueURI:
-            return "39- Indicates that a continue URI was not provided in a request to the backend which requires one."
+            return AlertsFirebase.alert41.rawValue
         case .missingClientIdentifier:
-            return "40- Indicates an error for when the client identifier is missing."
+            return AlertsFirebase.alert42.rawValue
         case .missingEmail:
-            return "41- Indicates that an email address was expected but one was not provided."
+            return AlertsFirebase.alert44.rawValue
         case .missingIosBundleID:
-            return "42- Indicates that the iOS bundle ID is missing when a iOS App Store ID is provided."
+            return AlertsFirebase.alert45.rawValue
         case .missingMultiFactorSession:
-            return "43- Indicates that the multi factor session is missing."
+            return AlertsFirebase.alert46.rawValue
         case .missingOrInvalidNonce:
-            return "44- Indicates that the nonce is missing or invalid."
+            return AlertsFirebase.alert47.rawValue
         case .missingPhoneNumber:
-            return "45- Indicates that a phone number was not provided in a call to verifyPhoneNumber:completion."
+            return AlertsFirebase.alert48.rawValue
         case .missingVerificationCode:
-            return "46- Indicates that the phone auth credential was created with an empty verification code."
+            return AlertsFirebase.alert49.rawValue
         case .missingVerificationID:
-            return "47- Indicates that the phone auth credential was created with an empty verification ID."
+            return AlertsFirebase.alert50.rawValue
         case .missingMultiFactorInfo:
-            return "48- Indicates that the multi factor info is missing."
+            return AlertsFirebase.alert51.rawValue
         case .multiFactorInfoNotFound:
-            return "49- Indicates that the multi factor info is not found."
+            return AlertsFirebase.alert52.rawValue
         case .networkError:
-            return "50- Indicates a network error occurred (such as a timeout, interrupted connection, or unreachable host. These types of errors are often recoverable with a retry. The NSUnderlyingError field in the NSError.userInfo dictionary will contain the error encountered."
+            return AlertsFirebase.alert53.rawValue
         case.noSuchProvider:
-            return "51- Indicates an attempt to unlink a provider that is not linked."
+            return AlertsFirebase.alert54.rawValue
         case .notificationNotForwarded:
-            return "52- Indicates that the app fails to forward remote notification to FIRAuth."
+            return AlertsFirebase.alert55.rawValue
         case .nullUser:
-            return "53- Indicates that a non-null user was expected as an argmument to the operation but a null user was provided."
+            return AlertsFirebase.alert56.rawValue
         case .operationNotAllowed:
-            return "54- Indicates the administrator disabled sign in with the specified identity provider."
+            return AlertsFirebase.alert57.rawValue
         case .providerAlreadyLinked:
-            return "55- Indicates an attempt to link a provider to which the account is already linked."
+            return AlertsFirebase.alert58.rawValue
         case .quotaExceeded:
-            return "56- Indicates that the quota of SMS messages for a given project has been exceeded."
+            return AlertsFirebase.alert59.rawValue
         case .rejectedCredential:
-            return "57- Indicates that the credential is rejected because it’s misformed or mismatching."
+            return AlertsFirebase.alert60.rawValue
         case .requiresRecentLogin:
-            return "58- Indicates the user has attemped to change email or password more than 5 minutes after signing in."
+            return AlertsFirebase.alert61.rawValue
         case .secondFactorAlreadyEnrolled:
-            return "59- Indicates that the second factor is already enrolled."
+            return AlertsFirebase.alert62.rawValue
         case .secondFactorRequired:
-            return "60- Indicates that the second factor is required for signin."
+            return AlertsFirebase.alert63.rawValue
         case .sessionExpired:
-            return "61- Indicates that the SMS code has expired."
+            return AlertsFirebase.alert64.rawValue
         case .tooManyRequests:
-            return "62- Indicates that too many requests were made to a server method."
+            return AlertsFirebase.alert65.rawValue
         case .unauthorizedDomain:
-            return "63- Indicates that the domain specified in the continue URL is not whitelisted in the Firebase console."
+            return AlertsFirebase.alert66.rawValue
         case .unsupportedFirstFactor:
-            return "64- Indicates that the first factor is not supported."
+            return AlertsFirebase.alert67.rawValue
         case .unverifiedEmail:
-            return "65- Indicates that the email is required for verification."
+            return AlertsFirebase.alert68.rawValue
         case .userDisabled:
-            return "66- Indicates the user’s account is disabled on the server."
+            return AlertsFirebase.alert69.rawValue
         case .userMismatch:
-            return "67- Indicates that an attempt was made to reauthenticate with a user which is not the current user."
+            return AlertsFirebase.alert70.rawValue
         case .userNotFound:
-            return "68- Indicates the user account was not found."
+            return AlertsFirebase.alert71.rawValue
         case .userTokenExpired:
-            return "69- Indicates the saved token has expired, for example, the user may have changed account password on another device. The user needs to sign in again on the device that made this request."
+            return AlertsFirebase.alert72.rawValue
         case .weakPassword:
-            return "70- Indicates an attempt to set a password that is considered too weak."
+            return AlertsFirebase.alert73.rawValue
         case .webContextAlreadyPresented:
-            return "71- Indicates that an attempt was made to present a new web context while one was already being presented."
+            return AlertsFirebase.alert74.rawValue
         case .webContextCancelled:
-            return "72- Indicates that the URL presentation was cancelled prematurely by the user."
-        case .webInternalError:
-            return "73- Indicates that an internal error occurred within a SFSafariViewController or WKWebView."
-        case .webNetworkRequestFailed:
-            return "74- Indicates that a network request within a SFSafariViewController or WKWebView failed."
-        case .wrongPassword:
-            return "75- Indicates the user attempted sign in with a wrong password."
-        case .webSignInUserInteractionFailure:
-            return "76- Indicates a general failure during a web sign-in flow."
+            return AlertsFirebase.alert75.rawValue
         default:
-            return "77- Unknown error occurred"
+            return AlertsFirebase.alert75.rawValue
         }
     }
     
@@ -340,9 +330,7 @@ extension RegisterVC: RegisterTableViewCellProtocol {
                 let err = error as NSError
                 self.alert?.getAlert(title: "Atenção", message: self.alertUser(of: AuthErrorCode(_nsError: err)))
             } else {
-                //                let vc: LoginVC = LoginVC()
                 self.navigationController?.popViewController(animated: true)
-                //                self.present(vc, animated: true)
             }
         }
         
