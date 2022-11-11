@@ -7,6 +7,19 @@
 
 import UIKit
 
+enum RegisterTableViewCellScreenStrings: String {
+    case register = "Cadastre-se"
+    case name = "Digite seu nome:"
+    case email = "Digite seu Email:"
+    case age = "Digite sua idade:"
+    case phone = "Digite seu telefone:"
+    case address = "Digite seu endereço:"
+    case cpf = "Digite seu CPF:"
+    case password = "Digite sua senha:"
+    case titleRegister = "Cadastrar"
+    case titleBackButton = "Botão Back"
+}
+
 protocol RegisterTableViewCellScreenProtocol: AnyObject {
     func actionBackButton()
     func tappedRegisterButton()
@@ -23,7 +36,7 @@ class RegisterTableViewCellScreen: UIView {
     lazy var registerLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Cadastre-se"
+        label.text = RegisterTableViewCellScreenStrings.register.rawValue
         label.font = UIFont.boldSystemFont(ofSize: 45)
         label.textColor = .white
         
@@ -37,8 +50,7 @@ class RegisterTableViewCellScreen: UIView {
         textfield.backgroundColor = .white
         textfield.borderStyle = .roundedRect
         textfield.keyboardType = .default
-        textfield.placeholder = "Digite seu nome:"
-        //        tf.font = UIFont.systemFont(ofSize: 14)
+        textfield.placeholder = RegisterTableViewCellScreenStrings.name.rawValue
         textfield.textColor = .darkGray
         return textfield
     }()
@@ -50,8 +62,7 @@ class RegisterTableViewCellScreen: UIView {
         textfield.backgroundColor = .white
         textfield.borderStyle = .roundedRect
         textfield.keyboardType = .emailAddress
-        textfield.placeholder = "Digite seu Email:"
-        //        tf.font = UIFont.systemFont(ofSize: 14)
+        textfield.placeholder = RegisterTableViewCellScreenStrings.email.rawValue
         textfield.textColor = .darkGray
         return textfield
     }()
@@ -63,8 +74,7 @@ class RegisterTableViewCellScreen: UIView {
         textfield.backgroundColor = .white
         textfield.borderStyle = .roundedRect
         textfield.keyboardType = .numberPad
-        textfield.placeholder = "Digite sua idade:"
-        //        tf.font = UIFont.systemFont(ofSize: 14)
+        textfield.placeholder = RegisterTableViewCellScreenStrings.age.rawValue
         textfield.textColor = .darkGray
         return textfield
     }()
@@ -76,8 +86,7 @@ class RegisterTableViewCellScreen: UIView {
         textfield.backgroundColor = .white
         textfield.borderStyle = .roundedRect
         textfield.keyboardType = .numberPad
-        textfield.placeholder = "Digite seu telefone:"
-        //        tf.font = UIFont.systemFont(ofSize: 14)
+        textfield.placeholder = RegisterTableViewCellScreenStrings.phone.rawValue
         textfield.textColor = .darkGray
         return textfield
     }()
@@ -89,8 +98,7 @@ class RegisterTableViewCellScreen: UIView {
         textfield.backgroundColor = .white
         textfield.borderStyle = .roundedRect
         textfield.keyboardType = .default
-        textfield.placeholder = "Digite seu endereço:"
-        //        tf.font = UIFont.systemFont(ofSize: 14)
+        textfield.placeholder = RegisterTableViewCellScreenStrings.address.rawValue
         textfield.textColor = .darkGray
         return textfield
     }()
@@ -102,8 +110,7 @@ class RegisterTableViewCellScreen: UIView {
         textfield.backgroundColor = .white
         textfield.borderStyle = .roundedRect
         textfield.keyboardType = .numberPad
-        textfield.placeholder = "Digite seu CPF:"
-        //        tf.font = UIFont.systemFont(ofSize: 14)
+        textfield.placeholder = RegisterTableViewCellScreenStrings.cpf.rawValue
         textfield.textColor = .darkGray
         return textfield
     }()
@@ -115,7 +122,7 @@ class RegisterTableViewCellScreen: UIView {
         textfield.backgroundColor = .white
         textfield.borderStyle = .roundedRect
         textfield.keyboardType = .default
-        textfield.placeholder = "Digite sua senha:"
+        textfield.placeholder = RegisterTableViewCellScreenStrings.password.rawValue
         textfield.isSecureTextEntry = true
         //        tf.font = UIFont.systemFont(ofSize: 14)
         textfield.textColor = .darkGray
@@ -125,7 +132,7 @@ class RegisterTableViewCellScreen: UIView {
     lazy var registerButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Cadastrar", for: .normal)
+        button.setTitle(RegisterTableViewCellScreenStrings.titleRegister.rawValue, for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.clipsToBounds = true
         button.layer.cornerRadius = 7.5
@@ -137,7 +144,7 @@ class RegisterTableViewCellScreen: UIView {
     lazy var backButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(named: "Botão Back"), for: .normal)
+        button.setImage(UIImage(named: RegisterTableViewCellScreenStrings.titleBackButton.rawValue), for: .normal)
         button.addTarget(self, action: #selector(self.tappedBackButton), for: .touchUpInside)
         return button
     }()

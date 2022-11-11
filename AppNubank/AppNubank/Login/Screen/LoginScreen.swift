@@ -7,6 +7,15 @@
 
 import UIKit
 
+enum LoginScreenString: String {
+    case logoImage = "AppIconNubank"
+    case titleLabel = "Um mundo financeiro sem complexidades"
+    case email = "Digite seu Email:"
+    case password = "Digite sua Senha:"
+    case titleButton = "Logar"
+    case titleRegister = "Não tem conta? Cadastre-se"
+}
+
 protocol LoginScreenProtocol: AnyObject {
     func actionLoginButton()
     func actionRegisterButton()
@@ -23,7 +32,7 @@ class LoginScreen: UIView {
     lazy var logoAppImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(named: "AppIconNubank")
+        image.image = UIImage(named: LoginScreenString.logoImage.rawValue)
         image.contentMode = .scaleAspectFit
         return image
     }()
@@ -34,7 +43,7 @@ class LoginScreen: UIView {
         label.textColor = .white
         label.font = UIFont.boldSystemFont(ofSize: 30)
         label.numberOfLines = 0
-        label.text = "Um mundo financeiro sem complexidades"
+        label.text = LoginScreenString.titleLabel.rawValue
         return label
     }()
     
@@ -45,7 +54,7 @@ class LoginScreen: UIView {
         tf.backgroundColor = .white
         tf.borderStyle = .roundedRect
         tf.keyboardType = .default
-        tf.placeholder = "Digite seu Email:"
+        tf.placeholder = LoginScreenString.email.rawValue
         tf.textColor = .darkGray
         return tf
     }()
@@ -59,7 +68,7 @@ class LoginScreen: UIView {
         tf.borderStyle = .roundedRect
         tf.keyboardType = .default
         tf.isSecureTextEntry = true
-        tf.placeholder = "Digite sua Senha:"
+        tf.placeholder = LoginScreenString.password.rawValue
         tf.textColor = .darkGray
         return tf
     }()
@@ -67,7 +76,7 @@ class LoginScreen: UIView {
     lazy var loginButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Logar", for: .normal)
+        button.setTitle(LoginScreenString.titleButton.rawValue, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         button.setTitleColor(.white, for: .normal)
         button.clipsToBounds = true
@@ -81,7 +90,7 @@ class LoginScreen: UIView {
     lazy var registerButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Não tem conta? Cadastre-se", for: .normal)
+        button.setTitle(LoginScreenString.titleRegister.rawValue, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         button.setTitleColor(.white, for: .normal)
         button.addTarget(self, action: #selector(self.tappedRegisterButton), for: .touchUpInside)

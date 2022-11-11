@@ -17,7 +17,8 @@ protocol RegisterTableViewCellProtocol: AnyObject{
 
 class RegisterTableViewCell: UITableViewCell {
     
-    static let identifier: String = "RegisterTableViewCell"
+//    static let identifier: String = "RegisterTableViewCell"
+    static let identifier: String = String(describing: RegisterTableViewCell.self)
     
     var cpfMask: TLCustomMask?
     var phoneMask: TLCustomMask?
@@ -120,21 +121,10 @@ class RegisterTableViewCell: UITableViewCell {
 
 extension RegisterTableViewCell: UITextFieldDelegate {
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        print("textFieldDidBeginEditing")
-    }
+    func textFieldDidBeginEditing(_ textField: UITextField) { }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         // TODA A LOGICA DEVE SER FEITA NO DID END (LOGICA DE VALIDACAO)
-        print("textFieldDidEndEditing")
-        
-//        if BooleanValidator().validate(cpf: screenCell.cpfTextField.text ?? ""){
-//            print("CPF validado!")
-//        } else {
-//
-//            print("CPF invalido, tente novamente")
-//        }
-        
         
         if textField.text?.isEmpty ?? false {
             textField.layer.borderWidth = 1.5
@@ -142,7 +132,6 @@ extension RegisterTableViewCell: UITextFieldDelegate {
         } else {
             textField.layer.borderWidth = 0
         }
-        
         
         switch textField {
         case self.screenCell.cpfTextField:
@@ -194,32 +183,26 @@ extension RegisterTableViewCell: UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField.isEqual(self.screenCell.nameTextField){
+        
+        switch textField {
+        case self.screenCell.nameTextField:
             self.screenCell.emailTextField.becomeFirstResponder()
-            
-        }else if textField.isEqual(self.screenCell.emailTextField){
+        case self.screenCell.emailTextField:
             self.screenCell.ageTextField.becomeFirstResponder()
-            
-        }else if textField.isEqual(self.screenCell.ageTextField){
+        case self.screenCell.ageTextField:
             self.screenCell.phoneTextField.becomeFirstResponder()
-            
-        }else if textField.isEqual(self.screenCell.phoneTextField){
+        case self.screenCell.phoneTextField:
             self.screenCell.addressTextField.becomeFirstResponder()
-            
-        }else if textField.isEqual(self.screenCell.addressTextField){
+        case self.screenCell.addressTextField:
             self.screenCell.cpfTextField.becomeFirstResponder()
-            
-        }else if textField.isEqual(self.screenCell.cpfTextField){
+        case self.screenCell.cpfTextField:
             self.screenCell.passwordTextField.becomeFirstResponder()
-            
-        }else {
+        default:
             self.screenCell.passwordTextField.resignFirstResponder()
         }
-  
-       return textField.resignFirstResponder()
+        return true
     }
-    
-    
+            
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         switch textField {
             
@@ -249,14 +232,10 @@ extension RegisterTableViewCell: UITextFieldDelegate {
 extension RegisterTableViewCell: RegisterTableViewCellScreenProtocol {
     
     func actionBackButton() {
-        print("cliquei no back button")
         delegate?.tappedBackButton()
     }
     
     func tappedRegisterButton() {
-        print(#function)
-        
- 
         self.delegate?.actionRegisterButton(user: User(name: screenCell.nameTextField.text ?? "", email: screenCell.emailTextField.text ?? "", age: screenCell.ageTextField.text ?? "", phone: screenCell.phoneTextField.text ?? "", address: screenCell.addressTextField.text ?? "", cpf: screenCell.cpfTextField.text ?? "", password: screenCell.passwordTextField.text ?? ""))
     }
 }
