@@ -154,7 +154,7 @@ extension LoginVC: LoginScreenProtocol {
     
     func actionLoginButton() {
         
-        let vc: HomeVC = HomeVC()
+        let vc: TabBarVC = TabBarVC()
         
         
    guard let login = self.loginScreen else {return}
