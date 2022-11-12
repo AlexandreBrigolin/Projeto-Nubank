@@ -30,6 +30,8 @@
 		3FA347E9291EED830001123A /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA347E8291EED830001123A /* TabBarVC.swift */; };
 		3FA347ED291FE98F0001123A /* Tela02VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA347EC291FE98F0001123A /* Tela02VC.swift */; };
 		3FA347EF291FE9AD0001123A /* Tela03VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA347EE291FE9AD0001123A /* Tela03VC.swift */; };
+		3FA347F3292006340001123A /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 3FA347F2292006340001123A /* data.json */; };
+		3FA347F5292008DE0001123A /* AllCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA347F4292008DE0001123A /* AllCells.swift */; };
 		3FB9335F291EDA33008D8872 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB9335E291EDA33008D8872 /* HomeScreen.swift */; };
 		7C309CA757C88BF76EC1AD34 /* Pods_AppNubank_AppNubankUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227BB31EC95E1BE65BC57DF8 /* Pods_AppNubank_AppNubankUITests.framework */; };
 		A8E7522CA096214B78CB5649 /* Pods_AppNubankTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FFF850FA52D79A0864C146 /* Pods_AppNubankTests.framework */; };
@@ -80,6 +82,8 @@
 		3FA347E8291EED830001123A /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		3FA347EC291FE98F0001123A /* Tela02VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela02VC.swift; sourceTree = "<group>"; };
 		3FA347EE291FE9AD0001123A /* Tela03VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela03VC.swift; sourceTree = "<group>"; };
+		3FA347F2292006340001123A /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		3FA347F4292008DE0001123A /* AllCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCells.swift; sourceTree = "<group>"; };
 		3FB9335E291EDA33008D8872 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		560F61D88076C62FAECBF47E /* Pods-AppNubank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppNubank.release.xcconfig"; path = "Target Support Files/Pods-AppNubank/Pods-AppNubank.release.xcconfig"; sourceTree = "<group>"; };
 		5E5F8A7BFCBAC46E142B2F14 /* Pods-AppNubankTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppNubankTests.debug.xcconfig"; path = "Target Support Files/Pods-AppNubankTests/Pods-AppNubankTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				3424F16B2900691500CA0B6A /* User.swift */,
+				3FA347F4292008DE0001123A /* AllCells.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -272,7 +277,6 @@
 		3F8182A3290EE7DB00D69E55 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				3FA347E7291EECD70001123A /* MyTabBarController */,
 				3FB9335D291EDA00008D8872 /* VC */,
 				3FB9335C291ED9F2008D8872 /* Screen */,
 			);
@@ -303,6 +307,21 @@
 			path = Tela03;
 			sourceTree = "<group>";
 		};
+		3FA347F0292002270001123A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		3FA347F1292002F10001123A /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				3FA347F2292006340001123A /* data.json */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
 		3FB9335C291ED9F2008D8872 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +342,8 @@
 			isa = PBXGroup;
 			children = (
 				3F81829C290EE70400D69E55 /* Login */,
+				3FA347E7291EECD70001123A /* MyTabBarController */,
+				3FA347F0292002270001123A /* Cell */,
 				3F8182A3290EE7DB00D69E55 /* Home */,
 				3FA347EA291FE9340001123A /* Tela02 */,
 				3FA347EB291FE9490001123A /* Tela03 */,
@@ -356,6 +377,7 @@
 		3FB93363291EDB8C008D8872 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3FA347F1292002F10001123A /* Json */,
 				3F595EEA28F064B100CD9C08 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -510,6 +532,7 @@
 				3F595EEE28F064B100CD9C08 /* LaunchScreen.storyboard in Resources */,
 				03B02DFF28F20722008E2ECA /* GoogleService-Info.plist in Resources */,
 				3F595EEB28F064B100CD9C08 /* Assets.xcassets in Resources */,
+				3FA347F3292006340001123A /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -643,6 +666,7 @@
 				3FB9335F291EDA33008D8872 /* HomeScreen.swift in Sources */,
 				3F7D382528F7010600D452A5 /* RegisterScreen.swift in Sources */,
 				3F7D382828F74CA700D452A5 /* RegisterTableViewCell.swift in Sources */,
+				3FA347F5292008DE0001123A /* AllCells.swift in Sources */,
 				3F8182A5290EE7DB00D69E55 /* HomeVC.swift in Sources */,
 				3F595EE628F064AF00CD9C08 /* RegisterVC.swift in Sources */,
 				3F8182A2290EE70400D69E55 /* LoginScreen.swift in Sources */,

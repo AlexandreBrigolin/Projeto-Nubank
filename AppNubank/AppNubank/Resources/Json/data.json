@@ -1,0 +1,130 @@
+{
+    "profile_cell": {
+        "name": "Olá Bárbara",
+        "image": "person"
+    },
+    "account_cell": {
+        "title": "Conta",
+        "balance": 1234.54
+    },
+    "payment_services": [{
+        "name": "Área Pix",
+        "image": "person"
+    },
+        {
+            "name": "Pagar",
+            "image": "person"
+        },
+        {
+            "name": "Pegar emprestado",
+            "image": "person"
+        },
+        {
+            "name": "Transferir",
+            "image": "person"
+        },
+        {
+            "name": "Depositar",
+            "image": "person"
+        },
+        {
+            "name": "Recarga de celular",
+            "image": "person"
+        },
+        {
+            "name": "Cobrar",
+            "image": "person"
+        },
+        {
+            "name": "Doação",
+            "image": "person"
+        },
+        {
+            "name": "Transferir Internecional",
+            "image": "person"
+        },
+        {
+            "name": "Investir",
+            "image": "person"
+        }
+    ],
+    "my_cards": {
+        "description": "Meus Cartões",
+        "image": "person"
+    },
+    "Ads": [{
+        "description": "Black Friday com cashback é no Shopping do Nu."
+    },
+        {
+            "description": "Você tem até R$ 5000,00 disponíveis para empréstimo."
+        },
+        {
+            "description": "Convide amigos para o Nubank e desbloqueie brasões incríveis"
+        }
+    ],
+    "credi_card_cell": {
+        "title": "Cartão de crédito",
+        "invoice_status": "Fatura Fechada",
+        "invoice_amount": 1234,
+        "invoice_due_date": "Vencimento dia 17"
+    },
+    "follow_also": {
+        "title": "Acompanhe também",
+        "image": "person",
+        "payments_assistant": "Assistente de pagamentos"
+    },
+    "loan": {
+        "title": "Empréstimo",
+        "available_value": "Valor disponível de até",
+        "loan_amount": 5000
+    },
+    "discover_more": [{
+        "image": "person",
+        "title": "Nubank Celular Seguro",
+        "description": "100% cobertura, 0% estresse. Simule agora mesmo.",
+        "title_button": "Conhecer"
+    },
+        {
+            "image": "person",
+            "title": "Seguro de vida",
+            "description": "Cuide de quem você ama de um jeito que cabe no seu bolso.",
+            "title_button": "Conhecer"
+        },
+        {
+            "image": "person",
+            "title": "Indique o Nu para amigos",
+            "description": "Espa;he como é simples estar no controle.",
+            "title_button": "Indique amigos"
+        },
+        {
+            "image": "person",
+            "title": "Portabilidade de salário",
+            "description": "Liberdade é escolher onde receber seu dinheiro.",
+            "title_button": "Conhecer"
+        },
+        {
+            "image": "person",
+            "title": "Traga seus dados",
+            "description": "Mais chances de limites e produtos com a sua cara.",
+            "title_button": "Saiba mais"
+        },
+        {
+            "image": "person",
+            "title": "WhatsApp",
+            "description": "Pagamentos seguros, rápidos e sem tarifa.",
+            "title_button": "Quero conhecer"
+        },
+        {
+            "image": "person",
+            "title": "Cartão de crédito",
+            "description": "Não vou conseguir pagar o total da fatura, e agora?",
+            "title_button": "Veja dicas"
+        },
+        {
+            "image": "person",
+            "title": "Emprestimo pessoal",
+            "description": "Você tem R$ 5.000,00 disponíveis para empréstimos",
+            "title_button": "Conhecer"
+        }
+    ]
+}

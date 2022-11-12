@@ -10,3 +10,5 @@ import UIKit
 struct User {
     var name, email, age, phone, address, cpf, password: String
 }
+
+
