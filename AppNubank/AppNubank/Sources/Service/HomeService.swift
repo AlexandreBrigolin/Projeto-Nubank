@@ -10,6 +10,7 @@ import Alamofire
 
 protocol HomeServiceDelegate: GenericService{
     func getHomefromJson(completion: @escaping completion<HomeData?>)
+    func getHome(completion: @escaping completion<HomeData?>)
 }
 
 class HomeService: HomeServiceDelegate {

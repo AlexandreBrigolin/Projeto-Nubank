@@ -12,10 +12,18 @@ enum TypeFetch {
     case request
 }
 
-class HomeViewModel {
+protocol HomeViewModelDelegate:AnyObject {
+    func success()
+    func error(_message: String)
+}
 
-   private
-    let service: HomeService = HomeService()
+class HomeViewModel {
+    
+    private let service: HomeService = HomeService()
+    private weak var delegate: HomeViewModelDelegate?
+    
+    
+    
     
     public func fetch(_ typeFetch: TypeFetch){
         switch typeFetch {
@@ -29,5 +37,5 @@ class HomeViewModel {
             }
         }
     }
-
+    
 }
