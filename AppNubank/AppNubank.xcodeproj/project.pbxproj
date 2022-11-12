@@ -307,13 +307,6 @@
 			path = Tela03;
 			sourceTree = "<group>";
 		};
-		3FA347F0292002270001123A /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
 		3FA347F1292002F10001123A /* Json */ = {
 			isa = PBXGroup;
 			children = (
@@ -343,7 +336,6 @@
 			children = (
 				3F81829C290EE70400D69E55 /* Login */,
 				3FA347E7291EECD70001123A /* MyTabBarController */,
-				3FA347F0292002270001123A /* Cell */,
 				3F8182A3290EE7DB00D69E55 /* Home */,
 				3FA347EA291FE9340001123A /* Tela02 */,
 				3FA347EB291FE9490001123A /* Tela03 */,

@@ -17,7 +17,7 @@ enum RegisterTableViewCellScreenStrings: String {
     case cpf = "Digite seu CPF:"
     case password = "Digite sua senha:"
     case titleRegister = "Cadastrar"
-    case titleBackButton = "Botão Back"
+    case nameBackButtonImage = "BotaoBack"
 }
 
 protocol RegisterTableViewCellScreenProtocol: AnyObject {
@@ -144,7 +144,7 @@ class RegisterTableViewCellScreen: UIView {
     lazy var backButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(named: RegisterTableViewCellScreenStrings.titleBackButton.rawValue), for: .normal)
+        button.setImage(UIImage(named: RegisterTableViewCellScreenStrings.nameBackButtonImage.rawValue), for: .normal)
         button.addTarget(self, action: #selector(self.tappedBackButton), for: .touchUpInside)
         return button
     }()
