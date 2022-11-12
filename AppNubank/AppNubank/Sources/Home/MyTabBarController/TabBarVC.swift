@@ -16,9 +16,9 @@ class TabBarVC: UITabBarController {
     
     private func setupTabBarController() {
         
-        let tela01 = UINavigationController(rootViewController: Tela01())
-        let tela02 = UINavigationController(rootViewController: Tela02())
-        let tela03 = UINavigationController(rootViewController: Tela03())
+        let tela01 = UINavigationController(rootViewController: HomeVC())
+        let tela02 = UINavigationController(rootViewController: Tela02VC())
+        let tela03 = UINavigationController(rootViewController: Tela03VC())
         self.setViewControllers([tela01, tela02, tela03], animated: true)
         self.tabBar.backgroundColor = .white
         self.tabBar.isTranslucent = false
@@ -35,29 +35,5 @@ class TabBarVC: UITabBarController {
     
 }
 
-class Tela01: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.view.backgroundColor = .red
-    }
-    
-}
 
-class Tela02: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.view.backgroundColor = .blue
-    }
-    
-}
-
-class Tela03: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.view.backgroundColor = .brown
-    }
-    
-}

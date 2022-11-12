@@ -27,6 +27,10 @@ class LoginVC: UIViewController {
         self.alert = Alert(controller: self)
         self.configKeyoard()
         self.dismissKeyboard()
+        self.loginScreen?.emailTextfield.text = "Xandy10@hotmail.com"
+        self.loginScreen?.passwordTextfield.text = "1234xandy"
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

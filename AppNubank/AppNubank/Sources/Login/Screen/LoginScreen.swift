@@ -102,7 +102,7 @@ class LoginScreen: UIView {
         self.configBackGround()
         self.configSuperView()
         self.setUpConstrains()
-        self.configButtonEnable(false)
+        self.configButtonEnable(true)
     }
     
     private func configBackGround(){
