@@ -7,8 +7,8 @@
 
 import Foundation
 
-// MARK: - AllCells
-struct AllCells: Codable {
+// MARK: - HomeData
+struct HomeData: Codable {
     let profileCell: ProfileCell
     let accountCell: AccountCell
     let paymentServices: [ProfileCell]
@@ -18,7 +18,7 @@ struct AllCells: Codable {
     let followAlso: FollowAlso
     let loan: Loan
     let discoverMore: [DiscoverMore]
-
+    
     enum CodingKeys: String, CodingKey {
         case profileCell = "profile_cell"
         case accountCell = "account_cell"
@@ -41,7 +41,7 @@ struct AccountCell: Codable {
 // MARK: - Ad
 struct Ad: Codable {
     let adDescription: String
-
+    
     enum CodingKeys: String, CodingKey {
         case adDescription = "description"
     }
@@ -52,7 +52,7 @@ struct CrediCardCell: Codable {
     let title, invoiceStatus: String
     let invoiceAmount: Int
     let invoiceDueDate: String
-
+    
     enum CodingKeys: String, CodingKey {
         case title
         case invoiceStatus = "invoice_status"
@@ -65,7 +65,7 @@ struct CrediCardCell: Codable {
 struct DiscoverMore: Codable {
     let image: Image
     let title, discoverMoreDescription, titleButton: String
-
+    
     enum CodingKeys: String, CodingKey {
         case image, title
         case discoverMoreDescription = "description"
@@ -82,7 +82,7 @@ struct FollowAlso: Codable {
     let title: String
     let image: Image
     let paymentsAssistant: String
-
+    
     enum CodingKeys: String, CodingKey {
         case title, image
         case paymentsAssistant = "payments_assistant"
@@ -93,7 +93,7 @@ struct FollowAlso: Codable {
 struct Loan: Codable {
     let title, availableValue: String
     let loanAmount: Int
-
+    
     enum CodingKeys: String, CodingKey {
         case title
         case availableValue = "available_value"
@@ -105,7 +105,7 @@ struct Loan: Codable {
 struct MyCards: Codable {
     let myCardsDescription: String
     let image: Image
-
+    
     enum CodingKeys: String, CodingKey {
         case myCardsDescription = "description"
         case image
