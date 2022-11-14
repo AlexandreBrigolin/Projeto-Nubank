@@ -22,18 +22,28 @@ class HomeViewModel {
     private let service: HomeService = HomeService()
     private weak var delegate: HomeViewModelDelegate?
     
-    
-    
+    public func delegate(delegate: HomeViewModelDelegate?) {
+        self.delegate = delegate
+    }
     
     public func fetch(_ typeFetch: TypeFetch){
         switch typeFetch {
         case.mock:
             self.service.getHomefromJson { sucess, error in
-                print(sucess)
+                if let sucess = sucess {
+                    self.delegate?.success()
+                }else {
+                    self.delegate?.error(_message: error?.localizedDescription ?? "")
+                }
+                
             }
         case.request:
             self.service.getHome { success, error in
-                print(success)
+                if let error = error {
+                    self.delegate?.error(_message: error.localizedDescription)
+                }else {
+                    self.delegate?.success()
+                }
             }
         }
     }
