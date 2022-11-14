@@ -21,7 +21,6 @@ protocol LoginScreenProtocol: AnyObject {
     func actionRegisterButton()
 }
 
-
 class LoginScreen: UIView {
     
     private weak var delegate: LoginScreenProtocol?
@@ -132,8 +131,6 @@ class LoginScreen: UIView {
         self.delegate?.actionRegisterButton()
     }
     
-
-
     private func configButtonEnable(_ enanle: Bool) {
         if enanle{
             self.loginButton.setTitleColor(.white, for: .normal)
@@ -156,8 +153,7 @@ class LoginScreen: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
+        
     private func setUpConstrains() {
         
         NSLayoutConstraint.activate([

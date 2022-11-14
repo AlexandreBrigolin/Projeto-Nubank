@@ -36,6 +36,8 @@
 		3FA347F3292006340001123A /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 3FA347F2292006340001123A /* data.json */; };
 		3FA347F5292008DE0001123A /* HomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA347F4292008DE0001123A /* HomeData.swift */; };
 		3FB9335F291EDA33008D8872 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB9335E291EDA33008D8872 /* HomeScreen.swift */; };
+		3FED2E32292294C300B188A2 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FED2E31292294C300B188A2 /* ProfileTableViewCell.swift */; };
+		3FED2E362922962300B188A2 /* ScreemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FED2E352922962300B188A2 /* ScreemCell.swift */; };
 		7C309CA757C88BF76EC1AD34 /* Pods_AppNubank_AppNubankUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227BB31EC95E1BE65BC57DF8 /* Pods_AppNubank_AppNubankUITests.framework */; };
 		A8E7522CA096214B78CB5649 /* Pods_AppNubankTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FFF850FA52D79A0864C146 /* Pods_AppNubankTests.framework */; };
 /* End PBXBuildFile section */
@@ -91,6 +93,8 @@
 		3FA347F2292006340001123A /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		3FA347F4292008DE0001123A /* HomeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeData.swift; sourceTree = "<group>"; };
 		3FB9335E291EDA33008D8872 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		3FED2E31292294C300B188A2 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		3FED2E352922962300B188A2 /* ScreemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreemCell.swift; sourceTree = "<group>"; };
 		560F61D88076C62FAECBF47E /* Pods-AppNubank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppNubank.release.xcconfig"; path = "Target Support Files/Pods-AppNubank/Pods-AppNubank.release.xcconfig"; sourceTree = "<group>"; };
 		5E5F8A7BFCBAC46E142B2F14 /* Pods-AppNubankTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppNubankTests.debug.xcconfig"; path = "Target Support Files/Pods-AppNubankTests/Pods-AppNubankTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6F0140EE9B5EDEAE0E9E9EB3 /* Pods_AppNubank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppNubank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -334,6 +338,8 @@
 		3FA347F0292002270001123A /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				3FED2E33292295A500B188A2 /* CellViewModel */,
+				3FED2E34292295C100B188A2 /* CellScreen */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -414,6 +420,22 @@
 				3F595EEC28F064B100CD9C08 /* LaunchScreen.storyboard */,
 			);
 			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		3FED2E33292295A500B188A2 /* CellViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3FED2E31292294C300B188A2 /* ProfileTableViewCell.swift */,
+			);
+			path = CellViewModel;
+			sourceTree = "<group>";
+		};
+		3FED2E34292295C100B188A2 /* CellScreen */ = {
+			isa = PBXGroup;
+			children = (
+				3FED2E352922962300B188A2 /* ScreemCell.swift */,
+			);
+			path = CellScreen;
 			sourceTree = "<group>";
 		};
 		56CED716C68C1D646FB9D68B /* Pods */ = {
@@ -700,8 +722,10 @@
 				3F1014602920188F0004F10D /* GenericService.swift in Sources */,
 				3F595EE428F064AF00CD9C08 /* SceneDelegate.swift in Sources */,
 				3F1014652920268D0004F10D /* HomeService.swift in Sources */,
+				3FED2E32292294C300B188A2 /* ProfileTableViewCell.swift in Sources */,
 				3FA347EF291FE9AD0001123A /* Tela03VC.swift in Sources */,
 				3424F16C2900691500CA0B6A /* User.swift in Sources */,
+				3FED2E362922962300B188A2 /* ScreemCell.swift in Sources */,
 				3FA347ED291FE98F0001123A /* Tela02VC.swift in Sources */,
 				3F7D382E2902F40D00D452A5 /* RegisterTableViewCellScreen.swift in Sources */,
 				3424F1BA2904365900CA0B6A /* String + Extension.swift in Sources */,

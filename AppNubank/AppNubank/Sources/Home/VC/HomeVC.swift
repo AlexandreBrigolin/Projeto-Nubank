@@ -14,13 +14,13 @@ class HomeVC: UIViewController {
     
     override func loadView() {
         self.homeScreen = HomeScreen()
-        self.homeScreen?.configTableViewProtocols(delegate: self, dataSource: self)
         self.view = homeScreen
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = UIColor(red: 130/255, green: 26/255, blue: 201/255, alpha: 1.0)
+        self.homeScreen?.configTableViewProtocols(delegate: self, dataSource: self)
         self.signatureDelegate()
         viewModel.fetch(.request)
     }
@@ -45,7 +45,9 @@ extension HomeVC: HomeViewModelDelegate {
     
     
 }
-extension HomeVC: UITableViewDelegate { }
+extension HomeVC: UITableViewDelegate{
+    
+}
 
 extension  HomeVC: UITableViewDataSource {
 
@@ -55,11 +57,31 @@ extension  HomeVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
-    }
+        let cell = tableView.dequeueReusableCell(withIdentifier: ProfileTableViewCell.identifier, for: indexPath) as? ProfileTableViewCell
+        cell?.delegate(delegate: self)
+        return cell ?? ProfileTableViewCell()
+    
+}
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return viewModel.heightForRowAt(indexPath: indexPath)
     }
+    
+}
+
+
+extension HomeVC: ScreenCellProtocol {
+    func actionEyeBalance() {
+        print(#function)
+    }
+    
+    func actionDoubt() {
+        print(#function)
+    }
+    
+    func actionInviteFriends() {
+        print(#function)
+    }
+    
     
 }
