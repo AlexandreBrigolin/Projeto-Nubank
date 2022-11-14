@@ -9,8 +9,6 @@ import UIKit
 
 class HomeVC: UIViewController {
     
-    
-
     var homeScreen: HomeScreen?
     let  viewModel: HomeViewModel = HomeViewModel()
     
@@ -29,6 +27,10 @@ class HomeVC: UIViewController {
     
     private func signatureDelegate() {
         viewModel.delegate(delegate: self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
 
 }
@@ -49,7 +51,7 @@ extension  HomeVC: UITableViewDataSource {
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return viewModel.numberOfRowsInSection
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -57,7 +59,7 @@ extension  HomeVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 0
+        return viewModel.heightForRowAt(indexPath: indexPath)
     }
     
 }

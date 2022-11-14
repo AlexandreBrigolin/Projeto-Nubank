@@ -22,6 +22,8 @@ class HomeViewModel {
     private let service: HomeService = HomeService()
     private weak var delegate: HomeViewModelDelegate?
     
+    private var homeData: HomeData?
+    
     public func delegate(delegate: HomeViewModelDelegate?) {
         self.delegate = delegate
     }
@@ -31,6 +33,7 @@ class HomeViewModel {
         case.mock:
             self.service.getHomefromJson { sucess, error in
                 if let sucess = sucess {
+                    self.homeData = sucess
                     self.delegate?.success()
                 }else {
                     self.delegate?.error(_message: error?.localizedDescription ?? "")
@@ -47,5 +50,19 @@ class HomeViewModel {
             }
         }
     }
+    
+    public var numberOfRowsInSection: Int {
+        return 9
+    }
+    
+    public func heightForRowAt(indexPath: IndexPath) -> CGFloat{
+        switch indexPath.row {
+        case 0:
+            return 0
+        default:
+            return 0
+        }
+    }
+    
     
 }
