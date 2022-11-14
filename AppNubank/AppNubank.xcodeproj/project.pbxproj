@@ -159,12 +159,12 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		3F10146129201B5E0004F10D /* ViewModel */ = {
+		3F10146129201B5E0004F10D /* PofileViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				3F10146229201C490004F10D /* HomeViewModel.swift */,
 			);
-			path = ViewModel;
+			path = PofileViewModel;
 			sourceTree = "<group>";
 		};
 		3F595ED528F064AF00CD9C08 = {
@@ -304,9 +304,12 @@
 		3F8182A3290EE7DB00D69E55 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				3F10146129201B5E0004F10D /* ViewModel */,
-				3FB9335D291EDA00008D8872 /* VC */,
-				3FB9335C291ED9F2008D8872 /* Screen */,
+				3FAC1FFA2922E6CB0083DD53 /* BalanceViewModel */,
+				3FAC1FFB2922E6F10083DD53 /* BalanceVC */,
+				3FAC1FF92922E5DE0083DD53 /* balanceScreen */,
+				3F10146129201B5E0004F10D /* PofileViewModel */,
+				3FB9335D291EDA00008D8872 /* PofileVC */,
+				3FB9335C291ED9F2008D8872 /* ProfileScreen */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -352,20 +355,41 @@
 			path = Json;
 			sourceTree = "<group>";
 		};
-		3FB9335C291ED9F2008D8872 /* Screen */ = {
+		3FAC1FF92922E5DE0083DD53 /* balanceScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = balanceScreen;
+			sourceTree = "<group>";
+		};
+		3FAC1FFA2922E6CB0083DD53 /* BalanceViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BalanceViewModel;
+			sourceTree = "<group>";
+		};
+		3FAC1FFB2922E6F10083DD53 /* BalanceVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BalanceVC;
+			sourceTree = "<group>";
+		};
+		3FB9335C291ED9F2008D8872 /* ProfileScreen */ = {
 			isa = PBXGroup;
 			children = (
 				3FB9335E291EDA33008D8872 /* HomeScreen.swift */,
 			);
-			path = Screen;
+			path = ProfileScreen;
 			sourceTree = "<group>";
 		};
-		3FB9335D291EDA00008D8872 /* VC */ = {
+		3FB9335D291EDA00008D8872 /* PofileVC */ = {
 			isa = PBXGroup;
 			children = (
 				3F8182A4290EE7DB00D69E55 /* HomeVC.swift */,
 			);
-			path = VC;
+			path = PofileVC;
 			sourceTree = "<group>";
 		};
 		3FB93360291EDADB008D8872 /* Sources */ = {
