@@ -7,17 +7,17 @@
 
 import UIKit
 
-protocol ScreenCellProtocol: AnyObject {
+protocol ProfileTableViewCellScreenProtocol: AnyObject {
     func actionEyeBalance()
     func actionDoubt()
     func actionInviteFriends()
 }
 
-class ScreemCell: UIView {
+class ProfileTableViewCellScreen: UIView {
 
-    weak private var delegate: ScreenCellProtocol?
+    weak private var delegate: ProfileTableViewCellScreenProtocol?
 
-    func delegate(delegate: ScreenCellProtocol?) {
+    func delegate(delegate: ProfileTableViewCellScreenProtocol?) {
         self.delegate = delegate
     }
     

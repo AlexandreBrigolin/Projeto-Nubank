@@ -70,7 +70,7 @@ extension  HomeVC: UITableViewDataSource {
 }
 
 
-extension HomeVC: ScreenCellProtocol {
+extension HomeVC: ProfileTableViewCellScreenProtocol {
     func actionEyeBalance() {
         print(#function)
     }

@@ -11,14 +11,14 @@ class ProfileTableViewCell: UITableViewCell {
 
     static let identifier: String = "ProfileTableViewCell"
     
-    weak private var delegate: ScreenCellProtocol?
+    weak private var delegate: ProfileTableViewCellScreenProtocol?
 
-    func delegate(delegate: ScreenCellProtocol) {
+    func delegate(delegate: ProfileTableViewCellScreenProtocol) {
         self.delegate = delegate
     }
     
-    lazy var screenViewModel: ScreemCell = {
-        let view = ScreemCell()
+    lazy var screenViewModel: ProfileTableViewCellScreen = {
+        let view = ProfileTableViewCellScreen()
         view.delegate(delegate: self.delegate)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
