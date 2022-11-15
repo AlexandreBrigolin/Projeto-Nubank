@@ -42,15 +42,11 @@ extension HomeVC: HomeViewModelDelegate {
     func error(_message: String) {
         print("Deu ruim \(_message)")
     }
-    
-    
 }
-extension HomeVC: UITableViewDelegate{
-    
-}
+
+extension HomeVC: UITableViewDelegate{  }
 
 extension  HomeVC: UITableViewDataSource {
-
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfRowsInSection
