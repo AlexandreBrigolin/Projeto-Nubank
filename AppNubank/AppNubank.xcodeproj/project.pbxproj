@@ -39,6 +39,8 @@
 		3FAC20032923562A0083DD53 /* BalanceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC20022923562A0083DD53 /* BalanceTableViewCell.swift */; };
 		3FAC2009292404170083DD53 /* MyCardsTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC2008292404170083DD53 /* MyCardsTableViewCellScreen.swift */; };
 		3FAC200B292404D00083DD53 /* MyCardsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC200A292404D00083DD53 /* MyCardsTableViewCell.swift */; };
+		3FAC200F292429C00083DD53 /* FollowAlsoTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC200E292429C00083DD53 /* FollowAlsoTableViewCellScreen.swift */; };
+		3FAC2011292429F30083DD53 /* FollowAlsoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC2010292429F30083DD53 /* FollowAlsoTableViewCell.swift */; };
 		3FB9335F291EDA33008D8872 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB9335E291EDA33008D8872 /* HomeScreen.swift */; };
 		3FED2E32292294C300B188A2 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FED2E31292294C300B188A2 /* ProfileTableViewCell.swift */; };
 		3FED2E362922962300B188A2 /* ProfileTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FED2E352922962300B188A2 /* ProfileTableViewCellScreen.swift */; };
@@ -100,6 +102,8 @@
 		3FAC20022923562A0083DD53 /* BalanceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceTableViewCell.swift; sourceTree = "<group>"; };
 		3FAC2008292404170083DD53 /* MyCardsTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCardsTableViewCellScreen.swift; sourceTree = "<group>"; };
 		3FAC200A292404D00083DD53 /* MyCardsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCardsTableViewCell.swift; sourceTree = "<group>"; };
+		3FAC200E292429C00083DD53 /* FollowAlsoTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowAlsoTableViewCellScreen.swift; sourceTree = "<group>"; };
+		3FAC2010292429F30083DD53 /* FollowAlsoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowAlsoTableViewCell.swift; sourceTree = "<group>"; };
 		3FB9335E291EDA33008D8872 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		3FED2E31292294C300B188A2 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		3FED2E352922962300B188A2 /* ProfileTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCellScreen.swift; sourceTree = "<group>"; };
@@ -354,6 +358,7 @@
 		3FA347F0292002270001123A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				3FAC200C292429540083DD53 /* FollowAlsoTableViewCell */,
 				3FAC2006292403150083DD53 /* MyCardsTableViewCell */,
 				3FAC1FFC29234EFC0083DD53 /* BalanceTableViewCell */,
 				3FED2E33292295A500B188A2 /* ProfileTableViewCell */,
@@ -391,6 +396,23 @@
 			isa = PBXGroup;
 			children = (
 				3FAC2008292404170083DD53 /* MyCardsTableViewCellScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		3FAC200C292429540083DD53 /* FollowAlsoTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				3FAC200D292429770083DD53 /* Screen */,
+				3FAC2010292429F30083DD53 /* FollowAlsoTableViewCell.swift */,
+			);
+			path = FollowAlsoTableViewCell;
+			sourceTree = "<group>";
+		};
+		3FAC200D292429770083DD53 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				3FAC200E292429C00083DD53 /* FollowAlsoTableViewCellScreen.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -761,8 +783,10 @@
 				3F7D382828F74CA700D452A5 /* RegisterTableViewCell.swift in Sources */,
 				3FA347F5292008DE0001123A /* HomeData.swift in Sources */,
 				3FAC200B292404D00083DD53 /* MyCardsTableViewCell.swift in Sources */,
+				3FAC200F292429C00083DD53 /* FollowAlsoTableViewCellScreen.swift in Sources */,
 				3F8182A5290EE7DB00D69E55 /* HomeVC.swift in Sources */,
 				3F595EE628F064AF00CD9C08 /* RegisterVC.swift in Sources */,
+				3FAC2011292429F30083DD53 /* FollowAlsoTableViewCell.swift in Sources */,
 				3F8182A2290EE70400D69E55 /* LoginScreen.swift in Sources */,
 				3F595EE228F064AF00CD9C08 /* AppDelegate.swift in Sources */,
 				3F1014602920188F0004F10D /* GenericService.swift in Sources */,

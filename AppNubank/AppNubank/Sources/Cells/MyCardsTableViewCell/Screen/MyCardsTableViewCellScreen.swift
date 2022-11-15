@@ -23,7 +23,7 @@ class MyCardsTableViewCellScreen: UIView {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.contentMode = .scaleAspectFit
-        image.tintColor = .white
+        image.tintColor = .black
         return image
     }()
     
@@ -49,6 +49,8 @@ class MyCardsTableViewCellScreen: UIView {
     private func configSuperView() {
         self.addSubview(self.cardImageView)
         self.addSubview(self.descriptionLabel)
+// criar backGround view chamar do add subview em primeiro lugar e adicionar os elementos dentro da mesma!
+        
     }
     
     private func setupConstraint() {

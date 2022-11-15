@@ -16,7 +16,7 @@ class ProfileTableViewCell: UITableViewCell {
         self.delegate = delegate
     }
     
-    lazy var screenViewModel = {
+    lazy var screen = {
         let view = ProfileTableViewCellScreen()
         view.delegate(delegate: self.delegate)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -35,21 +35,21 @@ class ProfileTableViewCell: UITableViewCell {
     }
     
     private func addSubView(){
-        self.contentView.addSubview(self.screenViewModel)
+        self.contentView.addSubview(self.screen)
     }
     
     private func setUpConstraintsScreenCell() {
         NSLayoutConstraint.activate([
-            self.screenViewModel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
-            self.screenViewModel.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor),
-            self.screenViewModel.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor),
-            self.screenViewModel.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
+            self.screen.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+            self.screen.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor),
+            self.screen.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor),
+            self.screen.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
         ])
     }
     
     public func setupCell(data: ProfileCell) {
-        self.screenViewModel.logoAppImageView.image = UIImage(systemName: data.image ?? "")
-        self.screenViewModel.personLabel.text = data.name
+        self.screen.logoAppImageView.image = UIImage(systemName: data.image ?? "")
+        self.screen.personLabel.text = data.name
         
     }
 }
