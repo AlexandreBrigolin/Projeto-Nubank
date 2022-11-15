@@ -109,13 +109,7 @@ class ProfileTableViewCellScreen: UIView {
             
             self.personLabel.topAnchor.constraint(equalTo: self.logoAppImageView.bottomAnchor, constant: 10),
             self.personLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20)
-            
-            
-        
-        
         ])
     }
-    
-    
 }
 
