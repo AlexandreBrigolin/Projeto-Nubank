@@ -7,6 +7,11 @@
 
 import UIKit
 
+enum HomeNameCell: Int {
+    case profile = 0
+    case balance = 1
+}
+
 class HomeVC: UIViewController {
     
     var homeScreen: HomeScreen?
@@ -53,10 +58,61 @@ extension  HomeVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ProfileTableViewCell.identifier, for: indexPath) as? ProfileTableViewCell
-        cell?.delegate(delegate: self)
-        cell?.setupCell(data: viewModel.profileCell)
-        return cell ?? ProfileTableViewCell()
+        
+        // primeira abordagem
+        
+//        if indexPath.row == 0 {
+//
+//            let cell = tableView.dequeueReusableCell(withIdentifier: ProfileTableViewCell.identifier, for: indexPath) as? ProfileTableViewCell
+//            cell?.delegate(delegate: self)
+//            cell?.setupCell(data: viewModel.profileCell)
+//            return cell ?? UITableViewCell()
+//
+//        } else if indexPath.row == 1 {
+//
+//            let cell = tableView.dequeueReusableCell(withIdentifier: BalanceTableViewCell.identifier, for: indexPath) as? BalanceTableViewCell
+//            cell?.setupCell(data: viewModel.balanceCell)
+//            return cell ?? UITableViewCell()
+//
+//        }
+//        return UITableViewCell()
+        
+        
+        // segunda abordagem
+        
+//        switch indexPath.row {
+//        case 0:
+//            let cell = tableView.dequeueReusableCell(withIdentifier: ProfileTableViewCell.identifier, for: indexPath) as? ProfileTableViewCell
+//            cell?.delegate(delegate: self)
+//            cell?.setupCell(data: viewModel.profileCell)
+//            return cell ?? UITableViewCell()
+//
+//        case 1:
+//            let cell = tableView.dequeueReusableCell(withIdentifier: BalanceTableViewCell.identifier, for: indexPath) as? BalanceTableViewCell
+//            cell?.setupCell(data: viewModel.balanceCell)
+//            return cell ?? UITableViewCell()
+//
+//        default:
+//            return UITableViewCell()
+//        }
+        
+        // terceira abordagem
+        
+        switch HomeNameCell(rawValue: indexPath.row) {
+        case .profile:
+            let cell = tableView.dequeueReusableCell(withIdentifier: ProfileTableViewCell.identifier, for: indexPath) as? ProfileTableViewCell
+            cell?.delegate(delegate: self)
+            cell?.setupCell(data: viewModel.profileCell)
+            return cell ?? UITableViewCell()
+        case .balance:
+            let cell = tableView.dequeueReusableCell(withIdentifier: BalanceTableViewCell.identifier, for: indexPath) as? BalanceTableViewCell
+            cell?.setupCell(data: viewModel.balanceCell)
+            return cell ?? UITableViewCell()
+            
+        default:
+            return UITableViewCell()
+        }
+       
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

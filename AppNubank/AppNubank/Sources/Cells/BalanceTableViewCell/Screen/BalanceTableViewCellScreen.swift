@@ -7,29 +7,30 @@
 
 import UIKit
 
-protocol BalanceCellScreenProtocol: AnyObject {
+protocol BalanceTableViewCellScreenProtocol: AnyObject {
     func actionBalance()
 }
 
-class BalanceCellScreen: UIView {
+class BalanceTableViewCellScreen: UIView {
     
-    weak private var delegate: BalanceCellScreenProtocol?
+    weak private var delegate: BalanceTableViewCellScreenProtocol?
 
-    func delegate(delegate: BalanceCellScreenProtocol?) {
+    func delegate(delegate: BalanceTableViewCellScreenProtocol?) {
         self.delegate = delegate
     }
 
-    lazy var balanceButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Conta", for: .normal)
-        return button
+    lazy var balanceLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .black
+        label.font = UIFont.boldSystemFont(ofSize: 22)
+        return label
     }()
     
     lazy var valueLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
+        label.textColor = .black
         label.font = UIFont.boldSystemFont(ofSize: 18)
         label.numberOfLines = 0
         label.text = "1.200,00 R$"
@@ -38,7 +39,7 @@ class BalanceCellScreen: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor(red: 130/255, green: 26/255, blue: 201/255, alpha: 1.0)
+        self.backgroundColor = .white
         self.configSuperView()
         self.setupConstraint()
     }
@@ -48,19 +49,18 @@ class BalanceCellScreen: UIView {
     }
     
     private func configSuperView() {
-        self.addSubview(self.balanceButton)
+        self.addSubview(self.balanceLabel)
         self.addSubview(self.valueLabel)        
     }
     
     private func setupConstraint() {
         NSLayoutConstraint.activate([
             
-            self.balanceButton.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 20),
-            self.balanceButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            self.balanceButton.heightAnchor.constraint(equalToConstant: 35),
-            self.balanceButton.widthAnchor.constraint(equalToConstant: 35),
+            self.balanceLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
+            self.balanceLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            self.balanceLabel.heightAnchor.constraint(equalToConstant: 35),
             
-            self.valueLabel.topAnchor.constraint(equalTo: self.balanceButton.bottomAnchor, constant: 10),
+            self.valueLabel.topAnchor.constraint(equalTo: self.balanceLabel.bottomAnchor, constant: 10),
             self.valueLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20)
             
         ])

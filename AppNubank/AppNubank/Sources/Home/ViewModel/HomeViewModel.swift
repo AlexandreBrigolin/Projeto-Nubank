@@ -52,12 +52,14 @@ class HomeViewModel {
     }
     
     public var numberOfRowsInSection: Int {
-        return 1
+        return 2
     }
     
     public func heightForRowAt(indexPath: IndexPath) -> CGFloat{
-        switch indexPath.row {
-        case 0:
+        switch HomeNameCell(rawValue: indexPath.row) {
+        case .profile:
+            return 90
+        case .balance:
             return 90
         default:
             return 0
@@ -67,6 +69,10 @@ class HomeViewModel {
     
     public var profileCell: ProfileCell {
         return homeData?.profileCell ?? ProfileCell()
+    }
+    
+    public var balanceCell: AccountCell {
+        return homeData?.accountCell ?? AccountCell()
     }
     
     

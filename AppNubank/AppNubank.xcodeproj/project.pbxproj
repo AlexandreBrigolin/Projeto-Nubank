@@ -35,8 +35,8 @@
 		3FA347EF291FE9AD0001123A /* Tela03VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA347EE291FE9AD0001123A /* Tela03VC.swift */; };
 		3FA347F3292006340001123A /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 3FA347F2292006340001123A /* data.json */; };
 		3FA347F5292008DE0001123A /* HomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA347F4292008DE0001123A /* HomeData.swift */; };
-		3FAC20012923520D0083DD53 /* BalanceCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC20002923520D0083DD53 /* BalanceCellScreen.swift */; };
-		3FAC20032923562A0083DD53 /* BalanceCellVieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC20022923562A0083DD53 /* BalanceCellVieModel.swift */; };
+		3FAC20012923520D0083DD53 /* BalanceTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC20002923520D0083DD53 /* BalanceTableViewCellScreen.swift */; };
+		3FAC20032923562A0083DD53 /* BalanceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC20022923562A0083DD53 /* BalanceTableViewCell.swift */; };
 		3FB9335F291EDA33008D8872 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB9335E291EDA33008D8872 /* HomeScreen.swift */; };
 		3FED2E32292294C300B188A2 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FED2E31292294C300B188A2 /* ProfileTableViewCell.swift */; };
 		3FED2E362922962300B188A2 /* ProfileTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FED2E352922962300B188A2 /* ProfileTableViewCellScreen.swift */; };
@@ -94,8 +94,8 @@
 		3FA347EE291FE9AD0001123A /* Tela03VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela03VC.swift; sourceTree = "<group>"; };
 		3FA347F2292006340001123A /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		3FA347F4292008DE0001123A /* HomeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeData.swift; sourceTree = "<group>"; };
-		3FAC20002923520D0083DD53 /* BalanceCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceCellScreen.swift; sourceTree = "<group>"; };
-		3FAC20022923562A0083DD53 /* BalanceCellVieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceCellVieModel.swift; sourceTree = "<group>"; };
+		3FAC20002923520D0083DD53 /* BalanceTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceTableViewCellScreen.swift; sourceTree = "<group>"; };
+		3FAC20022923562A0083DD53 /* BalanceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceTableViewCell.swift; sourceTree = "<group>"; };
 		3FB9335E291EDA33008D8872 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		3FED2E31292294C300B188A2 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		3FED2E352922962300B188A2 /* ProfileTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCellScreen.swift; sourceTree = "<group>"; };
@@ -137,6 +137,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		032E53B32923E2FD008A183D /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				3FAC20002923520D0083DD53 /* BalanceTableViewCellScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
 		3424F16A290068FE00CA0B6A /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -342,8 +350,7 @@
 		3FA347F0292002270001123A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				3FAC1FFD29234F170083DD53 /* BalanceCellViewModel */,
-				3FAC1FFC29234EFC0083DD53 /* BalanceCellScreen */,
+				3FAC1FFC29234EFC0083DD53 /* BalanceTableViewCell */,
 				3FED2E33292295A500B188A2 /* ProfileTableViewCell */,
 			);
 			path = Cells;
@@ -357,20 +364,13 @@
 			path = Json;
 			sourceTree = "<group>";
 		};
-		3FAC1FFC29234EFC0083DD53 /* BalanceCellScreen */ = {
+		3FAC1FFC29234EFC0083DD53 /* BalanceTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				3FAC20002923520D0083DD53 /* BalanceCellScreen.swift */,
+				032E53B32923E2FD008A183D /* Screen */,
+				3FAC20022923562A0083DD53 /* BalanceTableViewCell.swift */,
 			);
-			path = BalanceCellScreen;
-			sourceTree = "<group>";
-		};
-		3FAC1FFD29234F170083DD53 /* BalanceCellViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				3FAC20022923562A0083DD53 /* BalanceCellVieModel.swift */,
-			);
-			path = BalanceCellViewModel;
+			path = BalanceTableViewCell;
 			sourceTree = "<group>";
 		};
 		3FB9335C291ED9F2008D8872 /* Screen */ = {
@@ -745,9 +745,9 @@
 				3F595EE428F064AF00CD9C08 /* SceneDelegate.swift in Sources */,
 				3F1014652920268D0004F10D /* HomeService.swift in Sources */,
 				3FED2E32292294C300B188A2 /* ProfileTableViewCell.swift in Sources */,
-				3FAC20012923520D0083DD53 /* BalanceCellScreen.swift in Sources */,
+				3FAC20012923520D0083DD53 /* BalanceTableViewCellScreen.swift in Sources */,
 				3FA347EF291FE9AD0001123A /* Tela03VC.swift in Sources */,
-				3FAC20032923562A0083DD53 /* BalanceCellVieModel.swift in Sources */,
+				3FAC20032923562A0083DD53 /* BalanceTableViewCell.swift in Sources */,
 				3424F16C2900691500CA0B6A /* User.swift in Sources */,
 				3FED2E362922962300B188A2 /* ProfileTableViewCellScreen.swift in Sources */,
 				3FA347ED291FE98F0001123A /* Tela02VC.swift in Sources */,
