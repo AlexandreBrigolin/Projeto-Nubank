@@ -33,7 +33,6 @@ class BalanceTableViewCellScreen: UIView {
         label.textColor = .black
         label.font = UIFont.boldSystemFont(ofSize: 18)
         label.numberOfLines = 0
-        label.text = "1.200,00 R$"
         return label
     }()
     
@@ -59,6 +58,7 @@ class BalanceTableViewCellScreen: UIView {
             self.balanceLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
             self.balanceLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             self.balanceLabel.heightAnchor.constraint(equalToConstant: 35),
+            
             
             self.valueLabel.topAnchor.constraint(equalTo: self.balanceLabel.bottomAnchor, constant: 10),
             self.valueLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20)

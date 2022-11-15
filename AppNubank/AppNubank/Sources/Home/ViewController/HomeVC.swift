@@ -10,6 +10,7 @@ import UIKit
 enum HomeNameCell: Int {
     case profile = 0
     case balance = 1
+    case myCards = 2
 }
 
 class HomeVC: UIViewController {
@@ -108,6 +109,10 @@ extension  HomeVC: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: BalanceTableViewCell.identifier, for: indexPath) as? BalanceTableViewCell
             cell?.setupCell(data: viewModel.balanceCell)
             return cell ?? UITableViewCell()
+        case .myCards:
+            let cell = tableView.dequeueReusableCell(withIdentifier: MyCardsTableViewCell.identifier, for: indexPath) as? MyCardsTableViewCell
+            cell?.setupCell(data: viewModel.myCardsCell)
+            return cell ?? UITableViewCell()
             
         default:
             return UITableViewCell()
@@ -121,7 +126,6 @@ extension  HomeVC: UITableViewDataSource {
     
 }
 
-
 extension HomeVC: ProfileTableViewCellScreenProtocol {
     func actionEyeBalance() {
         print(#function)
@@ -134,5 +138,4 @@ extension HomeVC: ProfileTableViewCellScreenProtocol {
     func actionInviteFriends() {
         print(#function)
     }
-    
 }

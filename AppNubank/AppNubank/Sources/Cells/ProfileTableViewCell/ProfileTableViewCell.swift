@@ -3,7 +3,6 @@
 //  AppNubank
 //
 //  Created by Alexandre Brigolin on 14/11/22.
-//
 
 import UIKit
 
@@ -49,10 +48,10 @@ class ProfileTableViewCell: UITableViewCell {
     }
     
     public func setupCell(data: ProfileCell) {
-        self.screenViewModel.logoAppImageView.image = UIImage(named: data.image ?? "")
-        self.screenViewModel.personLabel.text = data.name        
+        self.screenViewModel.logoAppImageView.image = UIImage(systemName: data.image ?? "")
+        self.screenViewModel.personLabel.text = data.name
+        
     }
-
 }
 
 
