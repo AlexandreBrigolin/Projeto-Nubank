@@ -10,7 +10,7 @@ import UIKit
 class HomeVC: UIViewController {
     
     var homeScreen: HomeScreen?
-    let  viewModel: HomeViewModel = HomeViewModel()
+    let viewModel: HomeViewModel = HomeViewModel()
     
     override func loadView() {
         self.homeScreen = HomeScreen()
@@ -31,11 +31,11 @@ class HomeVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
-
+    
 }
 extension HomeVC: HomeViewModelDelegate {
     func success() {
-       print("Deu certo")
+        print("Deu certo")
         self.homeScreen?.configTableViewProtocols(delegate: self, dataSource: self)
     }
     
@@ -55,12 +55,9 @@ extension  HomeVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ProfileTableViewCell.identifier, for: indexPath) as? ProfileTableViewCell
         cell?.delegate(delegate: self)
-        
-        cell?.setupCell(data: viewModel.profileCell )
-        
+        cell?.setupCell(data: viewModel.profileCell)
         return cell ?? ProfileTableViewCell()
-    
-}
+    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return viewModel.heightForRowAt(indexPath: indexPath)
@@ -81,6 +78,5 @@ extension HomeVC: ProfileTableViewCellScreenProtocol {
     func actionInviteFriends() {
         print(#function)
     }
-    
     
 }

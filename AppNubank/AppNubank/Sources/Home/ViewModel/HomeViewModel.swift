@@ -1,34 +1,34 @@
 //
-//  BalanceViewModel.swift
+//  HomeViewModel.swift
 //  AppNubank
 //
-//  Created by Alexandre Brigolin on 15/11/22.
+//  Created by Alexandre Brigolin on 12/11/22.
 //
 
 import UIKit
 
-enum Fetch {
+enum TypeFetch {
     case mock
     case request
 }
 
-protocol BalanceViewModelDelegate:AnyObject {
+protocol HomeViewModelDelegate:AnyObject {
     func success()
     func error(_message: String)
 }
 
-class BalanceViewModel {
+class HomeViewModel {
     
     private let service: HomeService = HomeService()
-    private weak var delegate: BalanceViewModelDelegate?
+    private weak var delegate: HomeViewModelDelegate?
     
     private var homeData: HomeData?
     
-    public func delegateBalance(delegate: BalanceViewModelDelegate?) {
+    public func delegate(delegate: HomeViewModelDelegate?) {
         self.delegate = delegate
     }
     
-    public func fetch(_ typeFetch: Fetch){
+    public func fetch(_ typeFetch: TypeFetch){
         switch typeFetch {
         case.mock:
             self.service.getHomefromJson { sucess, error in
@@ -52,16 +52,25 @@ class BalanceViewModel {
     }
     
     public var numberOfRowsInSection: Int {
-        return 2
+        return 1
     }
     
     public func heightForRowAt(indexPath: IndexPath) -> CGFloat{
-        
         switch indexPath.row {
-        case 1:
+        case 0:
             return 90
         default:
             return 0
         }
     }
+    
+    
+    public var profileCell: ProfileCell {
+        return homeData?.profileCell ?? ProfileCell()
+    }
+    
+    
+    
+    
+    
 }

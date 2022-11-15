@@ -35,10 +35,8 @@
 		3FA347EF291FE9AD0001123A /* Tela03VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA347EE291FE9AD0001123A /* Tela03VC.swift */; };
 		3FA347F3292006340001123A /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 3FA347F2292006340001123A /* data.json */; };
 		3FA347F5292008DE0001123A /* HomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA347F4292008DE0001123A /* HomeData.swift */; };
-		3FAC1FFF2923501B0083DD53 /* BalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC1FFE2923501B0083DD53 /* BalanceViewController.swift */; };
 		3FAC20012923520D0083DD53 /* BalanceCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC20002923520D0083DD53 /* BalanceCellScreen.swift */; };
 		3FAC20032923562A0083DD53 /* BalanceCellVieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC20022923562A0083DD53 /* BalanceCellVieModel.swift */; };
-		3FAC20052923689D0083DD53 /* BalanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC20042923689D0083DD53 /* BalanceViewModel.swift */; };
 		3FB9335F291EDA33008D8872 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB9335E291EDA33008D8872 /* HomeScreen.swift */; };
 		3FED2E32292294C300B188A2 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FED2E31292294C300B188A2 /* ProfileTableViewCell.swift */; };
 		3FED2E362922962300B188A2 /* ProfileTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FED2E352922962300B188A2 /* ProfileTableViewCellScreen.swift */; };
@@ -96,10 +94,8 @@
 		3FA347EE291FE9AD0001123A /* Tela03VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela03VC.swift; sourceTree = "<group>"; };
 		3FA347F2292006340001123A /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		3FA347F4292008DE0001123A /* HomeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeData.swift; sourceTree = "<group>"; };
-		3FAC1FFE2923501B0083DD53 /* BalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewController.swift; sourceTree = "<group>"; };
 		3FAC20002923520D0083DD53 /* BalanceCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceCellScreen.swift; sourceTree = "<group>"; };
 		3FAC20022923562A0083DD53 /* BalanceCellVieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceCellVieModel.swift; sourceTree = "<group>"; };
-		3FAC20042923689D0083DD53 /* BalanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewModel.swift; sourceTree = "<group>"; };
 		3FB9335E291EDA33008D8872 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		3FED2E31292294C300B188A2 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		3FED2E352922962300B188A2 /* ProfileTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCellScreen.swift; sourceTree = "<group>"; };
@@ -167,12 +163,12 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		3F10146129201B5E0004F10D /* PofileViewModel */ = {
+		3F10146129201B5E0004F10D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				3F10146229201C490004F10D /* HomeViewModel.swift */,
 			);
-			path = PofileViewModel;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		3F595ED528F064AF00CD9C08 = {
@@ -312,11 +308,9 @@
 		3F8182A3290EE7DB00D69E55 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				3FAC1FFA2922E6CB0083DD53 /* BalanceViewModel */,
-				3FAC1FFB2922E6F10083DD53 /* BalanceVC */,
-				3F10146129201B5E0004F10D /* PofileViewModel */,
-				3FB9335D291EDA00008D8872 /* VC */,
-				3FB9335C291ED9F2008D8872 /* HomeScreenTB */,
+				3F10146129201B5E0004F10D /* ViewModel */,
+				3FB9335D291EDA00008D8872 /* ViewController */,
+				3FB9335C291ED9F2008D8872 /* Screen */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -350,8 +344,7 @@
 			children = (
 				3FAC1FFD29234F170083DD53 /* BalanceCellViewModel */,
 				3FAC1FFC29234EFC0083DD53 /* BalanceCellScreen */,
-				3FED2E33292295A500B188A2 /* ProfileCellViewModel */,
-				3FED2E34292295C100B188A2 /* ProfileCellScreen */,
+				3FED2E33292295A500B188A2 /* ProfileTableViewCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -362,22 +355,6 @@
 				3FA347F2292006340001123A /* data.json */,
 			);
 			path = Json;
-			sourceTree = "<group>";
-		};
-		3FAC1FFA2922E6CB0083DD53 /* BalanceViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				3FAC20042923689D0083DD53 /* BalanceViewModel.swift */,
-			);
-			path = BalanceViewModel;
-			sourceTree = "<group>";
-		};
-		3FAC1FFB2922E6F10083DD53 /* BalanceVC */ = {
-			isa = PBXGroup;
-			children = (
-				3FAC1FFE2923501B0083DD53 /* BalanceViewController.swift */,
-			);
-			path = BalanceVC;
 			sourceTree = "<group>";
 		};
 		3FAC1FFC29234EFC0083DD53 /* BalanceCellScreen */ = {
@@ -396,20 +373,20 @@
 			path = BalanceCellViewModel;
 			sourceTree = "<group>";
 		};
-		3FB9335C291ED9F2008D8872 /* HomeScreenTB */ = {
+		3FB9335C291ED9F2008D8872 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
 				3FB9335E291EDA33008D8872 /* HomeScreen.swift */,
 			);
-			path = HomeScreenTB;
+			path = Screen;
 			sourceTree = "<group>";
 		};
-		3FB9335D291EDA00008D8872 /* VC */ = {
+		3FB9335D291EDA00008D8872 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				3F8182A4290EE7DB00D69E55 /* HomeVC.swift */,
 			);
-			path = VC;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		3FB93360291EDADB008D8872 /* Sources */ = {
@@ -466,20 +443,21 @@
 			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
-		3FED2E33292295A500B188A2 /* ProfileCellViewModel */ = {
+		3FED2E33292295A500B188A2 /* ProfileTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				3FED2E34292295C100B188A2 /* Screen */,
 				3FED2E31292294C300B188A2 /* ProfileTableViewCell.swift */,
 			);
-			path = ProfileCellViewModel;
+			path = ProfileTableViewCell;
 			sourceTree = "<group>";
 		};
-		3FED2E34292295C100B188A2 /* ProfileCellScreen */ = {
+		3FED2E34292295C100B188A2 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
 				3FED2E352922962300B188A2 /* ProfileTableViewCellScreen.swift */,
 			);
-			path = ProfileCellScreen;
+			path = Screen;
 			sourceTree = "<group>";
 		};
 		56CED716C68C1D646FB9D68B /* Pods */ = {
@@ -760,7 +738,6 @@
 				3F7D382828F74CA700D452A5 /* RegisterTableViewCell.swift in Sources */,
 				3FA347F5292008DE0001123A /* HomeData.swift in Sources */,
 				3F8182A5290EE7DB00D69E55 /* HomeVC.swift in Sources */,
-				3FAC20052923689D0083DD53 /* BalanceViewModel.swift in Sources */,
 				3F595EE628F064AF00CD9C08 /* RegisterVC.swift in Sources */,
 				3F8182A2290EE70400D69E55 /* LoginScreen.swift in Sources */,
 				3F595EE228F064AF00CD9C08 /* AppDelegate.swift in Sources */,
@@ -774,7 +751,6 @@
 				3424F16C2900691500CA0B6A /* User.swift in Sources */,
 				3FED2E362922962300B188A2 /* ProfileTableViewCellScreen.swift in Sources */,
 				3FA347ED291FE98F0001123A /* Tela02VC.swift in Sources */,
-				3FAC1FFF2923501B0083DD53 /* BalanceViewController.swift in Sources */,
 				3F7D382E2902F40D00D452A5 /* RegisterTableViewCellScreen.swift in Sources */,
 				3424F1BA2904365900CA0B6A /* String + Extension.swift in Sources */,
 			);
