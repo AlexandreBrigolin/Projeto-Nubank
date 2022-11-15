@@ -24,7 +24,6 @@ class ProfileTableViewCellScreen: UIView {
     lazy var logoAppImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(systemName: "person")
         image.contentMode = .scaleAspectFit
         image.tintColor = .white
         return image
@@ -60,7 +59,7 @@ class ProfileTableViewCellScreen: UIView {
         label.textColor = .white
         label.font = UIFont.boldSystemFont(ofSize: 18)
         label.numberOfLines = 0
-        label.text = "Olá, Alexandre!"
+        
         return label
     }()
 

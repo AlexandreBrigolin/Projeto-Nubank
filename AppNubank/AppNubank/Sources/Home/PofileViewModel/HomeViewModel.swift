@@ -64,4 +64,14 @@ class HomeViewModel {
             return 0
         }
     }
+    
+    
+    public var profileCell: ProfileCell {
+        return homeData?.profileCell ?? ProfileCell()
+    }
+    
+    
+    
+    
+    
 }

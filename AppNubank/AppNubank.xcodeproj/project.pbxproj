@@ -315,7 +315,7 @@
 				3FAC1FFA2922E6CB0083DD53 /* BalanceViewModel */,
 				3FAC1FFB2922E6F10083DD53 /* BalanceVC */,
 				3F10146129201B5E0004F10D /* PofileViewModel */,
-				3FB9335D291EDA00008D8872 /* PofileVC */,
+				3FB9335D291EDA00008D8872 /* VC */,
 				3FB9335C291ED9F2008D8872 /* HomeScreenTB */,
 			);
 			path = Home;
@@ -404,12 +404,12 @@
 			path = HomeScreenTB;
 			sourceTree = "<group>";
 		};
-		3FB9335D291EDA00008D8872 /* PofileVC */ = {
+		3FB9335D291EDA00008D8872 /* VC */ = {
 			isa = PBXGroup;
 			children = (
 				3F8182A4290EE7DB00D69E55 /* HomeVC.swift */,
 			);
-			path = PofileVC;
+			path = VC;
 			sourceTree = "<group>";
 		};
 		3FB93360291EDADB008D8872 /* Sources */ = {

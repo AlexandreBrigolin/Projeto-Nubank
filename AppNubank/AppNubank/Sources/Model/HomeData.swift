@@ -9,15 +9,15 @@ import Foundation
 
 // MARK: - HomeData
 struct HomeData: Codable {
-    let profileCell: ProfileCell
-    let accountCell: AccountCell
-    let paymentServices: [ProfileCell]
-    let myCards: MyCards
-    let ads: [Ad]
-    let crediCardCell: CrediCardCell
-    let followAlso: FollowAlso
-    let loan: Loan
-    let discoverMore: [DiscoverMore]
+    var profileCell: ProfileCell?
+    var accountCell: AccountCell?
+    var paymentServices: [ProfileCell]?
+    var myCards: MyCards?
+    var ads: [Ad]?
+    var crediCardCell: CrediCardCell?
+    var followAlso: FollowAlso?
+    var loan: Loan?
+    var discoverMore: [DiscoverMore]?
     
     enum CodingKeys: String, CodingKey {
         case profileCell = "profile_cell"
@@ -34,13 +34,13 @@ struct HomeData: Codable {
 
 // MARK: - AccountCell
 struct AccountCell: Codable {
-    let title: String
-    let balance: Double
+    var title: String?
+    var balance: Double?
 }
 
 // MARK: - Ad
 struct Ad: Codable {
-    let adDescription: String
+    var adDescription: String?
     
     enum CodingKeys: String, CodingKey {
         case adDescription = "description"
@@ -49,9 +49,9 @@ struct Ad: Codable {
 
 // MARK: - CrediCardCell
 struct CrediCardCell: Codable {
-    let title, invoiceStatus: String
-    let invoiceAmount: Int
-    let invoiceDueDate: String
+    var title, invoiceStatus: String?
+    var invoiceAmount: Int?
+    var invoiceDueDate: String?
     
     enum CodingKeys: String, CodingKey {
         case title
@@ -63,8 +63,8 @@ struct CrediCardCell: Codable {
 
 // MARK: - DiscoverMore
 struct DiscoverMore: Codable {
-    let image: Image
-    let title, discoverMoreDescription, titleButton: String
+    var image: String?
+    var title, discoverMoreDescription, titleButton: String?
     
     enum CodingKeys: String, CodingKey {
         case image, title
@@ -73,15 +73,11 @@ struct DiscoverMore: Codable {
     }
 }
 
-enum Image: String, Codable {
-    case person = "person"
-}
-
 // MARK: - FollowAlso
 struct FollowAlso: Codable {
-    let title: String
-    let image: Image
-    let paymentsAssistant: String
+    var title: String?
+    var image: String?
+    var paymentsAssistant: String?
     
     enum CodingKeys: String, CodingKey {
         case title, image
@@ -91,8 +87,8 @@ struct FollowAlso: Codable {
 
 // MARK: - Loan
 struct Loan: Codable {
-    let title, availableValue: String
-    let loanAmount: Int
+    var title, availableValue: String?
+    var loanAmount: Int?
     
     enum CodingKeys: String, CodingKey {
         case title
@@ -103,8 +99,8 @@ struct Loan: Codable {
 
 // MARK: - MyCards
 struct MyCards: Codable {
-    let myCardsDescription: String
-    let image: Image
+    var myCardsDescription: String?
+    var image: String?
     
     enum CodingKeys: String, CodingKey {
         case myCardsDescription = "description"
@@ -114,6 +110,6 @@ struct MyCards: Codable {
 
 // MARK: - ProfileCell
 struct ProfileCell: Codable {
-    let name: String
-    let image: Image
+    var name: String?
+    var image: String?
 }

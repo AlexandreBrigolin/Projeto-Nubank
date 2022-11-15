@@ -17,7 +17,7 @@ class ProfileTableViewCell: UITableViewCell {
         self.delegate = delegate
     }
     
-    lazy var screenViewModel: ProfileTableViewCellScreen = {
+    lazy var screenViewModel = {
         let view = ProfileTableViewCellScreen()
         view.delegate(delegate: self.delegate)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -46,6 +46,11 @@ class ProfileTableViewCell: UITableViewCell {
             self.screenViewModel.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor),
             self.screenViewModel.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
         ])
+    }
+    
+    public func setupCell(data: ProfileCell) {
+        self.screenViewModel.logoAppImageView.image = UIImage(named: data.image ?? "")
+        self.screenViewModel.personLabel.text = data.name        
     }
 
 }

@@ -20,9 +20,8 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 130/255, green: 26/255, blue: 201/255, alpha: 1.0)
-        self.homeScreen?.configTableViewProtocols(delegate: self, dataSource: self)
         self.signatureDelegate()
-        viewModel.fetch(.request)
+        viewModel.fetch(.mock)
     }
     
     private func signatureDelegate() {
@@ -37,6 +36,7 @@ class HomeVC: UIViewController {
 extension HomeVC: HomeViewModelDelegate {
     func success() {
        print("Deu certo")
+        self.homeScreen?.configTableViewProtocols(delegate: self, dataSource: self)
     }
     
     func error(_message: String) {
@@ -55,6 +55,9 @@ extension  HomeVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ProfileTableViewCell.identifier, for: indexPath) as? ProfileTableViewCell
         cell?.delegate(delegate: self)
+        
+        cell?.setupCell(data: viewModel.profileCell )
+        
         return cell ?? ProfileTableViewCell()
     
 }
