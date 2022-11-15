@@ -10,6 +10,7 @@ import UIKit
 enum HomeNameCell: Int {
     case profile = 0
     case balance = 1
+    case accountMovimented = 2
 }
 
 class HomeVC: UIViewController {
