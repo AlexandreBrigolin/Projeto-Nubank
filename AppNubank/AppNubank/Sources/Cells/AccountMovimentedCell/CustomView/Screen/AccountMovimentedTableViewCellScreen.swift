@@ -15,7 +15,7 @@ class AccountMovimentedTableViewCellScreen: UIView {
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.backgroundColor = .none
         collectionView.delaysContentTouches = false
-//        collectionView.register(SportCollectionViewCell.self, forCellWithReuseIdentifier: SportCollectionViewCell.identifier)
+        collectionView.register(AccountMovimentedCollectionViewCell.self, forCellWithReuseIdentifier: AccountMovimentedCollectionViewCell.identifier)
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
         layout.scrollDirection = .horizontal
         
@@ -29,7 +29,6 @@ class AccountMovimentedTableViewCellScreen: UIView {
         self.configSubView()
         self.configConstraintsCollectionViewCell()
     }
-    
     
     
     func configSubView() {

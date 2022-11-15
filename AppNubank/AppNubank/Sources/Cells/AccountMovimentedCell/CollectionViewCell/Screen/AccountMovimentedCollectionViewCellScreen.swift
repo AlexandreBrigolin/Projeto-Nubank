@@ -13,7 +13,6 @@ class AccountMovimentedCollectionViewCellScreen: UIView {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.contentMode = .scaleAspectFit
-        
         return image
     }()
     

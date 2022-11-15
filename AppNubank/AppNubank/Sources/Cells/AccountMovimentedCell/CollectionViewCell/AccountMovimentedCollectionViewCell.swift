@@ -19,6 +19,10 @@ class AccountMovimentedCollectionViewCell: UICollectionViewCell {
         
     }
     
+//    func setUpCell(data: [ProfileCell]) {
+//        self.accountMovimentedCollectionViewCellScreen.imageView.image = UIImage
+//    }
+    
     func configSubView() {
         self.accountMovimentedCollectionViewCellScreen.translatesAutoresizingMaskIntoConstraints = false
         self.contentView.addSubview(self.accountMovimentedCollectionViewCellScreen)

@@ -109,7 +109,10 @@ extension  HomeVC: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: BalanceTableViewCell.identifier, for: indexPath) as? BalanceTableViewCell
             cell?.setupCell(data: viewModel.balanceCell)
             return cell ?? UITableViewCell()
-            
+        case .accountMovimented:
+            let cell = tableView.dequeueReusableCell(withIdentifier: AccountMovimentedTableViewCell.identifier, for: indexPath) as? AccountMovimentedTableViewCell
+//            cell?.setupCell(data: viewModel.balanceCell)
+            return cell ?? UITableViewCell()
         default:
             return UITableViewCell()
         }

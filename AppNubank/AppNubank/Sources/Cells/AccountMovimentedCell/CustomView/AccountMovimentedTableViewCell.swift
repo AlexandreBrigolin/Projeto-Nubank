@@ -19,6 +19,7 @@ class AccountMovimentedTableViewCell: UITableViewCell {
         self.configConstraintsAccountMovimentedTableViewCellScreen()
     }
     
+
     func configSubView() {
         self.accountMovimentedTableViewCellScreen.translatesAutoresizingMaskIntoConstraints = false
         self.contentView.addSubview(self.accountMovimentedTableViewCellScreen)
