@@ -18,7 +18,7 @@ class LineTableViewCellScreen: UIView {
         self.delegate = delegate
     }
     
-    lazy var lineCell: UIView = {
+    lazy var lineView: UIView = {
         var view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .lightGray.withAlphaComponent(0.4)
@@ -36,15 +36,15 @@ class LineTableViewCellScreen: UIView {
     }
     
     private func configSuperView() {
-        self.lineCell.addSubview(self.lineCell)
+        self.addSubview(self.lineView)
     }
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            self.lineCell.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
-            self.lineCell.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0),
-            self.lineCell.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
-            self.lineCell.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0)
+            self.lineView.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
+            self.lineView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0),
+            self.lineView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
+            self.lineView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0)
      
         ])
     }

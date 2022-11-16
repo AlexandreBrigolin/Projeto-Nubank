@@ -116,7 +116,7 @@ extension  HomeVC: UITableViewDataSource {
             return cell ?? UITableViewCell()
         case.line:
             let cell = tableView.dequeueReusableCell(withIdentifier: LineTableViewCell.identifier, for: indexPath) as? LineTableViewCell
-            return  UITableViewCell()
+            return cell ?? UITableViewCell()
             
         default:
             return UITableViewCell()
