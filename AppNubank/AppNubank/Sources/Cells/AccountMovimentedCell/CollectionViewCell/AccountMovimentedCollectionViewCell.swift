@@ -16,12 +16,15 @@ class AccountMovimentedCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.configSubView()
-        
+        self.configConstraints()
     }
     
-//    func setUpCell(data: [ProfileCell]) {
-//        self.accountMovimentedCollectionViewCellScreen.imageView.image = UIImage
-//    }
+    func setUpCell(data: ProfileCell) {
+        //        self.accountMovimentedCollectionViewCellScreen.imageView.image = UIImage(named: data.image ?? "")
+        self.accountMovimentedCollectionViewCellScreen.imageView.image = UIImage(systemName: data.image ?? "")
+        
+        self.accountMovimentedCollectionViewCellScreen.movementLabel.text = data.name
+    }
     
     func configSubView() {
         self.accountMovimentedCollectionViewCellScreen.translatesAutoresizingMaskIntoConstraints = false
@@ -39,8 +42,7 @@ class AccountMovimentedCollectionViewCell: UICollectionViewCell {
             self.accountMovimentedCollectionViewCellScreen.leftAnchor.constraint(equalTo: self.leftAnchor),
             self.accountMovimentedCollectionViewCellScreen.rightAnchor.constraint(equalTo: self.rightAnchor),
             self.accountMovimentedCollectionViewCellScreen.bottomAnchor.constraint(equalTo: self.bottomAnchor)
-        
+            
         ])
     }
 }
-// Fazer o setUp

@@ -111,7 +111,7 @@ extension  HomeVC: UITableViewDataSource {
             return cell ?? UITableViewCell()
         case .accountMovimented:
             let cell = tableView.dequeueReusableCell(withIdentifier: AccountMovimentedTableViewCell.identifier, for: indexPath) as? AccountMovimentedTableViewCell
-//            cell?.setupCell(data: viewModel.balanceCell)
+            cell?.dataCollection(data: self.viewModel.accountMovimented)
             return cell ?? UITableViewCell()
         default:
             return UITableViewCell()

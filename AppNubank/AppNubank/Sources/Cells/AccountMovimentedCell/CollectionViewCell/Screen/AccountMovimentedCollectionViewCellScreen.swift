@@ -13,6 +13,7 @@ class AccountMovimentedCollectionViewCellScreen: UIView {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.contentMode = .scaleAspectFit
+        image.tintColor = .black
         return image
     }()
     
@@ -20,18 +21,20 @@ class AccountMovimentedCollectionViewCellScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
-        label.textColor = .darkGray
+        label.textColor = .black
+        label.numberOfLines = 2
         return label
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.configSuperView()
+        self.configConstraints()
     }
     
     func configSuperView() {
         self.addSubview(self.imageView)
         self.addSubview(self.movementLabel)
-        
     }
     
     required init?(coder: NSCoder) {
@@ -42,15 +45,15 @@ class AccountMovimentedCollectionViewCellScreen: UIView {
         
         NSLayoutConstraint.activate([
             
-            self.imageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
-            self.imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
-            self.imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
-            self.imageView.bottomAnchor.constraint(equalTo: self.movementLabel.topAnchor, constant: -10),
+            self.imageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 5),
+            self.imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5),
+            self.imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5),
+            self.imageView.heightAnchor.constraint(equalToConstant: 30),
+            self.imageView.bottomAnchor.constraint(equalTo: self.movementLabel.topAnchor, constant: -5),
             
-            self.movementLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
-            self.movementLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
-            self.movementLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
-            self.movementLabel.heightAnchor.constraint(equalToConstant: 20)
+            self.movementLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5),
+            self.movementLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5),
+            self.movementLabel.heightAnchor.constraint(equalToConstant: 50)
         
         ])
         

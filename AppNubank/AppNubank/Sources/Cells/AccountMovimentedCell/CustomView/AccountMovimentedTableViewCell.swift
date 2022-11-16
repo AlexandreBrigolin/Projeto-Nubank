@@ -10,6 +10,8 @@ import UIKit
 class AccountMovimentedTableViewCell: UITableViewCell {
     
     var accountMovimentedTableViewCellScreen: AccountMovimentedTableViewCellScreen = AccountMovimentedTableViewCellScreen()
+    var data: [ProfileCell] = []
+    let viewModel: HomeViewModel = HomeViewModel()
     
     static let identifier: String = "AccountMovimentedTableViewCell"
     
@@ -17,9 +19,10 @@ class AccountMovimentedTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.configSubView()
         self.configConstraintsAccountMovimentedTableViewCellScreen()
+        self.accountMovimentedTableViewCellScreen.configProtocolsCollectionView(delegate: self, dataSource: self)
     }
     
-
+    
     func configSubView() {
         self.accountMovimentedTableViewCellScreen.translatesAutoresizingMaskIntoConstraints = false
         self.contentView.addSubview(self.accountMovimentedTableViewCellScreen)
@@ -27,6 +30,11 @@ class AccountMovimentedTableViewCell: UITableViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    public func dataCollection(data: [ProfileCell]) {
+        self.data = data
+        
     }
     
     func configConstraintsAccountMovimentedTableViewCellScreen() {
@@ -43,18 +51,28 @@ class AccountMovimentedTableViewCell: UITableViewCell {
 extension AccountMovimentedTableViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return self.data.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        
+        let cell: AccountMovimentedCollectionViewCell? = collectionView.dequeueReusableCell(withReuseIdentifier: AccountMovimentedCollectionViewCell.identifier, for: indexPath) as? AccountMovimentedCollectionViewCell
+        cell?.setUpCell(data: self.data[indexPath.row])
+        
+        return cell ?? UICollectionViewCell()
     }
 }
 
-
 extension AccountMovimentedTableViewCell: UICollectionViewDelegate {
-    
     
 }
 
-// fazer os dados da collection
+extension AccountMovimentedTableViewCell: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return CGSize(width: 120, height: 90)
+    }
+    
+}
+
