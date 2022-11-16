@@ -63,6 +63,8 @@ class HomeViewModel {
             return 90
         case .myCards:
             return 90
+        case .line:
+            return 20
         default:
             return 0
         }

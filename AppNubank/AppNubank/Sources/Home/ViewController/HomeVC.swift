@@ -11,6 +11,7 @@ enum HomeNameCell: Int {
     case profile = 0
     case balance = 1
     case myCards = 2
+    case line = 3
 }
 
 class HomeVC: UIViewController {
@@ -113,6 +114,9 @@ extension  HomeVC: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: MyCardsTableViewCell.identifier, for: indexPath) as? MyCardsTableViewCell
             cell?.setupCell(data: viewModel.myCardsCell)
             return cell ?? UITableViewCell()
+        case.line:
+            let cell = tableView.dequeueReusableCell(withIdentifier: LineTableViewCell.identifier, for: indexPath) as? LineTableViewCell
+            return  UITableViewCell()
             
         default:
             return UITableViewCell()

@@ -57,9 +57,7 @@ class MyCardsTableViewCellScreen: UIView {
     private func configSuperView() {
         self.addSubview(self.viewBackgraund)
         self.viewBackgraund.addSubview(self.cardImageView)
-        self.viewBackgraund.addSubview(self.descriptionLabel)
-
-        
+        self.viewBackgraund.addSubview(self.descriptionLabel)        
     }
     
     private func setupConstraint() {
