@@ -15,6 +15,7 @@ class HomeScreen: UIView {
         tableView.backgroundColor = UIColor(red: 126/255, green: 26/255, blue: 183/255, alpha: 1.0)
         tableView.register(ProfileTableViewCell.self, forCellReuseIdentifier: ProfileTableViewCell.identifier)
         tableView.register(BalanceTableViewCell.self, forCellReuseIdentifier: BalanceTableViewCell.identifier)
+        tableView.register(AccountMovimentedTableViewCell.self, forCellReuseIdentifier: AccountMovimentedTableViewCell.identifier)
         tableView.register(MyCardsTableViewCell.self, forCellReuseIdentifier: MyCardsTableViewCell.identifier)
         tableView.register(LineTableViewCell.self, forCellReuseIdentifier: LineTableViewCell.identifier)
         return tableView

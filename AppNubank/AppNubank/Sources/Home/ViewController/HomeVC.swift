@@ -10,8 +10,10 @@ import UIKit
 enum HomeNameCell: Int {
     case profile = 0
     case balance = 1
-    case myCards = 2
-    case line = 3
+    case accountMovimented = 2
+    case myCards = 3
+    case line = 4
+    
 }
 
 class HomeVC: UIViewController {
@@ -109,6 +111,10 @@ extension  HomeVC: UITableViewDataSource {
         case .balance:
             let cell = tableView.dequeueReusableCell(withIdentifier: BalanceTableViewCell.identifier, for: indexPath) as? BalanceTableViewCell
             cell?.setupCell(data: viewModel.balanceCell)
+            return cell ?? UITableViewCell()
+        case .accountMovimented:
+            let cell = tableView.dequeueReusableCell(withIdentifier: AccountMovimentedTableViewCell.identifier, for: indexPath) as? AccountMovimentedTableViewCell
+            cell?.dataCollection(data: viewModel.accountMovimented)
             return cell ?? UITableViewCell()
         case .myCards:
             let cell = tableView.dequeueReusableCell(withIdentifier: MyCardsTableViewCell.identifier, for: indexPath) as? MyCardsTableViewCell
