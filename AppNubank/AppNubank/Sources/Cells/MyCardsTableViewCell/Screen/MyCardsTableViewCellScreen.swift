@@ -26,8 +26,7 @@ class MyCardsTableViewCellScreen: UIView {
         view.backgroundColor = .lightGray.withAlphaComponent(0.3)
         return view
     }()
-
-    
+   
     lazy var cardImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
