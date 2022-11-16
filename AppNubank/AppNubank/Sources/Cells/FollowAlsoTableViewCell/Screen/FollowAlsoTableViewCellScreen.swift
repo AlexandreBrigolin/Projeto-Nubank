@@ -9,6 +9,7 @@ import UIKit
 
 class FollowAlsoTableViewCellScreen: UIView {
 
+    
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false

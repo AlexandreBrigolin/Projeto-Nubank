@@ -18,6 +18,15 @@ class MyCardsTableViewCellScreen: UIView {
     func delegate(delegate: MyCardsTableViewCellScreenProtocol?) {
         self.delegate = delegate
     }
+    lazy var viewBackgraund: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.layer.cornerRadius = 8
+        view.clipsToBounds = true
+        view.backgroundColor = .lightGray.withAlphaComponent(0.3)
+        return view
+    }()
+
     
     lazy var cardImageView: UIImageView = {
         let image = UIImageView()
@@ -47,23 +56,29 @@ class MyCardsTableViewCellScreen: UIView {
     }
     
     private func configSuperView() {
-        self.addSubview(self.cardImageView)
-        self.addSubview(self.descriptionLabel)
-// criar backGround view chamar do add subview em primeiro lugar e adicionar os elementos dentro da mesma!
+        self.addSubview(self.viewBackgraund)
+        self.viewBackgraund.addSubview(self.cardImageView)
+        self.viewBackgraund.addSubview(self.descriptionLabel)
+
         
     }
     
     private func setupConstraint() {
         NSLayoutConstraint.activate([
             
-            self.cardImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            self.cardImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            self.viewBackgraund.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
+            self.viewBackgraund.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            self.viewBackgraund.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            self.viewBackgraund.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20),
+        
+            self.cardImageView.leadingAnchor.constraint(equalTo: self.viewBackgraund.leadingAnchor, constant: 20),
+            self.cardImageView.centerYAnchor.constraint(equalTo: self.viewBackgraund.centerYAnchor),
             self.cardImageView.heightAnchor.constraint(equalToConstant: 35),
             self.cardImageView.widthAnchor.constraint(equalToConstant: 35),
-            
+
             self.descriptionLabel.leadingAnchor.constraint(equalTo: self.cardImageView.trailingAnchor, constant: 20),
-            self.descriptionLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-           
+            self.descriptionLabel.centerYAnchor.constraint(equalTo: self.viewBackgraund.centerYAnchor),
+//
         ])
     }
 }
