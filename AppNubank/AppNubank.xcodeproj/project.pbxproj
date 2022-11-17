@@ -47,6 +47,10 @@
 		3FAC2011292429F30083DD53 /* FollowAlsoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC2010292429F30083DD53 /* FollowAlsoTableViewCell.swift */; };
 		3FAC2015292530240083DD53 /* LineTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC2014292530240083DD53 /* LineTableViewCellScreen.swift */; };
 		3FAC2017292537070083DD53 /* LineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC2016292537070083DD53 /* LineTableViewCell.swift */; };
+		3FAC201E2925E2950083DD53 /* ADSTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC201D2925E2950083DD53 /* ADSTableViewCellScreen.swift */; };
+		3FAC20202925E2D40083DD53 /* ADSCollectionViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC201F2925E2D40083DD53 /* ADSCollectionViewCellScreen.swift */; };
+		3FAC20222925E2F90083DD53 /* ADSCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC20212925E2F90083DD53 /* ADSCollectionViewCell.swift */; };
+		3FAC20242925E31B0083DD53 /* ADSTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC20232925E31B0083DD53 /* ADSTableViewCell.swift */; };
 		3FB9335F291EDA33008D8872 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB9335E291EDA33008D8872 /* HomeScreen.swift */; };
 		3FED2E32292294C300B188A2 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FED2E31292294C300B188A2 /* ProfileTableViewCell.swift */; };
 		3FED2E362922962300B188A2 /* ProfileTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FED2E352922962300B188A2 /* ProfileTableViewCellScreen.swift */; };
@@ -116,6 +120,10 @@
 		3FAC2010292429F30083DD53 /* FollowAlsoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowAlsoTableViewCell.swift; sourceTree = "<group>"; };
 		3FAC2014292530240083DD53 /* LineTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTableViewCellScreen.swift; sourceTree = "<group>"; };
 		3FAC2016292537070083DD53 /* LineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTableViewCell.swift; sourceTree = "<group>"; };
+		3FAC201D2925E2950083DD53 /* ADSTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSTableViewCellScreen.swift; sourceTree = "<group>"; };
+		3FAC201F2925E2D40083DD53 /* ADSCollectionViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSCollectionViewCellScreen.swift; sourceTree = "<group>"; };
+		3FAC20212925E2F90083DD53 /* ADSCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSCollectionViewCell.swift; sourceTree = "<group>"; };
+		3FAC20232925E31B0083DD53 /* ADSTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSTableViewCell.swift; sourceTree = "<group>"; };
 		3FB9335E291EDA33008D8872 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		3FED2E31292294C300B188A2 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		3FED2E352922962300B188A2 /* ProfileTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCellScreen.swift; sourceTree = "<group>"; };
@@ -413,6 +421,7 @@
 		3FA347F0292002270001123A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				3FAC20182925E0B40083DD53 /* ADS */,
 				032E53EA292574DE008A183D /* AccountMovimentedCell */,
 				3FAC201229252E470083DD53 /* LineTableViewCell */,
 				3FAC200C292429540083DD53 /* FollowAlsoTableViewCell */,
@@ -487,6 +496,49 @@
 			isa = PBXGroup;
 			children = (
 				3FAC2014292530240083DD53 /* LineTableViewCellScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		3FAC20182925E0B40083DD53 /* ADS */ = {
+			isa = PBXGroup;
+			children = (
+				3FAC201B2925E2020083DD53 /* ADSCollectionViewCell */,
+				3FAC20192925E1D00083DD53 /* ADSTableViewCell */,
+			);
+			path = ADS;
+			sourceTree = "<group>";
+		};
+		3FAC20192925E1D00083DD53 /* ADSTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				3FAC201A2925E1F10083DD53 /* Screen */,
+				3FAC20232925E31B0083DD53 /* ADSTableViewCell.swift */,
+			);
+			path = ADSTableViewCell;
+			sourceTree = "<group>";
+		};
+		3FAC201A2925E1F10083DD53 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				3FAC201D2925E2950083DD53 /* ADSTableViewCellScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		3FAC201B2925E2020083DD53 /* ADSCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				3FAC201C2925E2250083DD53 /* Screen */,
+				3FAC20212925E2F90083DD53 /* ADSCollectionViewCell.swift */,
+			);
+			path = ADSCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		3FAC201C2925E2250083DD53 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				3FAC201F2925E2D40083DD53 /* ADSCollectionViewCellScreen.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -856,6 +908,8 @@
 				3FB9335F291EDA33008D8872 /* HomeScreen.swift in Sources */,
 				3F7D382528F7010600D452A5 /* RegisterScreen.swift in Sources */,
 				3F7D382828F74CA700D452A5 /* RegisterTableViewCell.swift in Sources */,
+				3FAC20222925E2F90083DD53 /* ADSCollectionViewCell.swift in Sources */,
+				3FAC20202925E2D40083DD53 /* ADSCollectionViewCellScreen.swift in Sources */,
 				3FA347F5292008DE0001123A /* HomeData.swift in Sources */,
 				032E53F3292574DE008A183D /* AccountMovimentedCollectionViewCellScreen.swift in Sources */,
 				3FAC200B292404D00083DD53 /* MyCardsTableViewCell.swift in Sources */,
@@ -865,6 +919,7 @@
 				3FAC2011292429F30083DD53 /* FollowAlsoTableViewCell.swift in Sources */,
 				3FAC2015292530240083DD53 /* LineTableViewCellScreen.swift in Sources */,
 				032E53F4292574DE008A183D /* AccountMovimentedCollectionViewCell.swift in Sources */,
+				3FAC20242925E31B0083DD53 /* ADSTableViewCell.swift in Sources */,
 				3FAC2017292537070083DD53 /* LineTableViewCell.swift in Sources */,
 				3F8182A2290EE70400D69E55 /* LoginScreen.swift in Sources */,
 				3F595EE228F064AF00CD9C08 /* AppDelegate.swift in Sources */,
@@ -881,6 +936,7 @@
 				032E53F5292574DE008A183D /* AccountMovimentedTableViewCellScreen.swift in Sources */,
 				3F7D382E2902F40D00D452A5 /* RegisterTableViewCellScreen.swift in Sources */,
 				3424F1BA2904365900CA0B6A /* String + Extension.swift in Sources */,
+				3FAC201E2925E2950083DD53 /* ADSTableViewCellScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

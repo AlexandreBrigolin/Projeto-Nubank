@@ -10,6 +10,8 @@ import UIKit
 class AccountMovimentedCollectionViewCell: UICollectionViewCell {
     
     static let identifier: String = "AccountMovimentedCollectionViewCellScreen"
+    var data: [ProfileCell] = []
+    let viewModel: HomeViewModel = HomeViewModel()
     
     var accountMovimentedCollectionViewCellScreen: AccountMovimentedCollectionViewCellScreen = AccountMovimentedCollectionViewCellScreen()
     
