@@ -11,7 +11,6 @@ class ADSTableViewCell: UITableViewCell {
 
     var aADSTableViewCellScreen: ADSTableViewCellScreen = ADSTableViewCellScreen()
     var data: [Ad] = []
-    let viewModel: HomeViewModel = HomeViewModel()
     
     static let identifier: String = "ADSTableViewCell"
    
@@ -35,7 +34,6 @@ class ADSTableViewCell: UITableViewCell {
     
     public func dataCollection(data: [Ad]) {
         self.data = data
-
     }
     
     func configConstraints() {
@@ -58,7 +56,6 @@ extension ADSTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: ADSCollectionViewCell? = collectionView.dequeueReusableCell(withReuseIdentifier: ADSCollectionViewCell.identifier, for: indexPath) as? ADSCollectionViewCell
         cell?.setUpCell(data: self.data[indexPath.row])
-        
         return cell ?? UICollectionViewCell()
     }
 }
@@ -66,7 +63,7 @@ extension ADSTableViewCell: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: 120, height: 90)
+        return CGSize(width: 400, height: 110)
     }
     
 }

@@ -23,7 +23,7 @@ class ADSCollectionViewCellScreen: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.textColor = .black
-        label.numberOfLines = 0
+        label.numberOfLines = 2
         return label
     }()
     
@@ -44,18 +44,18 @@ class ADSCollectionViewCellScreen: UIView {
     }
 
     private func configConstraints() {
-        
         NSLayoutConstraint.activate([
-        
             self.viewBackgraund.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
             self.viewBackgraund.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             self.viewBackgraund.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-            self.viewBackgraund.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20),
-            
-            self.titlesLabel.topAnchor.constraint(equalTo: self.viewBackgraund.topAnchor, constant: 20),
+//            self.viewBackgraund.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20),
+            self.viewBackgraund.heightAnchor.constraint(equalToConstant: 80),
+            self.viewBackgraund.widthAnchor.constraint(equalToConstant: 390),
+
+            self.titlesLabel.topAnchor.constraint(equalTo: self.viewBackgraund.topAnchor, constant: 10),
             self.titlesLabel.leadingAnchor.constraint(equalTo: self.viewBackgraund.leadingAnchor, constant: 20),
             self.titlesLabel.trailingAnchor.constraint(equalTo: self.viewBackgraund.trailingAnchor, constant: -20),
-            self.titlesLabel.bottomAnchor.constraint(equalTo: self.viewBackgraund.bottomAnchor, constant: -20)
+            self.titlesLabel.heightAnchor.constraint(equalToConstant: 60),
         ])
     }
 

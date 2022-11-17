@@ -68,7 +68,7 @@ class HomeViewModel {
         case .line:
             return 5
         case .ads:
-            return 90
+            return 130
         default:
             return 0
         }

@@ -50,8 +50,7 @@ class ADSTableViewCellScreen: UIView {
             self.collectionView.leftAnchor.constraint(equalTo: self.leftAnchor),
             self.collectionView.rightAnchor.constraint(equalTo: self.rightAnchor),
             self.collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
-        ])
-        
+        ])        
     }
 
 }

@@ -25,7 +25,7 @@ class ADSCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setUpCell(data: Ad) {
+    public func setUpCell(data: Ad) {
         self.ads.titlesLabel.text = data.adDescription
     }
     

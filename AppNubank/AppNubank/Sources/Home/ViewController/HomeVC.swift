@@ -123,6 +123,7 @@ extension  HomeVC: UITableViewDataSource {
             return cell ?? UITableViewCell()
         case .ads:
             let cell = tableView.dequeueReusableCell(withIdentifier: ADSTableViewCell.identifier, for: indexPath) as? ADSTableViewCell
+            cell?.dataCollection(data: viewModel.adsCell)
             return cell ?? UITableViewCell()
         case.line:
             let cell = tableView.dequeueReusableCell(withIdentifier: LineTableViewCell.identifier, for: indexPath) as? LineTableViewCell
