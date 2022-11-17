@@ -51,13 +51,13 @@ struct Ad: Codable {
 struct CrediCardCell: Codable {
     var title, invoiceStatus: String?
     var invoiceAmount: Int?
-    var invoiceDueDate: String?
+    var invoiceDescription: String?
     
     enum CodingKeys: String, CodingKey {
         case title
         case invoiceStatus = "invoice_status"
         case invoiceAmount = "invoice_amount"
-        case invoiceDueDate = "invoice_due_date"
+        case invoiceDescription = "invoice_description"
     }
 }
 

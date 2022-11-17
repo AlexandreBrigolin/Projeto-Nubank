@@ -5,7 +5,7 @@
     },
     "account_cell": {
         "title": "Conta",
-        "balance": 1234.54
+        "balance": 1234.52
     },
     "payment_services": [{
         "name": "Área Pix",
@@ -64,9 +64,9 @@
     ],
     "credi_card_cell": {
         "title": "Cartão de crédito",
-        "invoice_status": "Fatura Fechada",
-        "invoice_amount": 1234,
-        "invoice_due_date": "Vencimento dia 17"
+        "invoice_status": "Fatura Atual",
+        "invoice_amount": 680,
+        "invoice_description": "Valor disponivél R$ 1020,00"
     },
     "follow_also": {
         "title": "Acompanhe também",

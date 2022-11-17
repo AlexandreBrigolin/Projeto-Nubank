@@ -11,6 +11,8 @@
 		032E53F4292574DE008A183D /* AccountMovimentedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032E53EE292574DE008A183D /* AccountMovimentedCollectionViewCell.swift */; };
 		032E53F5292574DE008A183D /* AccountMovimentedTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032E53F1292574DE008A183D /* AccountMovimentedTableViewCellScreen.swift */; };
 		032E53F6292574DE008A183D /* AccountMovimentedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032E53F2292574DE008A183D /* AccountMovimentedTableViewCell.swift */; };
+		033E990529267E7500772F28 /* CreditCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033E990429267E7500772F28 /* CreditCardTableViewCell.swift */; };
+		033E990729267EBC00772F28 /* CreditCardTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033E990629267EBC00772F28 /* CreditCardTableViewCellScreen.swift */; };
 		03B02DFF28F20722008E2ECA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03B02DFE28F20722008E2ECA /* GoogleService-Info.plist */; };
 		03B02E0228F207C4008E2ECA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 03B02E0128F207C4008E2ECA /* FirebaseAuth */; };
 		0697E1DD40A2D753A0C1E52E /* Pods_AppNubank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F0140EE9B5EDEAE0E9E9EB3 /* Pods_AppNubank.framework */; };
@@ -76,6 +78,8 @@
 		032E53EE292574DE008A183D /* AccountMovimentedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountMovimentedCollectionViewCell.swift; sourceTree = "<group>"; };
 		032E53F1292574DE008A183D /* AccountMovimentedTableViewCellScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountMovimentedTableViewCellScreen.swift; sourceTree = "<group>"; };
 		032E53F2292574DE008A183D /* AccountMovimentedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountMovimentedTableViewCell.swift; sourceTree = "<group>"; };
+		033E990429267E7500772F28 /* CreditCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardTableViewCell.swift; sourceTree = "<group>"; };
+		033E990629267EBC00772F28 /* CreditCardTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardTableViewCellScreen.swift; sourceTree = "<group>"; };
 		03B02DFE28F20722008E2ECA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		227BB31EC95E1BE65BC57DF8 /* Pods_AppNubank_AppNubankUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppNubank_AppNubankUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		242210DC5F5F0C6361002351 /* Pods-AppNubank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppNubank.debug.xcconfig"; path = "Target Support Files/Pods-AppNubank/Pods-AppNubank.debug.xcconfig"; sourceTree = "<group>"; };
@@ -204,6 +208,23 @@
 			isa = PBXGroup;
 			children = (
 				032E53F1292574DE008A183D /* AccountMovimentedTableViewCellScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		033E990129267D6A00772F28 /* CreditCardCell */ = {
+			isa = PBXGroup;
+			children = (
+				033E990229267E3800772F28 /* Screen */,
+				033E990429267E7500772F28 /* CreditCardTableViewCell.swift */,
+			);
+			path = CreditCardCell;
+			sourceTree = "<group>";
+		};
+		033E990229267E3800772F28 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				033E990629267EBC00772F28 /* CreditCardTableViewCellScreen.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -413,6 +434,7 @@
 		3FA347F0292002270001123A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				033E990129267D6A00772F28 /* CreditCardCell */,
 				032E53EA292574DE008A183D /* AccountMovimentedCell */,
 				3FAC201229252E470083DD53 /* LineTableViewCell */,
 				3FAC200C292429540083DD53 /* FollowAlsoTableViewCell */,
@@ -857,6 +879,7 @@
 				3F7D382528F7010600D452A5 /* RegisterScreen.swift in Sources */,
 				3F7D382828F74CA700D452A5 /* RegisterTableViewCell.swift in Sources */,
 				3FA347F5292008DE0001123A /* HomeData.swift in Sources */,
+				033E990729267EBC00772F28 /* CreditCardTableViewCellScreen.swift in Sources */,
 				032E53F3292574DE008A183D /* AccountMovimentedCollectionViewCellScreen.swift in Sources */,
 				3FAC200B292404D00083DD53 /* MyCardsTableViewCell.swift in Sources */,
 				3FAC200F292429C00083DD53 /* FollowAlsoTableViewCellScreen.swift in Sources */,
@@ -865,6 +888,7 @@
 				3FAC2011292429F30083DD53 /* FollowAlsoTableViewCell.swift in Sources */,
 				3FAC2015292530240083DD53 /* LineTableViewCellScreen.swift in Sources */,
 				032E53F4292574DE008A183D /* AccountMovimentedCollectionViewCell.swift in Sources */,
+				033E990529267E7500772F28 /* CreditCardTableViewCell.swift in Sources */,
 				3FAC2017292537070083DD53 /* LineTableViewCell.swift in Sources */,
 				3F8182A2290EE70400D69E55 /* LoginScreen.swift in Sources */,
 				3F595EE228F064AF00CD9C08 /* AppDelegate.swift in Sources */,
