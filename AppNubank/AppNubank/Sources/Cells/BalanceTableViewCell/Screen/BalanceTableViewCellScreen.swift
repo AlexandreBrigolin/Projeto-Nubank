@@ -59,7 +59,6 @@ class BalanceTableViewCellScreen: UIView {
             self.balanceLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             self.balanceLabel.heightAnchor.constraint(equalToConstant: 35),
             
-            
             self.valueLabel.topAnchor.constraint(equalTo: self.balanceLabel.bottomAnchor, constant: 10),
             self.valueLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20)
             

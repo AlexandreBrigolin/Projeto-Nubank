@@ -48,7 +48,7 @@ class BalanceTableViewCell: UITableViewCell {
     }
     
     public func setupCell(data: AccountCell) {
-        screen.valueLabel.text = String(data.balance ?? 0.0)
+        screen.valueLabel.text = String(" R$ \(data.balance ?? 0.0)")
         screen.balanceLabel.text = data.title ?? ""
     }
 
