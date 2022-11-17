@@ -17,6 +17,7 @@ class HomeScreen: UIView {
         tableView.register(BalanceTableViewCell.self, forCellReuseIdentifier: BalanceTableViewCell.identifier)
         tableView.register(AccountMovimentedTableViewCell.self, forCellReuseIdentifier: AccountMovimentedTableViewCell.identifier)
         tableView.register(MyCardsTableViewCell.self, forCellReuseIdentifier: MyCardsTableViewCell.identifier)
+        tableView.register(ADSTableViewCell.self, forCellReuseIdentifier: ADSTableViewCell.identifier)
         tableView.register(LineTableViewCell.self, forCellReuseIdentifier: LineTableViewCell.identifier)
         return tableView
     }()

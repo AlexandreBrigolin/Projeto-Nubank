@@ -26,7 +26,6 @@ class AccountMovimentedTableViewCellScreen: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         self.configSubView()
         self.configConstraintsCollectionViewCell()
     }

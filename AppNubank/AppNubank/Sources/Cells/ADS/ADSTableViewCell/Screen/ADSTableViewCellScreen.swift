@@ -15,7 +15,7 @@ class ADSTableViewCellScreen: UIView {
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.backgroundColor = .none
         collectionView.delaysContentTouches = false
-//        collectionView.register(AccountMovimentedCollectionViewCell.self, forCellWithReuseIdentifier: AccountMovimentedCollectionViewCell.identifier)
+        collectionView.register(ADSCollectionViewCell.self, forCellWithReuseIdentifier: ADSCollectionViewCell.identifier)
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
         layout.scrollDirection = .horizontal
         
@@ -26,7 +26,6 @@ class ADSTableViewCellScreen: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         self.configSubView()
         self.configConstraintsCollectionViewCell()
     }

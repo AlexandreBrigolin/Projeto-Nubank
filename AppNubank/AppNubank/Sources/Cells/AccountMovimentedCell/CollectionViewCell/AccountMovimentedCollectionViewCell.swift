@@ -22,7 +22,6 @@ class AccountMovimentedCollectionViewCell: UICollectionViewCell {
     }
     
     func setUpCell(data: ProfileCell) {
-        //        self.accountMovimentedCollectionViewCellScreen.imageView.image = UIImage(named: data.image ?? "")
         self.accountMovimentedCollectionViewCellScreen.imageView.image = UIImage(systemName: data.image ?? "")
         
         self.accountMovimentedCollectionViewCellScreen.movementLabel.text = data.name

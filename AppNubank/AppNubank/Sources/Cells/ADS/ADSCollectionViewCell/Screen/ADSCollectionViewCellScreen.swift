@@ -9,6 +9,15 @@ import UIKit
 
 class ADSCollectionViewCellScreen: UIView {
     
+    lazy var viewBackgraund: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.layer.cornerRadius = 8
+        view.clipsToBounds = true
+        view.backgroundColor = .lightGray.withAlphaComponent(0.3)
+        return view
+    }()
+    
     lazy var titlesLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -25,8 +34,9 @@ class ADSCollectionViewCellScreen: UIView {
     }
     
     func configSuperView() {
-       
-        self.addSubview(self.titlesLabel)
+        self.addSubview(viewBackgraund)
+        self.viewBackgraund.addSubview(titlesLabel)
+        
     }
     
     required init?(coder: NSCoder) {
@@ -37,10 +47,15 @@ class ADSCollectionViewCellScreen: UIView {
         
         NSLayoutConstraint.activate([
         
+            self.viewBackgraund.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
+            self.viewBackgraund.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            self.viewBackgraund.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            self.viewBackgraund.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20),
             
-        
-        
-        
+            self.titlesLabel.topAnchor.constraint(equalTo: self.viewBackgraund.topAnchor, constant: 20),
+            self.titlesLabel.leadingAnchor.constraint(equalTo: self.viewBackgraund.leadingAnchor, constant: 20),
+            self.titlesLabel.trailingAnchor.constraint(equalTo: self.viewBackgraund.trailingAnchor, constant: -20),
+            self.titlesLabel.bottomAnchor.constraint(equalTo: self.viewBackgraund.bottomAnchor, constant: -20)
         ])
     }
 

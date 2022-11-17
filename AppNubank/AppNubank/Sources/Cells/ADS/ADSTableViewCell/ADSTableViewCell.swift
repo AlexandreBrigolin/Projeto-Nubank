@@ -19,7 +19,7 @@ class ADSTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.configSubView()
-        self.configConstraintsAccountMovimentedTableViewCellScreen()
+        self.configConstraints()
         self.aADSTableViewCellScreen.configProtocolsCollectionView(delegate: self, dataSource: self)
     }
     
@@ -38,7 +38,7 @@ class ADSTableViewCell: UITableViewCell {
 
     }
     
-    func configConstraintsAccountMovimentedTableViewCellScreen() {
+    func configConstraints() {
         NSLayoutConstraint.activate([
             
             self.aADSTableViewCellScreen.topAnchor.constraint(equalTo: self.topAnchor),
@@ -56,11 +56,18 @@ extension ADSTableViewCell: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        let cell: ADSCollectionViewCell? = collectionView.dequeueReusableCell(withReuseIdentifier: ADSCollectionViewCell.identifier, for: indexPath) as? ADSCollectionViewCell
+        cell?.setUpCell(data: self.data[indexPath.row])
+        
+        return cell ?? UICollectionViewCell()
     }
+}
+extension ADSTableViewCell: UICollectionViewDelegateFlowLayout {
     
-    
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return CGSize(width: 120, height: 90)
+    }
     
 }
 

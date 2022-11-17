@@ -52,7 +52,7 @@ class HomeViewModel {
     }
     
     public var numberOfRowsInSection: Int {
-        return 5
+        return 6
     }
     
     public func heightForRowAt(indexPath: IndexPath) -> CGFloat{
@@ -67,6 +67,8 @@ class HomeViewModel {
             return 90
         case .line:
             return 5
+        case .ads:
+            return 90
         default:
             return 0
         }
@@ -87,5 +89,9 @@ class HomeViewModel {
     
     public var accountMovimented: [ProfileCell] {
         return homeData?.paymentServices ?? [ProfileCell()]
+    }
+    
+    public var adsCell: [Ad] {
+        return homeData?.ads ?? [Ad()]
     }
 }
