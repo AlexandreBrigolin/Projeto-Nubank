@@ -52,7 +52,7 @@ class HomeViewModel {
     }
     
     public var numberOfRowsInSection: Int {
-        return 8
+        return 9
     }
     
     public func heightForRowAt(indexPath: IndexPath) -> CGFloat{
@@ -71,32 +71,42 @@ class HomeViewModel {
             return 130
         case .creditCard:
             return 140
+        case .followAlso:
+            return 150
         case .loan:
-            return 90
+            return 100
         default:
             return 0
         }
     }
     
-    
     public var profileCell: ProfileCell {
         return homeData?.profileCell ?? ProfileCell()
     }
+    
     public var balanceCell: AccountCell {
         return homeData?.accountCell ?? AccountCell()
     }
+    
     public var myCardsCell: MyCards {
         return homeData?.myCards ?? MyCards()
     }
+    
     public var accountMovimented: [ProfileCell] {
         return homeData?.paymentServices ?? [ProfileCell()]
     }
     public var adsCell: [Ad] {
         return homeData?.ads ?? [Ad()]
     }
+    
     public var creditCard: CrediCardCell {
         return homeData?.crediCardCell ?? CrediCardCell()
     }
+    
+    public var followAso: FollowAlso {
+        return homeData?.followAlso ?? FollowAlso()
+    }
+    
     public var loan: Loan {
         return homeData?.loan ?? Loan()
     }
