@@ -79,7 +79,7 @@ class CreditCardTableViewCellScreen: UIView {
             
             self.titleLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 5),
             self.titleLabel.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 15),
-            self.titleLabel.heightAnchor.constraint(equalToConstant: 35),
+            self.titleLabel.heightAnchor.constraint(equalToConstant: 30),
             
             self.invoiceStatusLabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 5),
             self.invoiceStatusLabel.leadingAnchor.constraint(equalTo: self.titleLabel.leadingAnchor),
@@ -87,6 +87,7 @@ class CreditCardTableViewCellScreen: UIView {
             
             self.valueLabel.topAnchor.constraint(equalTo: self.invoiceStatusLabel.bottomAnchor, constant: 5),
             self.valueLabel.leadingAnchor.constraint(equalTo: self.invoiceStatusLabel.leadingAnchor),
+            self.valueLabel.heightAnchor.constraint(equalToConstant: 30),
             
             self.invoiceDescriptionLabel.topAnchor.constraint(equalTo: self.valueLabel.bottomAnchor, constant: 5),
             self.invoiceDescriptionLabel.leadingAnchor.constraint(equalTo: self.valueLabel.leadingAnchor),
