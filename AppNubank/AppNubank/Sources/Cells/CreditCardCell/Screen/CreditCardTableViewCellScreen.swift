@@ -63,7 +63,6 @@ class CreditCardTableViewCellScreen: UIView {
     }
     
     func configSuperView() {
-        
         self.addSubview(self.titleLabel)
         self.addSubview(self.invoiceStatusLabel)
         self.addSubview(self.valueLabel)
