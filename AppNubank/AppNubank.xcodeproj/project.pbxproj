@@ -227,6 +227,7 @@
 		033E99082926B98600772F28 /* CreditCardCell */ = {
 			isa = PBXGroup;
 			children = (
+				033E99092926B98600772F28 /* CreditCardTableViewCell.swift */,
 				033E990A2926B98600772F28 /* Screen */,
 			);
 			path = CreditCardCell;
@@ -464,7 +465,6 @@
 			children = (
 				033E990E2926BC8E00772F28 /* LoanCell */,
 				033E99082926B98600772F28 /* CreditCardCell */,
-				033E99092926B98600772F28 /* CreditCardTableViewCell.swift */,
 				3FAC20182925E0B40083DD53 /* ADS */,
 				032E53EA292574DE008A183D /* AccountMovimentedCell */,
 				3FAC201229252E470083DD53 /* LineTableViewCell */,
