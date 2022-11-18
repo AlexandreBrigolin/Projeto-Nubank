@@ -11,7 +11,6 @@ class AccountMovimentedTableViewCell: UITableViewCell {
     
     var accountMovimentedTableViewCellScreen: AccountMovimentedTableViewCellScreen = AccountMovimentedTableViewCellScreen()
     var data: [ProfileCell] = []
-    let viewModel: HomeViewModel = HomeViewModel()
     
     static let identifier: String = "AccountMovimentedTableViewCell"
     

@@ -11,8 +11,6 @@ class AccountMovimentedCollectionViewCell: UICollectionViewCell {
     
     static let identifier: String = "AccountMovimentedCollectionViewCellScreen"
     var data: [ProfileCell] = []
-    let viewModel: HomeViewModel = HomeViewModel()
-    
     var accountMovimentedCollectionViewCellScreen: AccountMovimentedCollectionViewCellScreen = AccountMovimentedCollectionViewCellScreen()
     
     override init(frame: CGRect) {
@@ -23,7 +21,6 @@ class AccountMovimentedCollectionViewCell: UICollectionViewCell {
     
     func setUpCell(data: ProfileCell) {
         self.accountMovimentedCollectionViewCellScreen.imageView.image = UIImage(systemName: data.image ?? "")
-        
         self.accountMovimentedCollectionViewCellScreen.movementLabel.text = data.name
     }
     

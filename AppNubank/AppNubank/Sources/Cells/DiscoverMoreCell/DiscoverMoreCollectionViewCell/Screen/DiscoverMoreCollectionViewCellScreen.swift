@@ -9,15 +9,6 @@ import UIKit
 
 class DiscoverMoreCollectionViewCellScreen: UIView {
 
-    lazy var titleLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .boldSystemFont(ofSize: 22)
-        label.textAlignment = .center
-        label.textColor = .black
-        label.numberOfLines = 2
-        return label
-    }()
     
     lazy var viewBackgraund: UIView = {
         let view = UIView()
@@ -40,7 +31,6 @@ class DiscoverMoreCollectionViewCellScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .boldSystemFont(ofSize: 18)
-        label.textAlignment = .center
         label.textColor = .black
         label.numberOfLines = 2
         return label
@@ -49,8 +39,7 @@ class DiscoverMoreCollectionViewCellScreen: UIView {
     lazy var advertisementLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textAlignment = .center
-        label.textColor = .black
+        label.textColor = .lightGray
         label.numberOfLines = 2
         return label
     }()
@@ -59,8 +48,11 @@ class DiscoverMoreCollectionViewCellScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .boldSystemFont(ofSize: 20)
+        label.layer.cornerRadius = 20
+        label.clipsToBounds = true
+        label.textColor = .white
         label.textAlignment = .center
-        label.textColor = .black
+        label.backgroundColor = .purple
         label.numberOfLines = 2
         return label
     }()
@@ -72,7 +64,7 @@ class DiscoverMoreCollectionViewCellScreen: UIView {
     }
     
     func configSuperView() {
-        self.addSubview(self.titleLabel)
+//        self.addSubview(self.titleLabel)
         self.addSubview(self.viewBackgraund)
         self.viewBackgraund.addSubview(self.imageView)
         self.viewBackgraund.addSubview(self.titleImage)
@@ -90,34 +82,30 @@ class DiscoverMoreCollectionViewCellScreen: UIView {
         
         NSLayoutConstraint.activate([
             
-            self.titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
-            self.titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            self.titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 20),
-            self.titleLabel.heightAnchor.constraint(equalToConstant: 30),
-            
-            self.viewBackgraund.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 10),
-            self.viewBackgraund.leadingAnchor.constraint(equalTo: self.titleLabel.leadingAnchor, constant: 20),
-            self.viewBackgraund.trailingAnchor.constraint(equalTo: self.titleLabel.trailingAnchor, constant: -20),
-            self.viewBackgraund.bottomAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: -20),
-            self.viewBackgraund.heightAnchor.constraint(equalToConstant: 400),
-            self.viewBackgraund.widthAnchor.constraint(equalToConstant: 390),
+            self.viewBackgraund.topAnchor.constraint(equalTo: self.topAnchor),
+            self.viewBackgraund.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            self.viewBackgraund.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            self.viewBackgraund.heightAnchor.constraint(equalToConstant: 290),
+            self.viewBackgraund.widthAnchor.constraint(equalToConstant: 350),
             
             self.imageView.topAnchor.constraint(equalTo: self.viewBackgraund.topAnchor),
             self.imageView.leadingAnchor.constraint(equalTo: self.viewBackgraund.leadingAnchor),
             self.imageView.trailingAnchor.constraint(equalTo: self.viewBackgraund.trailingAnchor),
-            self.imageView.heightAnchor.constraint(equalToConstant: 150),
+            self.imageView.heightAnchor.constraint(equalToConstant: 130),
             
-            self.titleImage.topAnchor.constraint(equalTo: self.imageView.topAnchor, constant: 10),
-            self.titleImage.leadingAnchor.constraint(equalTo: self.imageView.leadingAnchor, constant: 10),
-            self.titleImage.heightAnchor.constraint(equalToConstant: 30),
+            self.titleImage.topAnchor.constraint(equalTo: self.imageView.bottomAnchor),
+            self.titleImage.leadingAnchor.constraint(equalTo: self.viewBackgraund.leadingAnchor, constant: 10),
+            self.titleImage.trailingAnchor.constraint(equalTo: self.viewBackgraund.trailingAnchor, constant: -5),
+            self.titleImage.heightAnchor.constraint(equalToConstant: 25),
             
-            self.advertisementLabel.topAnchor.constraint(equalTo: self.titleImage.topAnchor, constant: 10),
-            self.advertisementLabel.leadingAnchor.constraint(equalTo: self.titleImage.leadingAnchor, constant: 10),
-            self.advertisementLabel.trailingAnchor.constraint(equalTo: self.titleImage.trailingAnchor, constant: -10),
-            self.advertisementLabel.heightAnchor.constraint(equalToConstant: 60),
+            self.advertisementLabel.topAnchor.constraint(equalTo: self.titleImage.bottomAnchor, constant: 5),
+            self.advertisementLabel.leadingAnchor.constraint(equalTo: self.titleImage.leadingAnchor),
+            self.advertisementLabel.trailingAnchor.constraint(equalTo: self.titleImage.trailingAnchor),
+            self.advertisementLabel.heightAnchor.constraint(equalToConstant: 70),
             
-            self.buttonLabel.topAnchor.constraint(equalTo: self.advertisementLabel.topAnchor, constant: 10),
-            self.buttonLabel.leadingAnchor.constraint(equalTo: self.advertisementLabel.leadingAnchor, constant: 10),
+            self.buttonLabel.topAnchor.constraint(equalTo: self.advertisementLabel.bottomAnchor, constant: 5),
+            self.buttonLabel.leadingAnchor.constraint(equalTo: self.advertisementLabel.leadingAnchor),
+            self.buttonLabel.widthAnchor.constraint(equalToConstant: 160),
             self.buttonLabel.heightAnchor.constraint(equalToConstant: 40),
 
         ])

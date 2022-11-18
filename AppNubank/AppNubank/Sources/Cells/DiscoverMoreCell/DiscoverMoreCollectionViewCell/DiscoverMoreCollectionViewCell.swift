@@ -10,13 +10,38 @@ import UIKit
 class DiscoverMoreCollectionViewCell: UICollectionViewCell {
     
     static let identifier: String = "DiscoverMoreCollectionViewCell"
+    var discoverMoreCollectionViewCellScreen: DiscoverMoreCollectionViewCellScreen = DiscoverMoreCollectionViewCellScreen()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.configSubView()
+        self.configConstraints()
+    }
+    
+    func setUpCell(data: DiscoverMore) {
+        self.discoverMoreCollectionViewCellScreen.imageView.image = UIImage(systemName: data.image ?? "")
+        self.discoverMoreCollectionViewCellScreen.titleImage.text = data.title ?? ""
+        self.discoverMoreCollectionViewCellScreen.advertisementLabel.text = data.discoverMoreDescription ?? ""
+        self.discoverMoreCollectionViewCellScreen.buttonLabel.text = data.titleButton
+    }
+    
+    func configSubView() {
+        self.discoverMoreCollectionViewCellScreen.translatesAutoresizingMaskIntoConstraints = false
+        self.contentView.addSubview(self.discoverMoreCollectionViewCellScreen)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func configConstraints() {
+        
+        NSLayoutConstraint.activate([
+            self.discoverMoreCollectionViewCellScreen.topAnchor.constraint(equalTo: self.topAnchor),
+            self.discoverMoreCollectionViewCellScreen.leftAnchor.constraint(equalTo: self.leftAnchor),
+            self.discoverMoreCollectionViewCellScreen.rightAnchor.constraint(equalTo: self.rightAnchor),
+            self.discoverMoreCollectionViewCellScreen.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+        ])
     }
     
 }

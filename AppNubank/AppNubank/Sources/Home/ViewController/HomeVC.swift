@@ -17,6 +17,7 @@ enum HomeNameCell: Int {
     case creditCard = 6
     case followAlso = 7
     case loan = 8
+    case discoverMore = 9
     
 }
 
@@ -143,6 +144,10 @@ extension  HomeVC: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: LoanTableViewCell.identifier, for: indexPath) as? LoanTableViewCell
             cell?.setupCell(data: viewModel.loan)
             return cell ?? UITableViewCell()
+        case .discoverMore:
+            let cell = tableView.dequeueReusableCell(withIdentifier: DiscoverMoreTableViewCell.identifier, for: indexPath) as? DiscoverMoreTableViewCell
+            cell?.dataCollection(data: viewModel.titleDiscover)
+            return  cell ?? UITableViewCell()
         default:
             return UITableViewCell()
         }

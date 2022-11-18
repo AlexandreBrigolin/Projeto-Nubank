@@ -22,7 +22,7 @@ class HomeScreen: UIView {
         tableView.register(CreditCardTableViewCell.self, forCellReuseIdentifier: CreditCardTableViewCell.identifier)
         tableView.register(FollowAlsoTableViewCell.self, forCellReuseIdentifier: FollowAlsoTableViewCell.identifier)
         tableView.register(LoanTableViewCell.self, forCellReuseIdentifier: LoanTableViewCell.identifier)
-        tableView.register(DiscoverMoreCollectionViewCell.self, forCellReuseIdentifier: DiscoverMoreCollectionViewCell.identifier)
+        tableView.register(DiscoverMoreTableViewCell.self, forCellReuseIdentifier: DiscoverMoreTableViewCell.identifier)
         return tableView
     }()
     

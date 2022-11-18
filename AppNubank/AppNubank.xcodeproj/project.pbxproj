@@ -235,8 +235,8 @@
 		033E99082926B98600772F28 /* CreditCardCell */ = {
 			isa = PBXGroup;
 			children = (
-				033E99092926B98600772F28 /* CreditCardTableViewCell.swift */,
 				033E990A2926B98600772F28 /* Screen */,
+				033E99092926B98600772F28 /* CreditCardTableViewCell.swift */,
 			);
 			path = CreditCardCell;
 			sourceTree = "<group>";

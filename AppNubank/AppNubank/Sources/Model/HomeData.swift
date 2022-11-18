@@ -17,7 +17,8 @@ struct HomeData: Codable {
     var crediCardCell: CrediCardCell?
     var followAlso: FollowAlso?
     var loan: Loan?
-    var discoverMore: [DiscoverMore]?
+    var titleDiscover: TitleDiscover?
+
     
     enum CodingKeys: String, CodingKey {
         case profileCell = "profile_cell"
@@ -28,7 +29,8 @@ struct HomeData: Codable {
         case crediCardCell = "credi_card_cell"
         case followAlso = "follow_also"
         case loan
-        case discoverMore = "discover_more"
+        case titleDiscover = "title_discover"
+        
     }
 }
 
