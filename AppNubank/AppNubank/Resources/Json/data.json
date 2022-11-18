@@ -79,53 +79,58 @@
         "available_value": "Valor disponível de até",
         "loan_amount": 5000
     },
-    "discover_more": [{
-        "image": "person",
-        "title": "Nubank Celular Seguro",
-        "description": "100% cobertura, 0% estresse. Simule agora mesmo.",
-        "title_button": "Conhecer"
-    },
-        {
+    "title_discover": {
+        "title_discover_more": "Descubra mais",
+        "discover_more": [
+            {
             "image": "person",
-            "title": "Seguro de vida",
-            "description": "Cuide de quem você ama de um jeito que cabe no seu bolso.",
+            "title": "Nubank Celular Seguro",
+            "description": "100% cobertura, 0% estresse. Simule agora mesmo.",
             "title_button": "Conhecer"
-        },
-        {
-            "image": "person",
-            "title": "Indique o Nu para amigos",
-            "description": "Espa;he como é simples estar no controle.",
-            "title_button": "Indique amigos"
-        },
-        {
-            "image": "person",
-            "title": "Portabilidade de salário",
-            "description": "Liberdade é escolher onde receber seu dinheiro.",
-            "title_button": "Conhecer"
-        },
-        {
-            "image": "person",
-            "title": "Traga seus dados",
-            "description": "Mais chances de limites e produtos com a sua cara.",
-            "title_button": "Saiba mais"
-        },
-        {
-            "image": "person",
-            "title": "WhatsApp",
-            "description": "Pagamentos seguros, rápidos e sem tarifa.",
-            "title_button": "Quero conhecer"
-        },
-        {
-            "image": "person",
-            "title": "Cartão de crédito",
-            "description": "Não vou conseguir pagar o total da fatura, e agora?",
-            "title_button": "Veja dicas"
-        },
-        {
-            "image": "person",
-            "title": "Emprestimo pessoal",
-            "description": "Você tem R$ 5.000,00 disponíveis para empréstimos",
-            "title_button": "Conhecer"
-        }
-    ]
+            },
+            {
+                "image": "person",
+                "title": "Seguro de vida",
+                "description": "Cuide de quem você ama de um jeito que cabe no seu bolso.",
+                "title_button": "Conhecer"
+            },
+            {
+                "image": "person",
+                "title": "Indique o Nu para amigos",
+                "description": "Espa;he como é simples estar no controle.",
+                "title_button": "Indique amigos"
+            },
+            {
+                "image": "person",
+                "title": "Portabilidade de salário",
+                "description": "Liberdade é escolher onde receber seu dinheiro.",
+                "title_button": "Conhecer"
+            },
+            {
+                "image": "person",
+                "title": "Traga seus dados",
+                "description": "Mais chances de limites e produtos com a sua cara.",
+                "title_button": "Saiba mais"
+            },
+            {
+                "image": "person",
+                "title": "WhatsApp",
+                "description": "Pagamentos seguros, rápidos e sem tarifa.",
+                "title_button": "Quero conhecer"
+            },
+            {
+                "image": "person",
+                "title": "Cartão de crédito",
+                "description": "Não vou conseguir pagar o total da fatura, e agora?",
+                "title_button": "Veja dicas"
+            },
+            {
+                "image": "person",
+                "title": "Emprestimo pessoal",
+                "description": "Você tem R$ 5.000,00 disponíveis para empréstimos",
+                "title_button": "Conhecer"
+            }
+        ]
+    }
+  
 }

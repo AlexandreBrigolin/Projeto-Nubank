@@ -61,6 +61,17 @@ struct CrediCardCell: Codable {
     }
 }
 
+// MARK: - TitleDiscover
+struct TitleDiscover: Codable {
+    var titleDiscoverMore: String?
+    var discoverMore: [DiscoverMore]?
+
+    enum CodingKeys: String, CodingKey {
+        case titleDiscoverMore = "title_discover_more"
+        case discoverMore = "discover_more"
+    }
+}
+
 // MARK: - DiscoverMore
 struct DiscoverMore: Codable {
     var image: String?

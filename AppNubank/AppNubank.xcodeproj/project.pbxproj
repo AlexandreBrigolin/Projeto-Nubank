@@ -55,6 +55,10 @@
 		3FAC20202925E2D40083DD53 /* ADSCollectionViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC201F2925E2D40083DD53 /* ADSCollectionViewCellScreen.swift */; };
 		3FAC20222925E2F90083DD53 /* ADSCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC20212925E2F90083DD53 /* ADSCollectionViewCell.swift */; };
 		3FAC20242925E31B0083DD53 /* ADSTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC20232925E31B0083DD53 /* ADSTableViewCell.swift */; };
+		3FAC202A2927C25D0083DD53 /* DiscoverMoreCollectionViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC20292927C25D0083DD53 /* DiscoverMoreCollectionViewCellScreen.swift */; };
+		3FAC202C2927C2970083DD53 /* DiscoverMoreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC202B2927C2970083DD53 /* DiscoverMoreCollectionViewCell.swift */; };
+		3FAC202E2927C33E0083DD53 /* DiscoverMoreTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC202D2927C33E0083DD53 /* DiscoverMoreTableViewCellScreen.swift */; };
+		3FAC20302927C3A00083DD53 /* DiscoverMoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC202F2927C3A00083DD53 /* DiscoverMoreTableViewCell.swift */; };
 		3FB9335F291EDA33008D8872 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB9335E291EDA33008D8872 /* HomeScreen.swift */; };
 		3FED2E32292294C300B188A2 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FED2E31292294C300B188A2 /* ProfileTableViewCell.swift */; };
 		3FED2E362922962300B188A2 /* ProfileTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FED2E352922962300B188A2 /* ProfileTableViewCellScreen.swift */; };
@@ -132,6 +136,10 @@
 		3FAC201F2925E2D40083DD53 /* ADSCollectionViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSCollectionViewCellScreen.swift; sourceTree = "<group>"; };
 		3FAC20212925E2F90083DD53 /* ADSCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSCollectionViewCell.swift; sourceTree = "<group>"; };
 		3FAC20232925E31B0083DD53 /* ADSTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSTableViewCell.swift; sourceTree = "<group>"; };
+		3FAC20292927C25D0083DD53 /* DiscoverMoreCollectionViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverMoreCollectionViewCellScreen.swift; sourceTree = "<group>"; };
+		3FAC202B2927C2970083DD53 /* DiscoverMoreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverMoreCollectionViewCell.swift; sourceTree = "<group>"; };
+		3FAC202D2927C33E0083DD53 /* DiscoverMoreTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverMoreTableViewCellScreen.swift; sourceTree = "<group>"; };
+		3FAC202F2927C3A00083DD53 /* DiscoverMoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverMoreTableViewCell.swift; sourceTree = "<group>"; };
 		3FB9335E291EDA33008D8872 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		3FED2E31292294C300B188A2 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		3FED2E352922962300B188A2 /* ProfileTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCellScreen.swift; sourceTree = "<group>"; };
@@ -463,15 +471,16 @@
 		3FA347F0292002270001123A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				3FAC20352927CD980083DD53 /* DiscoverMoreCell */,
 				033E990E2926BC8E00772F28 /* LoanCell */,
 				033E99082926B98600772F28 /* CreditCardCell */,
-				3FAC20182925E0B40083DD53 /* ADS */,
+				3FAC20182925E0B40083DD53 /* ADSCell */,
 				032E53EA292574DE008A183D /* AccountMovimentedCell */,
-				3FAC201229252E470083DD53 /* LineTableViewCell */,
-				3FAC200C292429540083DD53 /* FollowAlsoTableViewCell */,
-				3FAC2006292403150083DD53 /* MyCardsTableViewCell */,
-				3FAC1FFC29234EFC0083DD53 /* BalanceTableViewCell */,
-				3FED2E33292295A500B188A2 /* ProfileTableViewCell */,
+				3FAC201229252E470083DD53 /* LineCell */,
+				3FAC200C292429540083DD53 /* FollowAlsoCell */,
+				3FAC2006292403150083DD53 /* MyCardsCell */,
+				3FAC1FFC29234EFC0083DD53 /* BalanceCell */,
+				3FED2E33292295A500B188A2 /* ProfileCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -484,22 +493,22 @@
 			path = Json;
 			sourceTree = "<group>";
 		};
-		3FAC1FFC29234EFC0083DD53 /* BalanceTableViewCell */ = {
+		3FAC1FFC29234EFC0083DD53 /* BalanceCell */ = {
 			isa = PBXGroup;
 			children = (
 				032E53B32923E2FD008A183D /* Screen */,
 				3FAC20022923562A0083DD53 /* BalanceTableViewCell.swift */,
 			);
-			path = BalanceTableViewCell;
+			path = BalanceCell;
 			sourceTree = "<group>";
 		};
-		3FAC2006292403150083DD53 /* MyCardsTableViewCell */ = {
+		3FAC2006292403150083DD53 /* MyCardsCell */ = {
 			isa = PBXGroup;
 			children = (
 				3FAC2007292403530083DD53 /* Screen */,
 				3FAC200A292404D00083DD53 /* MyCardsTableViewCell.swift */,
 			);
-			path = MyCardsTableViewCell;
+			path = MyCardsCell;
 			sourceTree = "<group>";
 		};
 		3FAC2007292403530083DD53 /* Screen */ = {
@@ -510,13 +519,13 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
-		3FAC200C292429540083DD53 /* FollowAlsoTableViewCell */ = {
+		3FAC200C292429540083DD53 /* FollowAlsoCell */ = {
 			isa = PBXGroup;
 			children = (
 				3FAC200D292429770083DD53 /* Screen */,
 				3FAC2010292429F30083DD53 /* FollowAlsoTableViewCell.swift */,
 			);
-			path = FollowAlsoTableViewCell;
+			path = FollowAlsoCell;
 			sourceTree = "<group>";
 		};
 		3FAC200D292429770083DD53 /* Screen */ = {
@@ -527,13 +536,13 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
-		3FAC201229252E470083DD53 /* LineTableViewCell */ = {
+		3FAC201229252E470083DD53 /* LineCell */ = {
 			isa = PBXGroup;
 			children = (
 				3FAC201329252ECF0083DD53 /* Screen */,
 				3FAC2016292537070083DD53 /* LineTableViewCell.swift */,
 			);
-			path = LineTableViewCell;
+			path = LineCell;
 			sourceTree = "<group>";
 		};
 		3FAC201329252ECF0083DD53 /* Screen */ = {
@@ -544,13 +553,13 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
-		3FAC20182925E0B40083DD53 /* ADS */ = {
+		3FAC20182925E0B40083DD53 /* ADSCell */ = {
 			isa = PBXGroup;
 			children = (
 				3FAC201B2925E2020083DD53 /* ADSCollectionViewCell */,
 				3FAC20192925E1D00083DD53 /* ADSTableViewCell */,
 			);
-			path = ADS;
+			path = ADSCell;
 			sourceTree = "<group>";
 		};
 		3FAC20192925E1D00083DD53 /* ADSTableViewCell */ = {
@@ -585,6 +594,49 @@
 				3FAC201F2925E2D40083DD53 /* ADSCollectionViewCellScreen.swift */,
 			);
 			path = Screen;
+			sourceTree = "<group>";
+		};
+		3FAC20252927C0C30083DD53 /* DiscoverMoreCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				3FAC20262927C11C0083DD53 /* Screen */,
+				3FAC202B2927C2970083DD53 /* DiscoverMoreCollectionViewCell.swift */,
+			);
+			path = DiscoverMoreCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		3FAC20262927C11C0083DD53 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				3FAC20292927C25D0083DD53 /* DiscoverMoreCollectionViewCellScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		3FAC20272927C1480083DD53 /* DiscoverMoreTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				3FAC20282927C1E80083DD53 /* Screen */,
+				3FAC202F2927C3A00083DD53 /* DiscoverMoreTableViewCell.swift */,
+			);
+			path = DiscoverMoreTableViewCell;
+			sourceTree = "<group>";
+		};
+		3FAC20282927C1E80083DD53 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				3FAC202D2927C33E0083DD53 /* DiscoverMoreTableViewCellScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		3FAC20352927CD980083DD53 /* DiscoverMoreCell */ = {
+			isa = PBXGroup;
+			children = (
+				3FAC20252927C0C30083DD53 /* DiscoverMoreCollectionViewCell */,
+				3FAC20272927C1480083DD53 /* DiscoverMoreTableViewCell */,
+			);
+			path = DiscoverMoreCell;
 			sourceTree = "<group>";
 		};
 		3FB9335C291ED9F2008D8872 /* Screen */ = {
@@ -657,13 +709,13 @@
 			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
-		3FED2E33292295A500B188A2 /* ProfileTableViewCell */ = {
+		3FED2E33292295A500B188A2 /* ProfileCell */ = {
 			isa = PBXGroup;
 			children = (
 				3FED2E34292295C100B188A2 /* Screen */,
 				3FED2E31292294C300B188A2 /* ProfileTableViewCell.swift */,
 			);
-			path = ProfileTableViewCell;
+			path = ProfileCell;
 			sourceTree = "<group>";
 		};
 		3FED2E34292295C100B188A2 /* Screen */ = {
@@ -967,6 +1019,7 @@
 				3FAC20242925E31B0083DD53 /* ADSTableViewCell.swift in Sources */,
 				3FAC2017292537070083DD53 /* LineTableViewCell.swift in Sources */,
 				3F8182A2290EE70400D69E55 /* LoginScreen.swift in Sources */,
+				3FAC202C2927C2970083DD53 /* DiscoverMoreCollectionViewCell.swift in Sources */,
 				3F595EE228F064AF00CD9C08 /* AppDelegate.swift in Sources */,
 				3F1014602920188F0004F10D /* GenericService.swift in Sources */,
 				3F595EE428F064AF00CD9C08 /* SceneDelegate.swift in Sources */,
@@ -985,6 +1038,9 @@
 				033E990C2926B98600772F28 /* CreditCardTableViewCell.swift in Sources */,
 				3424F1BA2904365900CA0B6A /* String + Extension.swift in Sources */,
 				3FAC201E2925E2950083DD53 /* ADSTableViewCellScreen.swift in Sources */,
+				3FAC20302927C3A00083DD53 /* DiscoverMoreTableViewCell.swift in Sources */,
+				3FAC202A2927C25D0083DD53 /* DiscoverMoreCollectionViewCellScreen.swift in Sources */,
+				3FAC202E2927C33E0083DD53 /* DiscoverMoreTableViewCellScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
