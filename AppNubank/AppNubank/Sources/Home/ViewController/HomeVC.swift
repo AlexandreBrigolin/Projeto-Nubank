@@ -48,7 +48,6 @@ class HomeVC: UIViewController {
 }
 extension HomeVC: HomeViewModelDelegate {
     func success() {
-        print("Deu certo")
         self.homeScreen?.configTableViewProtocols(delegate: self, dataSource: self)
     }
     

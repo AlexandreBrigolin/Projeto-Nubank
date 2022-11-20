@@ -172,7 +172,6 @@ extension LoginVC: LoginScreenProtocol {
              print("falha \(error?.localizedDescription ?? "")")
              self.alert?.getAlert(title: "Atenção", message: "Tivemos um problema inesperado, tente novamente mais tarde")
          }else{
-             print("Login realizado com sucesso")
              self.navigationController?.pushViewController(vc, animated: true)
          }
      }

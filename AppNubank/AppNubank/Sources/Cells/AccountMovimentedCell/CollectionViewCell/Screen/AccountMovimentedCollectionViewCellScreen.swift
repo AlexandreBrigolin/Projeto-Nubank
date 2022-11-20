@@ -12,8 +12,8 @@ class AccountMovimentedCollectionViewCellScreen: UIView {
     lazy var viewBackgraund: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.layer.cornerRadius = 20
         view.clipsToBounds = true
+        view.layer.cornerRadius = 50
         view.backgroundColor = .lightGray.withAlphaComponent(0.3)
         return view
     }()
