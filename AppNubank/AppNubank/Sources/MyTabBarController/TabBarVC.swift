@@ -7,6 +7,12 @@
 
 import UIKit
 
+enum TabBarVCString: String {
+    case imagePerson = "person"
+    case imageStar = "star"
+    case imageTrash = "trash"
+}
+
 class TabBarVC: UITabBarController {
 
     override func viewDidLoad() {
@@ -25,11 +31,11 @@ class TabBarVC: UITabBarController {
         
         guard let items = tabBar.items else{return}
         
-        items[0].image = UIImage(systemName: "person")
+        items[0].image = UIImage(systemName: TabBarVCString.imagePerson.rawValue)
         
-        items[1].image = UIImage(systemName: "star")
+        items[1].image = UIImage(systemName: TabBarVCString.imageStar.rawValue)
         
-        items[2].image = UIImage(systemName: "trash")
+        items[2].image = UIImage(systemName: TabBarVCString.imageTrash.rawValue)
         
     }
     

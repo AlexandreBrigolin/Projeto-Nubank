@@ -7,9 +7,13 @@
 
 import UIKit
 
+enum CreditCardTableViewCellString: String {
+    case identifier = "CreditCardTableViewCell"
+}
+
 class CreditCardTableViewCell: UITableViewCell {
     
-    static let identifier: String = "CreditCardTableViewCell"
+    static let identifier: String = CreditCardTableViewCellString.identifier.rawValue
     
     weak private var delegate: CreditCardTableViewCellScreenProtocol?
 

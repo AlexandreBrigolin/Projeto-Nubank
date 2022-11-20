@@ -7,9 +7,13 @@
 
 import UIKit
 
+enum FollowAlsoTableViewCellString: String {
+    case identifier = "FollowAlsoTableViewCell"
+}
+
 class FollowAlsoTableViewCell: UITableViewCell {
 
-    static let identifier: String = "FollowAlsoTableViewCell"
+    static let identifier: String = FollowAlsoTableViewCellString.identifier.rawValue
     
     weak var delegate: FollowAlsoTableViewCellScreenProtocol?
     

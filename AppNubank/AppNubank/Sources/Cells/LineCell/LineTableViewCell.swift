@@ -7,9 +7,13 @@
 
 import UIKit
 
+enum LineTableViewCellString: String {
+    case identifier = "LineTableViewCell"
+}
+
 class LineTableViewCell: UITableViewCell {
     
-    static let identifier: String = "LineTableViewCell"
+    static let identifier: String = LineTableViewCellString.identifier.rawValue
     
     weak var delegate: LineTableViewCellScreenProtocol?
     

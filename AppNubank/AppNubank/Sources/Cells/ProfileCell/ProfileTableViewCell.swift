@@ -6,9 +6,13 @@
 
 import UIKit
 
+enum ProfileTableViewCellString: String {
+    case identifier = "ProfileTableViewCell"
+}
+
 class ProfileTableViewCell: UITableViewCell {
 
-    static let identifier: String = "ProfileTableViewCell"
+    static let identifier: String = ProfileTableViewCellString.identifier.rawValue
     
     weak private var delegate: ProfileTableViewCellScreenProtocol?
 

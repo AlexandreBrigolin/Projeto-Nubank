@@ -7,6 +7,10 @@
 
 import UIKit
 
+enum ProfileTableViewCellScreenProtocolString: String {
+    case imageTrash = "trash"
+}
+
 protocol ProfileTableViewCellScreenProtocol: AnyObject {
     func actionEyeBalance()
     func actionDoubt()
@@ -32,7 +36,7 @@ class ProfileTableViewCellScreen: UIView {
     lazy var eyeBalanceButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(systemName: "trash"), for: .normal)
+        button.setImage(UIImage(systemName: ProfileTableViewCellScreenProtocolString.imageTrash.rawValue), for: .normal)
         button.tintColor = .white
         return button
     }()
@@ -40,7 +44,7 @@ class ProfileTableViewCellScreen: UIView {
     lazy var doubtButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(systemName: "trash"), for: .normal)
+        button.setImage(UIImage(systemName: ProfileTableViewCellScreenProtocolString.imageTrash.rawValue), for: .normal)
         button.tintColor = .white
         return button
     }()
@@ -48,7 +52,7 @@ class ProfileTableViewCellScreen: UIView {
     lazy var inviteFriendsButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(systemName: "trash"), for: .normal)
+        button.setImage(UIImage(systemName: ProfileTableViewCellScreenProtocolString.imageTrash.rawValue), for: .normal)
         button.tintColor = .white
         return button
     }()

@@ -7,12 +7,16 @@
 
 import UIKit
 
+enum AccountMovimentedTableViewCellString: String {
+    case identifier = "AccountMovimentedTableViewCell"
+}
+
 class AccountMovimentedTableViewCell: UITableViewCell {
     
     var accountMovimentedTableViewCellScreen: AccountMovimentedTableViewCellScreen = AccountMovimentedTableViewCellScreen()
     var data: [ProfileCell] = []
     
-    static let identifier: String = "AccountMovimentedTableViewCell"
+    static let identifier: String = AccountMovimentedTableViewCellString.identifier.rawValue
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

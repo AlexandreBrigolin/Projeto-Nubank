@@ -7,9 +7,13 @@
 
 import UIKit
 
+enum ADSCollectionViewCellString: String {
+    case identifier = "ADSCollectionViewCellScreen"
+}
+
 class ADSCollectionViewCell: UICollectionViewCell {
     
-    static let identifier: String = "ADSCollectionViewCellScreen"
+    static let identifier: String = ADSCollectionViewCellString.identifier.rawValue
     
     var ads:ADSCollectionViewCellScreen = ADSCollectionViewCellScreen()
     var data: [Ad] = []
@@ -17,6 +21,7 @@ class ADSCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
         self.configSubView()
         self.configConstraints()
     }

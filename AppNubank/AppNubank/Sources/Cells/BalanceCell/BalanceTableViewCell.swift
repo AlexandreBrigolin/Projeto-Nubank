@@ -7,9 +7,13 @@
 
 import UIKit
 
+enum BalanceTableViewCellString: String {
+    case identifier = "BalanceTableViewCell"
+}
+
 class BalanceTableViewCell: UITableViewCell {
 
-    static let identifier: String = "BalanceTableViewCell"
+    static let identifier: String = BalanceTableViewCellString.identifier.rawValue
     
     weak private var delegate: BalanceTableViewCellScreenProtocol?
 

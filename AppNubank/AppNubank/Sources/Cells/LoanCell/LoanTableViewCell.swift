@@ -7,9 +7,13 @@
 
 import UIKit
 
+enum LoanTableViewCellString: String {
+    case identifier = "LoanTableViewCell"
+}
+
 class LoanTableViewCell: UITableViewCell {
     
-    static let identifier: String = "LoanTableViewCell"
+    static let identifier: String = LoanTableViewCellString.identifier.rawValue
     
     weak private var delegate: LoanTableViewCellScreenProtocol?
 

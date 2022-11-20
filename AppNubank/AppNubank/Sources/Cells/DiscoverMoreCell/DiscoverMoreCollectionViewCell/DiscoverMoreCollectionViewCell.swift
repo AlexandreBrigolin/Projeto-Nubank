@@ -7,9 +7,13 @@
 
 import UIKit
 
+enum DiscoverMoreCollectionViewCellString: String {
+    case identifier = "DiscoverMoreCollectionViewCell"
+}
+
 class DiscoverMoreCollectionViewCell: UICollectionViewCell {
     
-    static let identifier: String = "DiscoverMoreCollectionViewCell"
+    static let identifier: String = DiscoverMoreCollectionViewCellString.identifier.rawValue
     var discoverMoreCollectionViewCellScreen: DiscoverMoreCollectionViewCellScreen = DiscoverMoreCollectionViewCellScreen()
     
     override init(frame: CGRect) {

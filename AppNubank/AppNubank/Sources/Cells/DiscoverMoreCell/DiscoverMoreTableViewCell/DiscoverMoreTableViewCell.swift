@@ -7,9 +7,13 @@
 
 import UIKit
 
+enum DiscoverMoreTableViewCellString: String {
+    case identifier = "DiscoverMoreTableViewCell"
+}
+
 class DiscoverMoreTableViewCell: UITableViewCell {
     
-    static let identifier: String = "DiscoverMoreTableViewCell"
+    static let identifier: String = DiscoverMoreTableViewCellString.identifier.rawValue
     var discoverMoreTableViewCellScreen: DiscoverMoreTableViewCellScreen = DiscoverMoreTableViewCellScreen()
     var dataDiscover: [DiscoverMore] = []
     

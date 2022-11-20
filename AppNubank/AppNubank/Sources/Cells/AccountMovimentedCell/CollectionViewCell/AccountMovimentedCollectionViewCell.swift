@@ -7,9 +7,13 @@
 
 import UIKit
 
+enum AccountMovimentedCollectionViewCellString: String {
+    case identifier = "AccountMovimentedCollectionViewCellScreen"
+}
+
 class AccountMovimentedCollectionViewCell: UICollectionViewCell {
     
-    static let identifier: String = "AccountMovimentedCollectionViewCellScreen"
+    static let identifier: String = AccountMovimentedCollectionViewCellString.identifier.rawValue
     var data: [ProfileCell] = []
     var accountMovimentedCollectionViewCellScreen: AccountMovimentedCollectionViewCellScreen = AccountMovimentedCollectionViewCellScreen()
     

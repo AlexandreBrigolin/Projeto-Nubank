@@ -7,13 +7,18 @@
 
 import UIKit
 
+enum ADSTableViewCellString: String {
+    case identifier = "ADSTableViewCell"
+}
+
+
+
 class ADSTableViewCell: UITableViewCell {
 
     var aADSTableViewCellScreen: ADSTableViewCellScreen = ADSTableViewCellScreen()
     var data: [Ad] = []
     
-    static let identifier: String = "ADSTableViewCell"
-   
+    static let identifier: String = ADSTableViewCellString.identifier.rawValue
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
