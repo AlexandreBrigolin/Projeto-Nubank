@@ -75,7 +75,6 @@ class MyCardsTableViewCellScreen: UIView {
 
             self.descriptionLabel.leadingAnchor.constraint(equalTo: self.cardImageView.trailingAnchor, constant: 20),
             self.descriptionLabel.centerYAnchor.constraint(equalTo: self.viewBackgraund.centerYAnchor),
-//
         ])
     }
 }

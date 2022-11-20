@@ -51,5 +51,4 @@ class BalanceTableViewCell: UITableViewCell {
         screen.valueLabel.text = String(" R$ \(data.balance ?? 0.0)")
         screen.balanceLabel.text = data.title ?? ""
     }
-
 }

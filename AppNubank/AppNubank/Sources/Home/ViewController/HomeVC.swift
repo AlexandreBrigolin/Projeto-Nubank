@@ -18,7 +18,6 @@ enum HomeNameCell: Int {
     case followAlso = 7
     case loan = 8
     case discoverMore = 9
-    
 }
 
 class HomeVC: UIViewController {
@@ -67,45 +66,6 @@ extension  HomeVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        // primeira abordagem
-        
-//        if indexPath.row == 0 {
-//
-//            let cell = tableView.dequeueReusableCell(withIdentifier: ProfileTableViewCell.identifier, for: indexPath) as? ProfileTableViewCell
-//            cell?.delegate(delegate: self)
-//            cell?.setupCell(data: viewModel.profileCell)
-//            return cell ?? UITableViewCell()
-//
-//        } else if indexPath.row == 1 {
-//
-//            let cell = tableView.dequeueReusableCell(withIdentifier: BalanceTableViewCell.identifier, for: indexPath) as? BalanceTableViewCell
-//            cell?.setupCell(data: viewModel.balanceCell)
-//            return cell ?? UITableViewCell()
-//
-//        }
-//        return UITableViewCell()
-        
-        
-        // segunda abordagem
-        
-//        switch indexPath.row {
-//        case 0:
-//            let cell = tableView.dequeueReusableCell(withIdentifier: ProfileTableViewCell.identifier, for: indexPath) as? ProfileTableViewCell
-//            cell?.delegate(delegate: self)
-//            cell?.setupCell(data: viewModel.profileCell)
-//            return cell ?? UITableViewCell()
-//
-//        case 1:
-//            let cell = tableView.dequeueReusableCell(withIdentifier: BalanceTableViewCell.identifier, for: indexPath) as? BalanceTableViewCell
-//            cell?.setupCell(data: viewModel.balanceCell)
-//            return cell ?? UITableViewCell()
-//
-//        default:
-//            return UITableViewCell()
-//        }
-        
-        // terceira abordagem
         
         switch HomeNameCell(rawValue: indexPath.row) {
         case .profile:

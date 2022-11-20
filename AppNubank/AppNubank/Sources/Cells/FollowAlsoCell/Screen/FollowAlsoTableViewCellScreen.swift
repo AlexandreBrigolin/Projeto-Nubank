@@ -76,8 +76,6 @@ class FollowAlsoTableViewCellScreen: UIView {
             
             self.titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             self.titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
-//            self.titleLabel.heightAnchor.constraint(equalToConstant: 35),
-//            self.titleLabel.widthAnchor.constraint(equalToConstant: 35),
             
             self.viewBackgraund.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 10),
             self.viewBackgraund.leadingAnchor.constraint(equalTo: self.titleLabel.leadingAnchor),
