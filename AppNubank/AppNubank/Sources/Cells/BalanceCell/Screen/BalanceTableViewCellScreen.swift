@@ -23,7 +23,7 @@ class BalanceTableViewCellScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
-        label.font = UIFont.boldSystemFont(ofSize: 22)
+        label.font = UIFont.boldSystemFont(ofSize: 17)
         return label
     }()
     
@@ -31,14 +31,13 @@ class BalanceTableViewCellScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
-        label.font = UIFont.boldSystemFont(ofSize: 18)
+        label.font = UIFont.boldSystemFont(ofSize: 17)
         label.numberOfLines = 0
         return label
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .white
         self.configSuperView()
         self.setupConstraint()
     }
@@ -55,9 +54,9 @@ class BalanceTableViewCellScreen: UIView {
     private func setupConstraint() {
         NSLayoutConstraint.activate([
             
-            self.balanceLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
+            self.balanceLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
             self.balanceLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            self.balanceLabel.heightAnchor.constraint(equalToConstant: 35),
+            self.balanceLabel.heightAnchor.constraint(equalToConstant: 25),
             
             self.valueLabel.topAnchor.constraint(equalTo: self.balanceLabel.bottomAnchor, constant: 10),
             self.valueLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20)

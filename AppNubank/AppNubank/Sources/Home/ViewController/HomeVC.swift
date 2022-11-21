@@ -15,9 +15,12 @@ enum HomeNameCell: Int {
     case ads = 4
     case line = 5
     case creditCard = 6
-    case followAlso = 7
-    case loan = 8
-    case discoverMore = 9
+    case line2 = 7
+    case followAlso = 8
+    case line3 = 9
+    case loan = 10
+    case line4 = 11
+    case discoverMore = 12
 }
 
 class HomeVC: UIViewController {
@@ -89,7 +92,7 @@ extension  HomeVC: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: ADSTableViewCell.identifier, for: indexPath) as? ADSTableViewCell
             cell?.dataCollection(data: viewModel.adsCell)
             return cell ?? UITableViewCell()
-        case.line:
+        case.line, .line2, .line3, .line4:
             let cell = tableView.dequeueReusableCell(withIdentifier: LineTableViewCell.identifier, for: indexPath) as? LineTableViewCell
             return cell ?? UITableViewCell()
         case.creditCard:

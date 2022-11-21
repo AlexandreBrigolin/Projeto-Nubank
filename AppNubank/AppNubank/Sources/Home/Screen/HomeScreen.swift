@@ -23,6 +23,7 @@ class HomeScreen: UIView {
         tableView.register(FollowAlsoTableViewCell.self, forCellReuseIdentifier: FollowAlsoTableViewCell.identifier)
         tableView.register(LoanTableViewCell.self, forCellReuseIdentifier: LoanTableViewCell.identifier)
         tableView.register(DiscoverMoreTableViewCell.self, forCellReuseIdentifier: DiscoverMoreTableViewCell.identifier)
+        tableView.separatorStyle = .none
         return tableView
     }()
     
