@@ -9,48 +9,48 @@
     },
     "payment_services": [{
         "name": "Área Pix",
-        "image": "person"
+        "image": "staroflife"
     },
         {
             "name": "Pagar",
-            "image": "person"
+            "image": "lineweight"
         },
         {
             "name": "Pegar emprestado",
-            "image": "person"
+            "image": "dollarsign.circle"
         },
         {
             "name": "Transferir",
-            "image": "person"
+            "image": "square.and.arrow.up"
         },
         {
             "name": "Depositar",
-            "image": "person"
+            "image": "square.and.arrow.down"
         },
         {
             "name": "Recarga de celular",
-            "image": "person"
+            "image": "iphone.gen2"
         },
         {
             "name": "Cobrar",
-            "image": "person"
+            "image": "dollarsign.square"
         },
         {
             "name": "Doação",
-            "image": "person"
+            "image": "suit.heart"
         },
         {
             "name": "Transferir Internecional",
-            "image": "person"
+            "image": "network"
         },
         {
             "name": "Investir",
-            "image": "person"
+            "image": "line.diagonal.arrow"
         }
     ],
     "my_cards": {
         "description": "Meus Cartões",
-        "image": "person"
+        "image": "lanyardcard"
     },
     "Ads": [
         {
