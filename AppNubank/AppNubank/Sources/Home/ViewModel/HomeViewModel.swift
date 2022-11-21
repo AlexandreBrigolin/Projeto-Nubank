@@ -94,8 +94,8 @@ class HomeViewModel {
         return homeData?.myCards ?? MyCards()
     }
     
-    public var accountMovimented: [ProfileCell] {
-        return homeData?.paymentServices ?? [ProfileCell()]
+    public var accountMovimented: [PaymentService] {
+        return homeData?.paymentServices ?? [PaymentService()]
     }
     public var adsCell: [Ad] {
         return homeData?.ads ?? [Ad()]

@@ -14,7 +14,7 @@ enum AccountMovimentedCollectionViewCellString: String {
 class AccountMovimentedCollectionViewCell: UICollectionViewCell {
     
     static let identifier: String = AccountMovimentedCollectionViewCellString.identifier.rawValue
-    var data: [ProfileCell] = []
+    var data: [PaymentService] = []
     var accountMovimentedCollectionViewCellScreen: AccountMovimentedCollectionViewCellScreen = AccountMovimentedCollectionViewCellScreen()
     
     override init(frame: CGRect) {
@@ -23,9 +23,10 @@ class AccountMovimentedCollectionViewCell: UICollectionViewCell {
         self.configConstraints()
     }
     
-    func setUpCell(data: ProfileCell) {
+    func setUpCell(data: PaymentService) {
         self.accountMovimentedCollectionViewCellScreen.imageView.image = UIImage(systemName: data.image ?? "")
         self.accountMovimentedCollectionViewCellScreen.movementLabel.text = data.name
+        
     }
     
     func configSubView() {

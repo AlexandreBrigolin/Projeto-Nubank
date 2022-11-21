@@ -11,7 +11,7 @@ import Foundation
 struct HomeData: Codable {
     var profileCell: ProfileCell?
     var accountCell: AccountCell?
-    var paymentServices: [ProfileCell]?
+    var paymentServices: [PaymentService]?
     var myCards: MyCards?
     var ads: [Ad]?
     var crediCardCell: CrediCardCell?
@@ -123,6 +123,19 @@ struct MyCards: Codable {
 
 // MARK: - ProfileCell
 struct ProfileCell: Codable {
-    var name: String?
-    var image: String?
+    var name, image, imageEye, imageEyeSlash: String?
+    var doubt, referFriends: String?
+
+    enum CodingKeys: String, CodingKey {
+        case name, image
+        case imageEye = "image_eye"
+        case imageEyeSlash = "image_eye_slash"
+        case doubt
+        case referFriends = "refer_friends"
+    }
+}
+
+// MARK: - PaymentService
+struct PaymentService: Codable {
+    var name, image: String?
 }

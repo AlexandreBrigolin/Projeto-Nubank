@@ -54,7 +54,9 @@ class ProfileTableViewCell: UITableViewCell {
     public func setupCell(data: ProfileCell) {
         self.screen.logoAppImageView.image = UIImage(systemName: data.image ?? "")
         self.screen.personLabel.text = data.name
-        
+        self.screen.eyeBalanceButton.setImage(UIImage(systemName: data.imageEye ?? ""), for: .normal)
+        self.screen.doubtButton.setImage(UIImage(systemName: data.doubt ?? ""), for: .normal)
+        self.screen.inviteFriendsButton.setImage(UIImage(systemName: data.referFriends ?? ""), for: .normal)
     }
 }
 

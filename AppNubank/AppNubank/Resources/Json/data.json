@@ -1,7 +1,11 @@
 {
     "profile_cell": {
         "name": "Olá Xandy",
-        "image": "person"
+        "image": "person",
+        "image_eye": "eye",
+        "image_eye_slash": "eye.slash",
+        "doubt": "person.fill.questionmark",
+        "refer_friends": "person.badge.plus"
     },
     "account_cell": {
         "title": "Conta",
@@ -71,7 +75,7 @@
     },
     "follow_also": {
         "title": "Acompanhe também",
-        "image": "person",
+        "image": "dollarsign.arrow.circlepath",
         "payments_assistant": "Assistente de pagamentos"
     },
     "loan": {
