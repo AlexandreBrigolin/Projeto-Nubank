@@ -32,7 +32,7 @@ class AccountMovimentedCollectionViewCellScreen: UIView {
         label.textAlignment = .center
         label.textColor = .black
         label.font = .systemFont(ofSize: 14)
-        label.numberOfLines = 2
+        label.numberOfLines = 0
         return label
     }()
     

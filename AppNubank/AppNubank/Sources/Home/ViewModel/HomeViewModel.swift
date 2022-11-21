@@ -64,11 +64,11 @@ class HomeViewModel {
         case .accountMovimented:
             return 120
         case .myCards:
-            return 90
+            return 60
         case .line, .line2, .line3, .line4:
             return 2
         case .ads:
-            return 130
+            return 90
         case .creditCard:
             return 140
         case .followAlso:

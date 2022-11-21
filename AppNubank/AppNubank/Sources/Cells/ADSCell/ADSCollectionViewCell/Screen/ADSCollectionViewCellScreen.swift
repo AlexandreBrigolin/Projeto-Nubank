@@ -14,7 +14,7 @@ class ADSCollectionViewCellScreen: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 8
         view.clipsToBounds = true
-        view.backgroundColor = .lightGray.withAlphaComponent(0.3)
+        view.backgroundColor = .lightGray.withAlphaComponent(0.2)
         return view
     }()
     
@@ -23,7 +23,8 @@ class ADSCollectionViewCellScreen: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.textColor = .black
-        label.numberOfLines = 2
+        label.font = .systemFont(ofSize: 16)
+        label.numberOfLines = 0
         return label
     }()
     
@@ -45,17 +46,15 @@ class ADSCollectionViewCellScreen: UIView {
 
     private func configConstraints() {
         NSLayoutConstraint.activate([
-            self.viewBackgraund.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
-            self.viewBackgraund.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            self.viewBackgraund.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-//            self.viewBackgraund.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20),
-            self.viewBackgraund.heightAnchor.constraint(equalToConstant: 80),
-            self.viewBackgraund.widthAnchor.constraint(equalToConstant: 390),
+            
+            self.viewBackgraund.centerYAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerYAnchor),
+            self.viewBackgraund.centerXAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerXAnchor),
+            self.viewBackgraund.heightAnchor.constraint(equalToConstant: 70),
+            self.viewBackgraund.widthAnchor.constraint(equalToConstant: 330),
 
-            self.titlesLabel.topAnchor.constraint(equalTo: self.viewBackgraund.topAnchor, constant: 10),
-            self.titlesLabel.leadingAnchor.constraint(equalTo: self.viewBackgraund.leadingAnchor, constant: 20),
-            self.titlesLabel.trailingAnchor.constraint(equalTo: self.viewBackgraund.trailingAnchor, constant: -20),
-            self.titlesLabel.heightAnchor.constraint(equalToConstant: 60),
+            self.titlesLabel.centerYAnchor.constraint(equalTo: self.viewBackgraund.centerYAnchor),
+            self.titlesLabel.leadingAnchor.constraint(equalTo: self.viewBackgraund.leadingAnchor, constant: 10),
+            self.titlesLabel.trailingAnchor.constraint(equalTo: self.viewBackgraund.trailingAnchor, constant: -10),
         ])
     }
 
