@@ -14,7 +14,7 @@ class AccountMovimentedCollectionViewCellScreen: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.clipsToBounds = true
         view.layer.cornerRadius = 30
-        view.backgroundColor = .lightGray.withAlphaComponent(0.2)
+        view.backgroundColor = .lightGray.withAlphaComponent(0.17)
         return view
     }()
     

@@ -30,7 +30,7 @@ class CreditCardTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.backgroundColor = .white
+        selectionStyle = .none
         self.configSuperView()
         self.setUpConstraintsScreenCell()
     }

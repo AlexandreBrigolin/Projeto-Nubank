@@ -12,7 +12,7 @@ class DiscoverMoreTableViewCellScreen: UIView {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .boldSystemFont(ofSize: 22)
+        label.font = .boldSystemFont(ofSize: 18)
         label.textAlignment = .left
         label.textColor = .black
         label.numberOfLines = 2
@@ -56,7 +56,7 @@ class DiscoverMoreTableViewCellScreen: UIView {
         NSLayoutConstraint.activate([
             
             
-            self.titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
+            self.titleLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 10),
             self.titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             self.titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
             self.titleLabel.heightAnchor.constraint(equalToConstant: 25),
@@ -64,9 +64,9 @@ class DiscoverMoreTableViewCellScreen: UIView {
             self.collectionView.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 5),
             self.collectionView.leftAnchor.constraint(equalTo: self.leftAnchor),
             self.collectionView.rightAnchor.constraint(equalTo: self.rightAnchor),
-            self.collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 10),
+//            self.collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 10),
             self.collectionView.heightAnchor.constraint(equalToConstant: 290),
-            self.collectionView.widthAnchor.constraint(equalToConstant: 350)
+            self.collectionView.widthAnchor.constraint(equalToConstant: 315)
         ])
     }
 }

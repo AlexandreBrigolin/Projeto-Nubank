@@ -14,7 +14,7 @@ class ADSCollectionViewCellScreen: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 8
         view.clipsToBounds = true
-        view.backgroundColor = .lightGray.withAlphaComponent(0.2)
+        view.backgroundColor = .lightGray.withAlphaComponent(0.17)
         return view
     }()
     

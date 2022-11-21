@@ -69,7 +69,7 @@ extension DiscoverMoreTableViewCell: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: 360, height: 300)
+        return CGSize(width: 310, height: 280)
     }
     
 }

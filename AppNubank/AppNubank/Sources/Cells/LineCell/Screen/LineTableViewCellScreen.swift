@@ -21,7 +21,7 @@ class LineTableViewCellScreen: UIView {
     lazy var lineView: UIView = {
         var view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .lightGray.withAlphaComponent(0.4)
+        view.backgroundColor = .lightGray.withAlphaComponent(0.2)
         return view
     }()
     

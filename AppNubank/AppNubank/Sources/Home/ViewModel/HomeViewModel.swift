@@ -66,17 +66,17 @@ class HomeViewModel {
         case .myCards:
             return 60
         case .line, .line2, .line3, .line4:
-            return 2
+            return 1.5
         case .ads:
             return 90
         case .creditCard:
-            return 140
+            return 115
         case .followAlso:
-            return 150
+            return 110
         case .loan:
-            return 100
+            return 80
         case .discoverMore:
-            return 370
+            return 320
         default:
             return 0
         }
