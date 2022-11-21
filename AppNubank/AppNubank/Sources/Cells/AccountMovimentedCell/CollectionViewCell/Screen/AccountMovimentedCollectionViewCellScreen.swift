@@ -31,7 +31,7 @@ class AccountMovimentedCollectionViewCellScreen: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.textColor = .black
-        label.font = .systemFont(ofSize: 15)
+        label.font = .systemFont(ofSize: 14)
         label.numberOfLines = 2
         return label
     }()

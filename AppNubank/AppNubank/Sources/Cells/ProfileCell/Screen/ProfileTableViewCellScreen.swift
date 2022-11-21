@@ -7,10 +7,6 @@
 
 import UIKit
 
-enum ProfileTableViewCellScreenProtocolString: String {
-    case imageTrash = "trash"
-}
-
 protocol ProfileTableViewCellScreenProtocol: AnyObject {
     func actionEyeBalance()
     func actionDoubt()
@@ -36,7 +32,6 @@ class ProfileTableViewCellScreen: UIView {
     lazy var eyeBalanceButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(systemName: ProfileTableViewCellScreenProtocolString.imageTrash.rawValue), for: .normal)
         button.tintColor = .white
         return button
     }()
@@ -44,7 +39,6 @@ class ProfileTableViewCellScreen: UIView {
     lazy var doubtButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(systemName: ProfileTableViewCellScreenProtocolString.imageTrash.rawValue), for: .normal)
         button.tintColor = .white
         return button
     }()
@@ -52,7 +46,6 @@ class ProfileTableViewCellScreen: UIView {
     lazy var inviteFriendsButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(systemName: ProfileTableViewCellScreenProtocolString.imageTrash.rawValue), for: .normal)
         button.tintColor = .white
         return button
     }()
@@ -61,7 +54,7 @@ class ProfileTableViewCellScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.font = UIFont.boldSystemFont(ofSize: 18)
+        label.font = UIFont.systemFont(ofSize: 19)
         label.numberOfLines = 0
         
         return label
@@ -90,7 +83,7 @@ class ProfileTableViewCellScreen: UIView {
     private func setupConstraint() {
         NSLayoutConstraint.activate([
         
-            self.logoAppImageView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 20),
+            self.logoAppImageView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 10),
             self.logoAppImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             self.logoAppImageView.heightAnchor.constraint(equalToConstant: 35),
             self.logoAppImageView.widthAnchor.constraint(equalToConstant: 35),
@@ -110,7 +103,7 @@ class ProfileTableViewCellScreen: UIView {
             self.eyeBalanceButton.heightAnchor.constraint(equalToConstant: 35),
             self.eyeBalanceButton.widthAnchor.constraint(equalToConstant: 35),
             
-            self.personLabel.topAnchor.constraint(equalTo: self.logoAppImageView.bottomAnchor, constant: 10),
+            self.personLabel.topAnchor.constraint(equalTo: self.logoAppImageView.bottomAnchor, constant: 15),
             self.personLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20)
         ])
     }

@@ -1,7 +1,7 @@
 {
     "profile_cell": {
         "name": "Olá Xandy",
-        "image": "person",
+        "image": "person.circle",
         "image_eye": "eye",
         "image_eye_slash": "eye.slash",
         "doubt": "person.fill.questionmark",

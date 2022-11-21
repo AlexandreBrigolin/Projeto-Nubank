@@ -62,7 +62,7 @@ class HomeViewModel {
         case .balance:
             return 90
         case .accountMovimented:
-            return 140
+            return 120
         case .myCards:
             return 90
         case .line:
