@@ -23,7 +23,7 @@ class ADSCollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         self.configSubView()
         self.configConstraints()
-//        self.configString1()
+        
     }
 
     required init?(coder: NSCoder) {
@@ -31,7 +31,7 @@ class ADSCollectionViewCell: UICollectionViewCell {
     }
     
     public func setUpCell(data: Ad) {
-        self.ads.titlesLabel.text = data.adDescription
+        self.configString(data: data)
     }
     
     func configSubView() {
@@ -39,17 +39,20 @@ class ADSCollectionViewCell: UICollectionViewCell {
         self.contentView.addSubview(self.ads)
     }
     
-    func configString1(data: Ad) {
-        
-        var text: String =  data.adDescription ?? ""
+    func configString(data: Ad) {
+        let text: String = data.adDescription ?? ""
         let attributedString = NSMutableAttributedString.init(string: text)
+        let range = NSString(string: text).range(of: data.highlightedText ?? "", options: String.CompareOptions.caseInsensitive)
         
-        let range = NSString(string: text).range(of: "Black Friday", options: String.CompareOptions.caseInsensitive)
-
         attributedString.addAttribute(
             .foregroundColor,
             value: UIColor.purple,
             range: range)
+        attributedString.addAttribute(
+            .font,
+            value: UIFont.systemFont(ofSize: 16, weight: .semibold),
+            range: range)
+
         ads.titlesLabel.attributedText = attributedString
     }
     
