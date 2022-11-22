@@ -9,6 +9,8 @@ import UIKit
 
 class HomeScreen: UIView {
     
+    var refreshControl = UIRefreshControl()
+    
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -32,6 +34,7 @@ class HomeScreen: UIView {
         self.configBackGround()
         self.addSubView()
         self.setUpConstraints()
+        self.configReload()
     }
     
     required init?(coder: NSCoder) {
@@ -41,6 +44,20 @@ class HomeScreen: UIView {
     public func configTableViewProtocols(delegate: UITableViewDelegate, dataSource: UITableViewDataSource){
         self.tableView.delegate = delegate
         self.tableView.dataSource = dataSource
+    }
+    
+    public func configReload() {
+        self.tableView.allowsMultipleSelection = true
+        self.refreshControl.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
+        self.tableView.addSubview(refreshControl)
+        
+    }
+    
+    @objc func refresh(send: UIRefreshControl) {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+            self.refreshControl.endRefreshing()
+        }
     }
     
     private func configBackGround(){

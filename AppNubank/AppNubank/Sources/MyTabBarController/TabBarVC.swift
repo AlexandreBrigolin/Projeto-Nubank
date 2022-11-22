@@ -8,9 +8,9 @@
 import UIKit
 
 enum TabBarVCString: String {
-    case imagePerson = "person"
-    case imageStar = "star"
-    case imageTrash = "trash"
+    case imageDollar = "dollarsign"
+    case imageArrow = "arrow.up.arrow.down"
+    case imageSuitcase = "suitcase"
 }
 
 class TabBarVC: UITabBarController {
@@ -28,14 +28,17 @@ class TabBarVC: UITabBarController {
         self.setViewControllers([tela01, tela02, tela03], animated: true)
         self.tabBar.backgroundColor = .white
         self.tabBar.isTranslucent = false
+        self.tabBar.tintColor = UIColor(red: 130/255, green: 26/255, blue: 201/255, alpha: 1.0)
         
         guard let items = tabBar.items else{return}
         
-        items[0].image = UIImage(systemName: TabBarVCString.imagePerson.rawValue)
+        items[0].image = UIImage(systemName: TabBarVCString.imageArrow.rawValue)
         
-        items[1].image = UIImage(systemName: TabBarVCString.imageStar.rawValue)
+        items[1].image = UIImage(systemName: TabBarVCString.imageDollar.rawValue)
         
-        items[2].image = UIImage(systemName: TabBarVCString.imageTrash.rawValue)
+        items[2].image = UIImage(systemName: TabBarVCString.imageSuitcase.rawValue)
+        
+
         
     }
     

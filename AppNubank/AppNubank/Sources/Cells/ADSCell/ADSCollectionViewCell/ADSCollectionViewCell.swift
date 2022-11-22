@@ -46,7 +46,7 @@ class ADSCollectionViewCell: UICollectionViewCell {
         
         attributedString.addAttribute(
             .foregroundColor,
-            value: UIColor.purple,
+            value: UIColor(red: 130/255, green: 26/255, blue: 201/255, alpha: 1.0),
             range: range)
         attributedString.addAttribute(
             .font,

@@ -37,7 +37,7 @@ struct HomeData: Codable {
 // MARK: - AccountCell
 struct AccountCell: Codable {
     var title: String?
-    var balance: Double?
+    var balance: Int?
 }
 
 // MARK: - Ad

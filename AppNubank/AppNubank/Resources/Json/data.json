@@ -1,6 +1,6 @@
 {
     "profile_cell": {
-        "name": "Olá Alexandre",
+        "name": "Olá, Alexandre",
         "image": "person.circle",
         "image_eye": "eye",
         "image_eye_slash": "eye.slash",
@@ -9,7 +9,7 @@
     },
     "account_cell": {
         "title": "Conta",
-        "balance": 1234.52
+        "balance": 1220
     },
     "payment_services": [{
         "name": "Área Pix",
@@ -139,5 +139,4 @@
             }
         ]
     }
-  
 }
