@@ -87,49 +87,49 @@
         "title_discover_more": "Descubra mais",
         "discover_more": [
             {
-            "image": "person",
+            "image": "nubank.image.8",
             "title": "Nubank Celular Seguro",
             "description": "100% cobertura, 0% estresse. Simule agora mesmo.",
             "title_button": "Conhecer"
             },
             {
-                "image": "person",
+                "image": "nubank.image.1",
                 "title": "Seguro de vida",
                 "description": "Cuide de quem você ama de um jeito que cabe no seu bolso.",
                 "title_button": "Conhecer"
             },
             {
-                "image": "person",
+                "image": "nubank.image.2",
                 "title": "Indique o Nu para amigos",
                 "description": "Espalhe como é simples estar no controle.",
                 "title_button": "Indique amigos"
             },
             {
-                "image": "person",
+                "image": "nubank.image.3",
                 "title": "Portabilidade de salário",
                 "description": "Liberdade é escolher onde receber seu dinheiro.",
                 "title_button": "Conhecer"
             },
             {
-                "image": "person",
+                "image": "nubank.image.4",
                 "title": "Traga seus dados",
                 "description": "Mais chances de limites e produtos com a sua cara.",
                 "title_button": "Saiba mais"
             },
             {
-                "image": "person",
+                "image": "nubank.image.5",
                 "title": "WhatsApp",
                 "description": "Pagamentos seguros, rápidos e sem tarifa.",
                 "title_button": "Quero conhecer"
             },
             {
-                "image": "person",
+                "image": "nubank.image.6",
                 "title": "Cartão de crédito",
                 "description": "Não vou conseguir pagar o total da fatura, e agora?",
                 "title_button": "Veja dicas"
             },
             {
-                "image": "person",
+                "image": "nubank.image.7",
                 "title": "Emprestimo pessoal",
                 "description": "Você tem R$ 5.000,00 disponíveis para empréstimos",
                 "title_button": "Conhecer"

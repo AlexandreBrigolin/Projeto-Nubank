@@ -22,7 +22,7 @@ class DiscoverMoreCollectionViewCellScreen: UIView {
     lazy var imageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.contentMode = .scaleAspectFit
+        image.contentMode = .scaleToFill
         image.tintColor = .black
         return image
     }()
