@@ -14,11 +14,11 @@ protocol BalanceTableViewCellScreenProtocol: AnyObject {
 class BalanceTableViewCellScreen: UIView {
     
     weak private var delegate: BalanceTableViewCellScreenProtocol?
-
+    
     func delegate(delegate: BalanceTableViewCellScreenProtocol?) {
         self.delegate = delegate
     }
-
+    
     lazy var balanceLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false

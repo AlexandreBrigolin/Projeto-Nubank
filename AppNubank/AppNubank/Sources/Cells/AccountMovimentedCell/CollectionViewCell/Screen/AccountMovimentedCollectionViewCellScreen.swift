@@ -61,17 +61,17 @@ class AccountMovimentedCollectionViewCellScreen: UIView {
             self.viewBackgraund.centerXAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerXAnchor),
             self.viewBackgraund.heightAnchor.constraint(equalToConstant: 60),
             self.viewBackgraund.widthAnchor.constraint(equalToConstant: 60),
-        
+            
             self.imageView.centerXAnchor.constraint(equalTo: self.viewBackgraund.centerXAnchor),
             self.imageView.centerYAnchor.constraint(equalTo: self.viewBackgraund.centerYAnchor),
             self.imageView.heightAnchor.constraint(equalToConstant: 25),
-
+            
             
             self.movementLabel.topAnchor.constraint(equalTo: self.viewBackgraund.bottomAnchor, constant: 4),
             self.movementLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             self.movementLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
             self.movementLabel.heightAnchor.constraint(equalToConstant: 50)
-        
+            
         ])
     }
 }

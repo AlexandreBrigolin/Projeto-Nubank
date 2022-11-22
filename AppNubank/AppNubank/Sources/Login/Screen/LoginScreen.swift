@@ -35,7 +35,7 @@ class LoginScreen: UIView {
         image.contentMode = .scaleAspectFit
         return image
     }()
-
+    
     lazy var sentenceLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -81,11 +81,11 @@ class LoginScreen: UIView {
         button.clipsToBounds = true
         button.layer.cornerRadius = 7.5
         button.backgroundColor = UIColor(red: 107/255, green: 18/255, blue: 147/255, alpha: 1.0)
-
+        
         button.addTarget(self, action: #selector(self.tappedLoginButton), for: .touchUpInside)
         return button
     }()
-
+    
     lazy var registerButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -149,45 +149,45 @@ class LoginScreen: UIView {
     public func getPassword() -> String {
         return self.passwordTextfield.text ?? ""
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-        
+    
     private func setUpConstrains() {
         
         NSLayoutConstraint.activate([
             
-                self.logoAppImageView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 100),
-                self.logoAppImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 60),
-                self.logoAppImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -60),
-                self.logoAppImageView.heightAnchor.constraint(equalToConstant: 200),
-                
+            self.logoAppImageView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 100),
+            self.logoAppImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 60),
+            self.logoAppImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -60),
+            self.logoAppImageView.heightAnchor.constraint(equalToConstant: 200),
             
-                self.registerButton.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -5),
-                self.registerButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-                self.registerButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-                self.registerButton.heightAnchor.constraint(equalToConstant: 45),
-
-                self.loginButton.bottomAnchor.constraint(equalTo: self.registerButton.topAnchor, constant: -15),
-                self.loginButton.leadingAnchor.constraint(equalTo: self.registerButton.leadingAnchor),
-                self.loginButton.trailingAnchor.constraint(equalTo: self.registerButton.trailingAnchor ),
-                self.loginButton.heightAnchor.constraint(equalTo: self.registerButton.heightAnchor),
-
-                self.passwordTextfield.bottomAnchor.constraint(equalTo: self.loginButton.topAnchor, constant: -20),
-                self.passwordTextfield.leadingAnchor.constraint(equalTo: self.loginButton.leadingAnchor),
-                self.passwordTextfield.trailingAnchor.constraint(equalTo: self.loginButton.trailingAnchor),
-                self.passwordTextfield.heightAnchor.constraint(equalTo: self.loginButton.heightAnchor),
-
-                self.emailTextfield.bottomAnchor.constraint(equalTo: self.passwordTextfield.topAnchor, constant: -20),
-                self.emailTextfield.leadingAnchor.constraint(equalTo: self.passwordTextfield.leadingAnchor),
-                self.emailTextfield.trailingAnchor.constraint(equalTo: self.passwordTextfield.trailingAnchor),
-                self.emailTextfield.heightAnchor.constraint(equalTo: self.passwordTextfield.heightAnchor),
-                
-                self.sentenceLabel.bottomAnchor.constraint(equalTo: self.emailTextfield.topAnchor, constant: -30),
-                self.sentenceLabel.leadingAnchor.constraint(equalTo: self.emailTextfield.leadingAnchor),
-                self.sentenceLabel.trailingAnchor.constraint(equalTo: self.emailTextfield.trailingAnchor)
-                
+            
+            self.registerButton.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -5),
+            self.registerButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            self.registerButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            self.registerButton.heightAnchor.constraint(equalToConstant: 45),
+            
+            self.loginButton.bottomAnchor.constraint(equalTo: self.registerButton.topAnchor, constant: -15),
+            self.loginButton.leadingAnchor.constraint(equalTo: self.registerButton.leadingAnchor),
+            self.loginButton.trailingAnchor.constraint(equalTo: self.registerButton.trailingAnchor ),
+            self.loginButton.heightAnchor.constraint(equalTo: self.registerButton.heightAnchor),
+            
+            self.passwordTextfield.bottomAnchor.constraint(equalTo: self.loginButton.topAnchor, constant: -20),
+            self.passwordTextfield.leadingAnchor.constraint(equalTo: self.loginButton.leadingAnchor),
+            self.passwordTextfield.trailingAnchor.constraint(equalTo: self.loginButton.trailingAnchor),
+            self.passwordTextfield.heightAnchor.constraint(equalTo: self.loginButton.heightAnchor),
+            
+            self.emailTextfield.bottomAnchor.constraint(equalTo: self.passwordTextfield.topAnchor, constant: -20),
+            self.emailTextfield.leadingAnchor.constraint(equalTo: self.passwordTextfield.leadingAnchor),
+            self.emailTextfield.trailingAnchor.constraint(equalTo: self.passwordTextfield.trailingAnchor),
+            self.emailTextfield.heightAnchor.constraint(equalTo: self.passwordTextfield.heightAnchor),
+            
+            self.sentenceLabel.bottomAnchor.constraint(equalTo: self.emailTextfield.topAnchor, constant: -30),
+            self.sentenceLabel.leadingAnchor.constraint(equalTo: self.emailTextfield.leadingAnchor),
+            self.sentenceLabel.trailingAnchor.constraint(equalTo: self.emailTextfield.trailingAnchor)
+            
         ])
     }
 }

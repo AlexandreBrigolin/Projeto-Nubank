@@ -26,7 +26,7 @@ protocol RegisterTableViewCellScreenProtocol: AnyObject {
 }
 
 class RegisterTableViewCellScreen: UIView {
-
+    
     weak private var delegate: RegisterTableViewCellScreenProtocol?
     
     func delegate(delegate: RegisterTableViewCellScreenProtocol?) {
@@ -164,7 +164,7 @@ class RegisterTableViewCellScreen: UIView {
         super.init(frame: frame)
         self.addSubView()
         self.setUpConstraints()
-
+        
     }
     
     required init?(coder: NSCoder) {
@@ -242,8 +242,8 @@ class RegisterTableViewCellScreen: UIView {
             self.registerButton.leadingAnchor.constraint(equalTo: self.passwordTextField.leadingAnchor),
             self.registerButton.trailingAnchor.constraint(equalTo: self.passwordTextField.trailingAnchor),
             self.registerButton.heightAnchor.constraint(equalToConstant: 45),
-                        
+            
         ])
     }
-
+    
 }

@@ -25,7 +25,7 @@ class ADSCollectionViewCell: UICollectionViewCell {
         self.configConstraints()
         
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -52,7 +52,7 @@ class ADSCollectionViewCell: UICollectionViewCell {
             .font,
             value: UIFont.systemFont(ofSize: 16, weight: .semibold),
             range: range)
-
+        
         ads.titlesLabel.attributedText = attributedString
     }
     

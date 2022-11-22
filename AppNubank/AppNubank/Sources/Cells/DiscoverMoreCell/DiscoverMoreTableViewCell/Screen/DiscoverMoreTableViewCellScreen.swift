@@ -64,7 +64,7 @@ class DiscoverMoreTableViewCellScreen: UIView {
             self.collectionView.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 5),
             self.collectionView.leftAnchor.constraint(equalTo: self.leftAnchor),
             self.collectionView.rightAnchor.constraint(equalTo: self.rightAnchor),
-//            self.collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 10),
+            //            self.collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 10),
             self.collectionView.heightAnchor.constraint(equalToConstant: 290),
             self.collectionView.widthAnchor.constraint(equalToConstant: 315)
         ])

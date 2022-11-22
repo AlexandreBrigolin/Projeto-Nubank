@@ -45,7 +45,7 @@ class LineTableViewCellScreen: UIView {
             self.lineView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0),
             self.lineView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
             self.lineView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0)
-     
+            
         ])
     }
     

@@ -12,7 +12,7 @@ enum FollowAlsoTableViewCellString: String {
 }
 
 class FollowAlsoTableViewCell: UITableViewCell {
-
+    
     static let identifier: String = FollowAlsoTableViewCellString.identifier.rawValue
     
     weak var delegate: FollowAlsoTableViewCellScreenProtocol?
@@ -27,7 +27,7 @@ class FollowAlsoTableViewCell: UITableViewCell {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-
+    
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -39,11 +39,11 @@ class FollowAlsoTableViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     private func addSubView(){
         self.contentView.addSubview(self.screen)
     }
-
+    
     private func setUpConstraintsScreenCell() {
         NSLayoutConstraint.activate([
             self.screen.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),

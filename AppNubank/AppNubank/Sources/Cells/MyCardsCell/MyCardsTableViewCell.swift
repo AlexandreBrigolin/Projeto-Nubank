@@ -12,7 +12,7 @@ enum MyCardsTableViewCellString: String {
 }
 
 class MyCardsTableViewCell: UITableViewCell {
-
+    
     static let identifier: String = MyCardsTableViewCellString.identifier.rawValue
     
     weak var delegate: MyCardsTableViewCellScreenProtocol?
@@ -27,7 +27,7 @@ class MyCardsTableViewCell: UITableViewCell {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-
+    
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -43,7 +43,7 @@ class MyCardsTableViewCell: UITableViewCell {
     private func addSubView(){
         self.contentView.addSubview(self.screen)
     }
-
+    
     private func setUpConstraintsScreenCell() {
         NSLayoutConstraint.activate([
             self.screen.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
@@ -57,5 +57,5 @@ class MyCardsTableViewCell: UITableViewCell {
         self.screen.cardImageView.image = UIImage(systemName: data?.image ?? "")
         self.screen.descriptionLabel.text = data?.myCardsDescription
     }
-
+    
 }

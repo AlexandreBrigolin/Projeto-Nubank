@@ -8,7 +8,7 @@
 import UIKit
 
 class ADSTableViewCellScreen: UIView {
-
+    
     lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewLayout.init())
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -20,7 +20,7 @@ class ADSTableViewCellScreen: UIView {
         layout.scrollDirection = .horizontal
         
         collectionView.setCollectionViewLayout(layout, animated: false)
-    
+        
         return collectionView
     }()
     
@@ -52,5 +52,5 @@ class ADSTableViewCellScreen: UIView {
             self.collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])        
     }
-
+    
 }

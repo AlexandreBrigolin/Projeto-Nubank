@@ -20,7 +20,7 @@ class AccountMovimentedTableViewCellScreen: UIView {
         layout.scrollDirection = .horizontal
         
         collectionView.setCollectionViewLayout(layout, animated: false)
-    
+        
         return collectionView
     }()
     
@@ -53,6 +53,6 @@ class AccountMovimentedTableViewCellScreen: UIView {
         ])
         
     }
-
+    
     
 }

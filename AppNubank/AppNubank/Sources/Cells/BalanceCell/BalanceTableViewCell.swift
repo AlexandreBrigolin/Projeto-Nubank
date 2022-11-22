@@ -12,11 +12,11 @@ enum BalanceTableViewCellString: String {
 }
 
 class BalanceTableViewCell: UITableViewCell {
-
+    
     static let identifier: String = BalanceTableViewCellString.identifier.rawValue
     
     weak private var delegate: BalanceTableViewCellScreenProtocol?
-
+    
     func delegate(delegate: BalanceTableViewCellScreenProtocol?) {
         self.delegate = delegate
     }
@@ -42,7 +42,7 @@ class BalanceTableViewCell: UITableViewCell {
     private func addSubView(){
         self.contentView.addSubview(self.screen)
     }
-
+    
     private func setUpConstraintsScreenCell() {
         NSLayoutConstraint.activate([
             self.screen.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),

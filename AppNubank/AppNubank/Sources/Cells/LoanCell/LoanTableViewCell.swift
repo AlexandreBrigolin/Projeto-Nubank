@@ -16,7 +16,7 @@ class LoanTableViewCell: UITableViewCell {
     static let identifier: String = LoanTableViewCellString.identifier.rawValue
     
     weak private var delegate: LoanTableViewCellScreenProtocol?
-
+    
     func delegate(delegate: LoanTableViewCellScreenProtocol?) {
         self.delegate = delegate
     }

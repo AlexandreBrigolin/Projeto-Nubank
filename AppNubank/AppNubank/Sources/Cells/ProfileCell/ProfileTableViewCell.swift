@@ -11,11 +11,11 @@ enum ProfileTableViewCellString: String {
 }
 
 class ProfileTableViewCell: UITableViewCell {
-
+    
     static let identifier: String = ProfileTableViewCellString.identifier.rawValue
     
     weak private var delegate: ProfileTableViewCellScreenProtocol?
-
+    
     func delegate(delegate: ProfileTableViewCellScreenProtocol) {
         self.delegate = delegate
     }

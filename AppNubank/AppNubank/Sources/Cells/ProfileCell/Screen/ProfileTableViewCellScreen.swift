@@ -14,9 +14,9 @@ protocol ProfileTableViewCellScreenProtocol: AnyObject {
 }
 
 class ProfileTableViewCellScreen: UIView {
-
+    
     weak private var delegate: ProfileTableViewCellScreenProtocol?
-
+    
     func delegate(delegate: ProfileTableViewCellScreenProtocol?) {
         self.delegate = delegate
     }
@@ -59,7 +59,7 @@ class ProfileTableViewCellScreen: UIView {
         
         return label
     }()
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = UIColor(red: 130/255, green: 26/255, blue: 201/255, alpha: 1.0)
@@ -82,7 +82,7 @@ class ProfileTableViewCellScreen: UIView {
     
     private func setupConstraint() {
         NSLayoutConstraint.activate([
-        
+            
             self.logoAppImageView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 10),
             self.logoAppImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             self.logoAppImageView.heightAnchor.constraint(equalToConstant: 35),
@@ -92,7 +92,7 @@ class ProfileTableViewCellScreen: UIView {
             self.inviteFriendsButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15),
             self.inviteFriendsButton.heightAnchor.constraint(equalToConstant: 35),
             self.inviteFriendsButton.widthAnchor.constraint(equalToConstant: 35),
-
+            
             self.doubtButton.topAnchor.constraint(equalTo: self.inviteFriendsButton.topAnchor),
             self.doubtButton.trailingAnchor.constraint(equalTo: self.inviteFriendsButton.leadingAnchor, constant: -10),
             self.doubtButton.heightAnchor.constraint(equalToConstant: 35),

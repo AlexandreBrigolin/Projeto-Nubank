@@ -14,7 +14,7 @@ protocol LoanTableViewCellScreenProtocol: AnyObject {
 class LoanTableViewCellScreen: UIView {
     
     weak private var delegate: LoanTableViewCellScreenProtocol?
-
+    
     func delegate(delegate: LoanTableViewCellScreenProtocol?) {
         self.delegate = delegate
     }
@@ -76,7 +76,7 @@ class LoanTableViewCellScreen: UIView {
             self.valueLabel.topAnchor.constraint(equalTo: self.availableValueLabel.bottomAnchor),
             self.valueLabel.leadingAnchor.constraint(equalTo: self.availableValueLabel.leadingAnchor),
             self.valueLabel.heightAnchor.constraint(equalToConstant: 20),
-        
+            
         ])
     }
     

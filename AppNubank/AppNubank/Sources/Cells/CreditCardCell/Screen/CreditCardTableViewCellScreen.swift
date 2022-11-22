@@ -15,7 +15,7 @@ protocol CreditCardTableViewCellScreenProtocol: AnyObject {
 class CreditCardTableViewCellScreen: UIView {
     
     weak private var delegate: CreditCardTableViewCellScreenProtocol?
-
+    
     func delegate(delegate: CreditCardTableViewCellScreenProtocol?) {
         self.delegate = delegate
     }
@@ -55,7 +55,7 @@ class CreditCardTableViewCellScreen: UIView {
         label.text = ""
         return label
     }()
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.configSuperView()

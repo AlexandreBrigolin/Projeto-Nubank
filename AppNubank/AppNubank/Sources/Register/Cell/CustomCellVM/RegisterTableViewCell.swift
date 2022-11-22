@@ -17,14 +17,14 @@ protocol RegisterTableViewCellProtocol: AnyObject{
 
 class RegisterTableViewCell: UITableViewCell {
     
-//    static let identifier: String = "RegisterTableViewCell"
+    //    static let identifier: String = "RegisterTableViewCell"
     static let identifier: String = String(describing: RegisterTableViewCell.self)
     
     var cpfMask: TLCustomMask?
     var phoneMask: TLCustomMask?
     
     weak private var delegate: RegisterTableViewCellProtocol?
-
+    
     func delegate(delegate: RegisterTableViewCellProtocol) {
         self.delegate = delegate
     }
@@ -63,7 +63,7 @@ class RegisterTableViewCell: UITableViewCell {
         self.contentView.backgroundColor = UIColor(red: 130/255, green: 26/255, blue: 201/255, alpha: 1.0)
     }
     
-
+    
     private func addSubView(){
         self.contentView.addSubview(self.screenCell)        
     }
@@ -105,7 +105,7 @@ class RegisterTableViewCell: UITableViewCell {
             self.configButtonEnable(false)
         }
     }
-
+    
     
     private func configButtonEnable(_ enable: Bool) {
         if enable {
@@ -136,7 +136,7 @@ extension RegisterTableViewCell: UITextFieldDelegate {
         switch textField {
         case self.screenCell.cpfTextField:
             
-//             logica para verificar o CPF
+            //             logica para verificar o CPF
             if  screenCell.cpfTextField.text?.count == 14 && BooleanValidator().validate(cpf: screenCell.cpfTextField.text ?? "") {
                 screenCell.cpfTextField.layer.borderWidth = 0
                 print("CPF valido!")
@@ -145,7 +145,7 @@ extension RegisterTableViewCell: UITextFieldDelegate {
                 screenCell.cpfTextField.layer.borderColor = UIColor.red.cgColor
                 print("CPF invalido")
             }
-                       
+            
             break
         case self.screenCell.passwordTextField:
             
@@ -165,7 +165,7 @@ extension RegisterTableViewCell: UITextFieldDelegate {
                 screenCell.emailTextField.layer.borderWidth = 1.5
                 screenCell.emailTextField.layer.borderColor = UIColor.red.cgColor
             }
-
+            
         case self.screenCell.phoneTextField:
             // logica para verificar o Phone
             
@@ -202,7 +202,7 @@ extension RegisterTableViewCell: UITextFieldDelegate {
         }
         return true
     }
-            
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         switch textField {
             

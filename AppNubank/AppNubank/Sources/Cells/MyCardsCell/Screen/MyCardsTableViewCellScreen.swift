@@ -12,9 +12,9 @@ protocol MyCardsTableViewCellScreenProtocol: AnyObject {
 }
 
 class MyCardsTableViewCellScreen: UIView {
-
+    
     weak private var delegate: MyCardsTableViewCellScreenProtocol?
-
+    
     func delegate(delegate: MyCardsTableViewCellScreenProtocol?) {
         self.delegate = delegate
     }
@@ -26,7 +26,7 @@ class MyCardsTableViewCellScreen: UIView {
         view.backgroundColor = .lightGray.withAlphaComponent(0.2)
         return view
     }()
-   
+    
     lazy var cardImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -66,12 +66,12 @@ class MyCardsTableViewCellScreen: UIView {
             self.viewBackgraund.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             self.viewBackgraund.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
             self.viewBackgraund.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
-        
+            
             self.cardImageView.leadingAnchor.constraint(equalTo: self.viewBackgraund.leadingAnchor, constant: 20),
             self.cardImageView.centerYAnchor.constraint(equalTo: self.viewBackgraund.centerYAnchor),
             self.cardImageView.heightAnchor.constraint(equalToConstant: 25),
             self.cardImageView.widthAnchor.constraint(equalToConstant: 25),
-
+            
             self.descriptionLabel.leadingAnchor.constraint(equalTo: self.cardImageView.trailingAnchor, constant: 20),
             self.descriptionLabel.centerYAnchor.constraint(equalTo: self.viewBackgraund.centerYAnchor),
         ])

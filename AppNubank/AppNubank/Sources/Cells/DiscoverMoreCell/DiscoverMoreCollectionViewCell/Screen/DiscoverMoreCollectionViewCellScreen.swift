@@ -8,7 +8,7 @@
 import UIKit
 
 class DiscoverMoreCollectionViewCellScreen: UIView {
-
+    
     
     lazy var viewBackgraund: UIView = {
         let view = UIView()
@@ -54,7 +54,7 @@ class DiscoverMoreCollectionViewCellScreen: UIView {
         label.textColor = .white
         label.textAlignment = .center
         label.backgroundColor =  UIColor(red: 130/255, green: 26/255, blue: 201/255, alpha: 1.0)
-
+        
         label.numberOfLines = 2
         return label
     }()
@@ -71,14 +71,14 @@ class DiscoverMoreCollectionViewCellScreen: UIView {
         self.viewBackgraund.addSubview(self.titleImage)
         self.viewBackgraund.addSubview(self.advertisementLabel)
         self.viewBackgraund.addSubview(self.buttonLabel)
-
+        
         
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     func configConstraints() {
         
         NSLayoutConstraint.activate([
@@ -107,10 +107,10 @@ class DiscoverMoreCollectionViewCellScreen: UIView {
             self.buttonLabel.leadingAnchor.constraint(equalTo: self.advertisementLabel.leadingAnchor),
             self.buttonLabel.widthAnchor.constraint(equalToConstant: 160),
             self.buttonLabel.heightAnchor.constraint(equalToConstant: 40),
-
+            
         ])
         
     }
-
+    
     
 }

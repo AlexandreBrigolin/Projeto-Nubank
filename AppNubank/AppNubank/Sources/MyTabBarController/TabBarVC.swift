@@ -14,7 +14,7 @@ enum TabBarVCString: String {
 }
 
 class TabBarVC: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTabBarController()
@@ -38,7 +38,7 @@ class TabBarVC: UITabBarController {
         
         items[2].image = UIImage(systemName: TabBarVCString.imageSuitcase.rawValue)
         
-
+        
         
     }
     

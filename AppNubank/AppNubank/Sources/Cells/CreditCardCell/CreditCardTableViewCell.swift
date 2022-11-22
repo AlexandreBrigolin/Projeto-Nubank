@@ -16,7 +16,7 @@ class CreditCardTableViewCell: UITableViewCell {
     static let identifier: String = CreditCardTableViewCellString.identifier.rawValue
     
     weak private var delegate: CreditCardTableViewCellScreenProtocol?
-
+    
     func delegate(delegate: CreditCardTableViewCellScreenProtocol?) {
         self.delegate = delegate
     }

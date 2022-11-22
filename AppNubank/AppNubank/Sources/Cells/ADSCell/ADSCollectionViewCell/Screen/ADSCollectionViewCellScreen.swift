@@ -43,7 +43,7 @@ class ADSCollectionViewCellScreen: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     private func configConstraints() {
         NSLayoutConstraint.activate([
             
@@ -51,11 +51,11 @@ class ADSCollectionViewCellScreen: UIView {
             self.viewBackgraund.centerXAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerXAnchor),
             self.viewBackgraund.heightAnchor.constraint(equalToConstant: 70),
             self.viewBackgraund.widthAnchor.constraint(equalToConstant: 330),
-
+            
             self.titlesLabel.centerYAnchor.constraint(equalTo: self.viewBackgraund.centerYAnchor),
             self.titlesLabel.leadingAnchor.constraint(equalTo: self.viewBackgraund.leadingAnchor, constant: 10),
             self.titlesLabel.trailingAnchor.constraint(equalTo: self.viewBackgraund.trailingAnchor, constant: -10),
         ])
     }
-
+    
 }

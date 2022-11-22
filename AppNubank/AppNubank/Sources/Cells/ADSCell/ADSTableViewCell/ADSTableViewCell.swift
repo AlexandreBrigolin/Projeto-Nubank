@@ -14,7 +14,7 @@ enum ADSTableViewCellString: String {
 
 
 class ADSTableViewCell: UITableViewCell {
-
+    
     var aADSTableViewCellScreen: ADSTableViewCellScreen = ADSTableViewCellScreen()
     var data: [Ad] = []
     

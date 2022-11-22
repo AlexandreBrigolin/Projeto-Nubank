@@ -12,13 +12,13 @@ protocol FollowAlsoTableViewCellScreenProtocol: AnyObject {
 }
 
 class FollowAlsoTableViewCellScreen: UIView {
-
+    
     weak private var delegate: FollowAlsoTableViewCellScreenProtocol?
-
+    
     func delegate(delegate: FollowAlsoTableViewCellScreenProtocol?) {
         self.delegate = delegate
     }
-
+    
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -68,7 +68,7 @@ class FollowAlsoTableViewCellScreen: UIView {
         self.addSubview(self.viewBackgraund)
         self.viewBackgraund.addSubview(self.sifraImageView)
         self.viewBackgraund.addSubview(self.assistentLabel)
-
+        
     }
     
     private func setupConstraint() {
@@ -87,7 +87,7 @@ class FollowAlsoTableViewCellScreen: UIView {
             
             self.assistentLabel.leadingAnchor.constraint(equalTo: self.sifraImageView.trailingAnchor, constant: 10),
             self.assistentLabel.centerYAnchor.constraint(equalTo: self.viewBackgraund.centerYAnchor)
-  
+            
         ])
     }
 }

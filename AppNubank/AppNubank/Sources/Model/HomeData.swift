@@ -18,7 +18,7 @@ struct HomeData: Codable {
     var followAlso: FollowAlso?
     var loan: Loan?
     var titleDiscover: TitleDiscover?
-
+    
     
     enum CodingKeys: String, CodingKey {
         case profileCell = "profile_cell"
@@ -69,7 +69,7 @@ struct CrediCardCell: Codable {
 struct TitleDiscover: Codable {
     var titleDiscoverMore: String?
     var discoverMore: [DiscoverMore]?
-
+    
     enum CodingKeys: String, CodingKey {
         case titleDiscoverMore = "title_discover_more"
         case discoverMore = "discover_more"
@@ -127,7 +127,7 @@ struct MyCards: Codable {
 struct ProfileCell: Codable {
     var name, image, imageEye, imageEyeSlash: String?
     var doubt, referFriends: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case name, image
         case imageEye = "image_eye"
