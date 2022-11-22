@@ -13,8 +13,8 @@ class AccountMovimentedCollectionViewCellScreen: UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.clipsToBounds = true
-        view.layer.cornerRadius = 50
-        view.backgroundColor = .lightGray.withAlphaComponent(0.3)
+        view.layer.cornerRadius = 30
+        view.backgroundColor = .lightGray.withAlphaComponent(0.17)
         return view
     }()
     
@@ -31,8 +31,8 @@ class AccountMovimentedCollectionViewCellScreen: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.textColor = .black
-        label.font = .systemFont(ofSize: 15)
-        label.numberOfLines = 2
+        label.font = .systemFont(ofSize: 14)
+        label.numberOfLines = 0
         return label
     }()
     
@@ -45,7 +45,7 @@ class AccountMovimentedCollectionViewCellScreen: UIView {
     func configSuperView() {
         self.addSubview(self.viewBackgraund)
         self.viewBackgraund.addSubview(self.imageView)
-        self.viewBackgraund.addSubview(self.movementLabel)
+        self.addSubview(self.movementLabel)
         
     }
     
@@ -57,23 +57,21 @@ class AccountMovimentedCollectionViewCellScreen: UIView {
         
         NSLayoutConstraint.activate([
             
-            self.viewBackgraund.topAnchor.constraint(equalTo: self.topAnchor),
-            self.viewBackgraund.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            self.viewBackgraund.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-            self.viewBackgraund.heightAnchor.constraint(equalToConstant: 100),
-            self.viewBackgraund.widthAnchor.constraint(equalToConstant: 120),
+            self.viewBackgraund.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor,constant: 5),
+            self.viewBackgraund.centerXAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerXAnchor),
+            self.viewBackgraund.heightAnchor.constraint(equalToConstant: 60),
+            self.viewBackgraund.widthAnchor.constraint(equalToConstant: 60),
+        
+            self.imageView.centerXAnchor.constraint(equalTo: self.viewBackgraund.centerXAnchor),
+            self.imageView.centerYAnchor.constraint(equalTo: self.viewBackgraund.centerYAnchor),
+            self.imageView.heightAnchor.constraint(equalToConstant: 25),
+
             
-            self.imageView.topAnchor.constraint(equalTo: self.viewBackgraund.topAnchor, constant: 5),
-            self.imageView.leadingAnchor.constraint(equalTo: self.viewBackgraund.leadingAnchor, constant: 5),
-            self.imageView.trailingAnchor.constraint(equalTo: self.viewBackgraund.trailingAnchor, constant: -5),
-            self.imageView.heightAnchor.constraint(equalToConstant: 30),
-            self.imageView.bottomAnchor.constraint(equalTo: self.movementLabel.topAnchor, constant: -5),
-            
-            self.movementLabel.leadingAnchor.constraint(equalTo: self.viewBackgraund.leadingAnchor, constant: 5),
-            self.movementLabel.trailingAnchor.constraint(equalTo: self.viewBackgraund.trailingAnchor, constant: -5),
+            self.movementLabel.topAnchor.constraint(equalTo: self.viewBackgraund.bottomAnchor, constant: 4),
+            self.movementLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
+            self.movementLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
             self.movementLabel.heightAnchor.constraint(equalToConstant: 50)
         
         ])
-        
     }
 }

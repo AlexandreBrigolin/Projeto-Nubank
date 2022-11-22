@@ -24,7 +24,7 @@ class CreditCardTableViewCellScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
-        label.font = UIFont.boldSystemFont(ofSize: 22)
+        label.font = UIFont.boldSystemFont(ofSize: 18)
         label.text = ""
         return label
     }()
@@ -33,7 +33,7 @@ class CreditCardTableViewCellScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .lightGray
-        label.font = UIFont.boldSystemFont(ofSize: 15)
+        label.font = UIFont.systemFont(ofSize: 15)
         label.text = ""
         return label
     }()
@@ -42,7 +42,7 @@ class CreditCardTableViewCellScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
-        label.font = UIFont.boldSystemFont(ofSize: 22)
+        label.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
         label.text = ""
         return label
     }()
@@ -51,7 +51,7 @@ class CreditCardTableViewCellScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .lightGray
-        label.font = UIFont.boldSystemFont(ofSize: 15)
+        label.font = UIFont.systemFont(ofSize: 15)
         label.text = ""
         return label
     }()
@@ -78,19 +78,19 @@ class CreditCardTableViewCellScreen: UIView {
             
             self.titleLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 5),
             self.titleLabel.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 15),
-            self.titleLabel.heightAnchor.constraint(equalToConstant: 30),
+            self.titleLabel.heightAnchor.constraint(equalToConstant: 25),
             
             self.invoiceStatusLabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 5),
             self.invoiceStatusLabel.leadingAnchor.constraint(equalTo: self.titleLabel.leadingAnchor),
-            self.invoiceStatusLabel.heightAnchor.constraint(equalToConstant: 25),
+            self.invoiceStatusLabel.heightAnchor.constraint(equalToConstant: 20),
             
             self.valueLabel.topAnchor.constraint(equalTo: self.invoiceStatusLabel.bottomAnchor, constant: 5),
             self.valueLabel.leadingAnchor.constraint(equalTo: self.invoiceStatusLabel.leadingAnchor),
-            self.valueLabel.heightAnchor.constraint(equalToConstant: 30),
+            self.valueLabel.heightAnchor.constraint(equalToConstant: 25),
             
             self.invoiceDescriptionLabel.topAnchor.constraint(equalTo: self.valueLabel.bottomAnchor, constant: 5),
             self.invoiceDescriptionLabel.leadingAnchor.constraint(equalTo: self.valueLabel.leadingAnchor),
-            self.invoiceDescriptionLabel.heightAnchor.constraint(equalToConstant: 25),
+            self.invoiceDescriptionLabel.heightAnchor.constraint(equalToConstant: 20),
         ])
     }
 }

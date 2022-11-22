@@ -23,7 +23,7 @@ class FollowAlsoTableViewCellScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
-        label.font = UIFont.boldSystemFont(ofSize: 20)
+        label.font = UIFont.boldSystemFont(ofSize: 18)
         return label
     }()
     
@@ -32,7 +32,7 @@ class FollowAlsoTableViewCellScreen: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 8
         view.clipsToBounds = true
-        view.backgroundColor = .lightGray.withAlphaComponent(0.3)
+        view.backgroundColor = .lightGray.withAlphaComponent(0.17)
         return view
     }()
     
@@ -48,7 +48,7 @@ class FollowAlsoTableViewCellScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
-        label.font = UIFont.boldSystemFont(ofSize: 18)
+        label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         return label
     }()
     
@@ -75,12 +75,12 @@ class FollowAlsoTableViewCellScreen: UIView {
         NSLayoutConstraint.activate([
             
             self.titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
-            self.titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
+            self.titleLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 10),
             
             self.viewBackgraund.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 10),
             self.viewBackgraund.leadingAnchor.constraint(equalTo: self.titleLabel.leadingAnchor),
             self.viewBackgraund.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-            self.viewBackgraund.heightAnchor.constraint(equalToConstant: 80),
+            self.viewBackgraund.heightAnchor.constraint(equalToConstant: 60),
             
             self.sifraImageView.leadingAnchor.constraint(equalTo: self.viewBackgraund.leadingAnchor, constant: 10),
             self.sifraImageView.centerYAnchor.constraint(equalTo: self.viewBackgraund.centerYAnchor),

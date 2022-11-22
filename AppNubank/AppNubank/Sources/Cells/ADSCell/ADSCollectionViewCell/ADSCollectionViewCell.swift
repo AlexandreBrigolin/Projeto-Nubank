@@ -21,9 +21,9 @@ class ADSCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         self.configSubView()
         self.configConstraints()
+//        self.configString1()
     }
 
     required init?(coder: NSCoder) {
@@ -37,6 +37,20 @@ class ADSCollectionViewCell: UICollectionViewCell {
     func configSubView() {
         self.ads.translatesAutoresizingMaskIntoConstraints = false
         self.contentView.addSubview(self.ads)
+    }
+    
+    func configString1(data: Ad) {
+        
+        var text: String =  data.adDescription ?? ""
+        let attributedString = NSMutableAttributedString.init(string: text)
+        
+        let range = NSString(string: text).range(of: "Black Friday", options: String.CompareOptions.caseInsensitive)
+
+        attributedString.addAttribute(
+            .foregroundColor,
+            value: UIColor.purple,
+            range: range)
+        ads.titlesLabel.attributedText = attributedString
     }
     
     func configConstraints() {

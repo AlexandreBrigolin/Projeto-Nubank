@@ -30,6 +30,7 @@ class LoanTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        selectionStyle = .none
         self.configSubView()
         self.configConstraints()
     }

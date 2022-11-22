@@ -14,7 +14,7 @@ enum AccountMovimentedTableViewCellString: String {
 class AccountMovimentedTableViewCell: UITableViewCell {
     
     var accountMovimentedTableViewCellScreen: AccountMovimentedTableViewCellScreen = AccountMovimentedTableViewCellScreen()
-    var data: [ProfileCell] = []
+    var data: [PaymentService] = []
     
     static let identifier: String = AccountMovimentedTableViewCellString.identifier.rawValue
     
@@ -35,7 +35,7 @@ class AccountMovimentedTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func dataCollection(data: [ProfileCell]) {
+    public func dataCollection(data: [PaymentService]) {
         self.data = data
         
     }
@@ -74,7 +74,7 @@ extension AccountMovimentedTableViewCell: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: 140, height: 110)
+        return CGSize(width: 110, height: 100)
     }
     
 }
