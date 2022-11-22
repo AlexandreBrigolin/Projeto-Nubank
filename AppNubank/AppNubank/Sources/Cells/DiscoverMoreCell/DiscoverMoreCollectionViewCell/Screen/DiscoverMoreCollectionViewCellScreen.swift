@@ -53,7 +53,8 @@ class DiscoverMoreCollectionViewCellScreen: UIView {
         label.clipsToBounds = true
         label.textColor = .white
         label.textAlignment = .center
-        label.backgroundColor = .purple
+        label.backgroundColor =  UIColor(red: 130/255, green: 26/255, blue: 201/255, alpha: 1.0)
+
         label.numberOfLines = 2
         return label
     }()
