@@ -23,7 +23,7 @@ class DiscoverMoreCollectionViewCell: UICollectionViewCell {
     }
     
     func setUpCell(data: DiscoverMore) {
-        self.discoverMoreCollectionViewCellScreen.imageView.image = UIImage(systemName: data.image ?? "")
+        self.discoverMoreCollectionViewCellScreen.imageView.image = UIImage(named: data.image ?? "")
         self.discoverMoreCollectionViewCellScreen.titleImage.text = data.title ?? ""
         self.discoverMoreCollectionViewCellScreen.advertisementLabel.text = data.discoverMoreDescription ?? ""
         self.discoverMoreCollectionViewCellScreen.buttonLabel.text = data.titleButton
