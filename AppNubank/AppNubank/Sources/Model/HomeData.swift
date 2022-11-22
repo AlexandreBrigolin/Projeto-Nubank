@@ -43,9 +43,11 @@ struct AccountCell: Codable {
 // MARK: - Ad
 struct Ad: Codable {
     var adDescription: String?
+    var highlightedText: String?
     
     enum CodingKeys: String, CodingKey {
         case adDescription = "description"
+        case highlightedText = "highlighted_text"
     }
 }
 

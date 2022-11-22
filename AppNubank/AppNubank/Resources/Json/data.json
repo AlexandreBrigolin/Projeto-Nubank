@@ -1,6 +1,6 @@
 {
     "profile_cell": {
-        "name": "Olá Xandy",
+        "name": "Olá Alexandre",
         "image": "person.circle",
         "image_eye": "eye",
         "image_eye_slash": "eye.slash",
@@ -58,12 +58,15 @@
     },
     "Ads": [
         {
-            "description": "Black Friday com cashback é no Shopping do Nu."
+            "highlighted_text": "débito automático",
+            "description": "Chegou o débito automático no fechamento da fatura"
         },
         {
-            "description": "Você tem até R$ 5000,00 disponíveis para empréstimo."
+            "highlighted_text": "R$ 25.000,00",
+            "description": "Você tem até R$ 25.000,00 disponíveis para empréstimo"
         },
         {
+            "highlighted_text": "Convide amigos para o Nubank",
             "description": "Convide amigos para o Nubank e desbloqueie brasões incríveis"
         }
     ],
