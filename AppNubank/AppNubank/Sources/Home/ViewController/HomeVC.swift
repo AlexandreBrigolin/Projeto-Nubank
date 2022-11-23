@@ -27,6 +27,7 @@ class HomeVC: UIViewController {
     
     var homeScreen: HomeScreen?
     let viewModel: HomeViewModel = HomeViewModel()
+    var refreshControl = UIRefreshControl()
     
     override func loadView() {
         self.homeScreen = HomeScreen()
@@ -35,10 +36,11 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(red: 130/255, green: 26/255, blue: 201/255, alpha: 1.0)
         self.signatureDelegate()
-        viewModel.fetch(.mock)
+        self.viewModel.fetch(.request)
+        self.configReload()
     }
+    
     
     private func signatureDelegate() {
         viewModel.delegate(delegate: self)
@@ -48,10 +50,23 @@ class HomeVC: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
+    
+    public func configReload() {
+        self.refreshControl.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
+        self.homeScreen?.tableView.addSubview(refreshControl)
+        
+    }
+    
+    @objc func refresh(send: UIRefreshControl) {
+            self.viewModel.fetch(.request)
+    }
+    
 }
 extension HomeVC: HomeViewModelDelegate {
     func success() {
         self.homeScreen?.configTableViewProtocols(delegate: self, dataSource: self)
+        self.refreshControl.endRefreshing()
+        self.homeScreen?.tableView.reloadData()
     }
     
     func error(_message: String) {

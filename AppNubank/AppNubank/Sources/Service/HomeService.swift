@@ -16,7 +16,7 @@ protocol HomeServiceDelegate: GenericService{
 class HomeService: HomeServiceDelegate {
     
     func getHome(completion: @escaping completion<HomeData?>){
-        let url: String = ""
+        let url: String = "https://run.mocky.io/v3/4c599af9-e458-4604-a12f-e952cc310a44"
         
         AF.request(url, method: .get).validate().responseDecodable(of: HomeData.self) { response in
             print(#function)
