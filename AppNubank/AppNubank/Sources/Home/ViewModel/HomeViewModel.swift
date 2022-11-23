@@ -42,10 +42,11 @@ class HomeViewModel {
             }
         case.request:
             self.service.getHome { success, error in
-                if let error = error {
-                    self.delegate?.error(_message: error.localizedDescription)
-                }else {
+                if let success = success {
+                    self.homeData = success
                     self.delegate?.success()
+                }else {
+                    self.delegate?.error(_message: error?.localizedDescription ?? "")
                 }
             }
         }

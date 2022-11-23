@@ -27,6 +27,7 @@ class HomeVC: UIViewController {
     
     var homeScreen: HomeScreen?
     let viewModel: HomeViewModel = HomeViewModel()
+    var refreshControl = UIRefreshControl()
     
     override func loadView() {
         self.homeScreen = HomeScreen()
@@ -37,8 +38,10 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 130/255, green: 26/255, blue: 201/255, alpha: 1.0)
         self.signatureDelegate()
-        viewModel.fetch(.mock)
+        self.viewModel.fetch(.request)
+        self.configReload()
     }
+    
     
     private func signatureDelegate() {
         viewModel.delegate(delegate: self)
@@ -48,10 +51,33 @@ class HomeVC: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
+    
+    public func configReload() {
+//        permite Seleção Múltipla
+        self.homeScreen?.tableView.allowsMultipleSelection = true
+//        add destino (movimento do scroll que chama a acao)
+        self.refreshControl.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
+//        add a bolinha que fica girando dentro da table view
+        self.homeScreen?.tableView.addSubview(refreshControl)
+//
+        
+    }
+    
+    @objc func refresh(send: UIRefreshControl) {
+        DispatchQueue.global().asyncAfter(deadline: .now(), execute: {
+            self.viewModel.fetch(.request)
+            self.homeScreen?.tableView.reloadData()
+            self.refreshControl.endRefreshing()
+        })
+    }
+    
 }
 extension HomeVC: HomeViewModelDelegate {
     func success() {
+        print("deu certo")
         self.homeScreen?.configTableViewProtocols(delegate: self, dataSource: self)
+       
+        
     }
     
     func error(_message: String) {
