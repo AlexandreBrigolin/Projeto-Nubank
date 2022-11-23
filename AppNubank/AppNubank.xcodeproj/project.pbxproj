@@ -327,7 +327,6 @@
 			children = (
 				3FB93360291EDADB008D8872 /* Sources */,
 				3FB93363291EDB8C008D8872 /* Resources */,
-				3F595EEF28F064B100CD9C08 /* Info.plist */,
 				03B02DFE28F20722008E2ECA /* GoogleService-Info.plist */,
 			);
 			path = AppNubank;
@@ -695,6 +694,7 @@
 		3FB93363291EDB8C008D8872 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3F595EEF28F064B100CD9C08 /* Info.plist */,
 				3FA347F1292002F10001123A /* Json */,
 				3F595EEA28F064B100CD9C08 /* Assets.xcassets */,
 			);
@@ -1212,7 +1212,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X24P9DA2X5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AppNubank/Info.plist;
+				INFOPLIST_FILE = AppNubank/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -1245,7 +1245,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X24P9DA2X5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AppNubank/Info.plist;
+				INFOPLIST_FILE = AppNubank/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
