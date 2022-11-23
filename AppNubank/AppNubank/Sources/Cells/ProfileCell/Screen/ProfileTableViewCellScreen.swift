@@ -33,6 +33,7 @@ class ProfileTableViewCellScreen: UIView {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.tintColor = .white
+        button.addTarget(self, action: #selector(self.tappedEyeBalance), for: .touchUpInside)
         return button
     }()
     
@@ -67,10 +68,6 @@ class ProfileTableViewCellScreen: UIView {
         self.setupConstraint()
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     private func configSuperView() {
         self.addSubview(self.logoAppImageView)
         self.addSubview(self.inviteFriendsButton)
@@ -79,6 +76,15 @@ class ProfileTableViewCellScreen: UIView {
         self.addSubview(self.personLabel)
         
     }
+    
+    @objc private func tappedEyeBalance() {
+        self.delegate?.actionEyeBalance()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     
     private func setupConstraint() {
         NSLayoutConstraint.activate([
