@@ -36,7 +36,6 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(red: 130/255, green: 26/255, blue: 201/255, alpha: 1.0)
         self.signatureDelegate()
         self.viewModel.fetch(.request)
         self.configReload()
@@ -53,31 +52,21 @@ class HomeVC: UIViewController {
     
     
     public func configReload() {
-//        permite Seleção Múltipla
-        self.homeScreen?.tableView.allowsMultipleSelection = true
-//        add destino (movimento do scroll que chama a acao)
         self.refreshControl.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
-//        add a bolinha que fica girando dentro da table view
         self.homeScreen?.tableView.addSubview(refreshControl)
-//
         
     }
     
     @objc func refresh(send: UIRefreshControl) {
-        DispatchQueue.global().asyncAfter(deadline: .now(), execute: {
             self.viewModel.fetch(.request)
-            self.homeScreen?.tableView.reloadData()
-            self.refreshControl.endRefreshing()
-        })
     }
     
 }
 extension HomeVC: HomeViewModelDelegate {
     func success() {
-        print("deu certo")
         self.homeScreen?.configTableViewProtocols(delegate: self, dataSource: self)
-       
-        
+        self.refreshControl.endRefreshing()
+        self.homeScreen?.tableView.reloadData()
     }
     
     func error(_message: String) {

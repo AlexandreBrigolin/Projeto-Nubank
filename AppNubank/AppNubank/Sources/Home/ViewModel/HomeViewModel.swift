@@ -38,7 +38,6 @@ class HomeViewModel {
                 }else {
                     self.delegate?.error(_message: error?.localizedDescription ?? "")
                 }
-                
             }
         case.request:
             self.service.getHome { success, error in
@@ -96,10 +95,10 @@ class HomeViewModel {
     }
     
     public var accountMovimented: [PaymentService] {
-        return homeData?.paymentServices ?? [PaymentService()]
+        return homeData?.paymentServices ?? []
     }
     public var adsCell: [Ad] {
-        return homeData?.ads ?? [Ad()]
+        return homeData?.ads ?? []
     }
     
     public var creditCard: CrediCardCell {
