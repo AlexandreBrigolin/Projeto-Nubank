@@ -19,7 +19,6 @@ struct HomeData: Codable {
     var loan: Loan?
     var titleDiscover: TitleDiscover?
     
-    
     enum CodingKeys: String, CodingKey {
         case profileCell = "profile_cell"
         case accountCell = "account_cell"

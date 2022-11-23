@@ -27,10 +27,6 @@ class LoginVC: UIViewController {
         self.alert = Alert(controller: self)
         self.configKeyoard()
         self.dismissKeyboard()
-        self.loginScreen?.emailTextfield.text = "Xandy10@hotmail.com"
-        self.loginScreen?.passwordTextfield.text = "1234xandy"
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,19 +48,13 @@ class LoginVC: UIViewController {
     }
     
     @objc func keyboardSubir(notification:Notification){
-        
-        print("O teclado mostrará: \(notification.name.rawValue)")
-        
         view.frame.origin.y = -290
     }
     
     @objc func keyboardOriginal(notification:Notification){
-        
-        print("O teclado mostrará: \(notification.name.rawValue)")
-        
         view.frame.origin.y = 0
-        
     }
+    
     func cadastroTest() {
         
         self.auth?.createUser(withEmail: "bah@hotmail.com", password: "1234567", completion: { authResult , error in
@@ -85,7 +75,6 @@ class LoginVC: UIViewController {
         }else{
             self.configButtonEnable(false)
         }
-        
     }
     
     private func configButtonEnable(_ enanle: Bool) {
@@ -101,7 +90,6 @@ class LoginVC: UIViewController {
 
 extension LoginVC: UITextFieldDelegate {
     
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField.isEqual(self.loginScreen?.emailTextfield){
             self.loginScreen?.passwordTextfield.becomeFirstResponder()
@@ -112,12 +100,12 @@ extension LoginVC: UITextFieldDelegate {
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        print("textFieldDidBeginEditing")
+        print(#function)
         
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        print("textFieldDidEndEditing")
+        print(#function)
         
         if textField.text?.isEmpty ?? false {
             textField.layer.borderWidth = 1.5
@@ -125,7 +113,6 @@ extension LoginVC: UITextFieldDelegate {
         } else {
             textField.layer.borderWidth = 0
         }
-        
         switch textField {
         case self.loginScreen?.emailTextfield:
             
@@ -135,7 +122,6 @@ extension LoginVC: UITextFieldDelegate {
                 self.loginScreen?.emailTextfield.layer.borderWidth = 1.5
                 self.loginScreen?.emailTextfield.layer.borderColor = UIColor.red.cgColor
             }
-            
             break
         case self.loginScreen?.passwordTextfield:
             
@@ -150,21 +136,15 @@ extension LoginVC: UITextFieldDelegate {
         }
         self.validaTextField()
     }
-    
 }
-
 
 extension LoginVC: LoginScreenProtocol {
     
     func actionLoginButton() {
-        
         let vc: TabBarVC = TabBarVC()
-        
-        
         guard let login = self.loginScreen else {return}
         
         self.auth?.signIn(withEmail: login.getEmail(), password: login.getPassword(), completion: { user, error in
-            
             if error != nil {
                 self.alert?.getAlert(title: "Atenção", message: "Dados incorretos, verifique seus dados")
             }else{
@@ -182,5 +162,4 @@ extension LoginVC: LoginScreenProtocol {
         let vc: RegisterVC = RegisterVC()
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
 }

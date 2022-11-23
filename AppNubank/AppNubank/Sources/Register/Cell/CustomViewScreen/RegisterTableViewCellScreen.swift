@@ -124,7 +124,6 @@ class RegisterTableViewCellScreen: UIView {
         textfield.keyboardType = .default
         textfield.placeholder = RegisterTableViewCellScreenStrings.password.rawValue
         textfield.isSecureTextEntry = true
-        //        tf.font = UIFont.systemFont(ofSize: 14)
         textfield.textColor = .darkGray
         return textfield
     }()
@@ -154,17 +153,14 @@ class RegisterTableViewCellScreen: UIView {
         delegate?.tappedRegisterButton()
     }
     
-    
     @objc private func tappedBackButton() {
         self.delegate?.actionBackButton()
     }
-    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.addSubView()
         self.setUpConstraints()
-        
     }
     
     required init?(coder: NSCoder) {
@@ -172,6 +168,7 @@ class RegisterTableViewCellScreen: UIView {
     }
     
     private func addSubView(){
+        
         self.addSubview(self.registerLabel)
         self.addSubview(self.nameTextField)
         self.addSubview(self.emailTextField)
@@ -191,7 +188,6 @@ class RegisterTableViewCellScreen: UIView {
             self.registerLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             self.registerLabel.heightAnchor.constraint(equalToConstant: 45),
             
-            
             self.backButton.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
             self.backButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             self.backButton.heightAnchor.constraint(equalToConstant: 40),
@@ -201,49 +197,40 @@ class RegisterTableViewCellScreen: UIView {
             self.nameTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
             self.nameTextField.heightAnchor.constraint(equalToConstant: 45),
             
-            
             self.emailTextField.topAnchor.constraint(equalTo: self.nameTextField.bottomAnchor, constant: 20),
             self.emailTextField.leadingAnchor.constraint(equalTo: self.nameTextField.leadingAnchor),
             self.emailTextField.trailingAnchor.constraint(equalTo: self.nameTextField.trailingAnchor),
             self.emailTextField.heightAnchor.constraint(equalToConstant: 45),
-            
             
             self.ageTextField.topAnchor.constraint(equalTo: self.emailTextField.bottomAnchor, constant: 20),
             self.ageTextField.leadingAnchor.constraint(equalTo: self.emailTextField.leadingAnchor),
             self.ageTextField.trailingAnchor.constraint(equalTo: self.emailTextField.trailingAnchor),
             self.ageTextField.heightAnchor.constraint(equalToConstant: 45),
             
-            
             self.phoneTextField.topAnchor.constraint(equalTo: self.ageTextField.bottomAnchor, constant: 20),
             self.phoneTextField.leadingAnchor.constraint(equalTo: self.ageTextField.leadingAnchor),
             self.phoneTextField.trailingAnchor.constraint(equalTo: self.ageTextField.trailingAnchor),
             self.phoneTextField.heightAnchor.constraint(equalToConstant: 45),
-            
             
             self.addressTextField.topAnchor.constraint(equalTo: self.phoneTextField.bottomAnchor, constant: 20),
             self.addressTextField.leadingAnchor.constraint(equalTo: self.phoneTextField.leadingAnchor),
             self.addressTextField.trailingAnchor.constraint(equalTo: self.phoneTextField.trailingAnchor),
             self.addressTextField.heightAnchor.constraint(equalToConstant: 45),
             
-            
             self.cpfTextField.topAnchor.constraint(equalTo: self.addressTextField.bottomAnchor, constant: 20),
             self.cpfTextField.leadingAnchor.constraint(equalTo: self.addressTextField.leadingAnchor),
             self.cpfTextField.trailingAnchor.constraint(equalTo: self.addressTextField.trailingAnchor),
             self.cpfTextField.heightAnchor.constraint(equalToConstant: 45),
-            
             
             self.passwordTextField.topAnchor.constraint(equalTo: self.cpfTextField.bottomAnchor, constant: 20),
             self.passwordTextField.leadingAnchor.constraint(equalTo: self.cpfTextField.leadingAnchor),
             self.passwordTextField.trailingAnchor.constraint(equalTo: self.cpfTextField.trailingAnchor),
             self.passwordTextField.heightAnchor.constraint(equalToConstant: 45),
             
-            
             self.registerButton.topAnchor.constraint(equalTo: self.passwordTextField.bottomAnchor, constant: 20),
             self.registerButton.leadingAnchor.constraint(equalTo: self.passwordTextField.leadingAnchor),
             self.registerButton.trailingAnchor.constraint(equalTo: self.passwordTextField.trailingAnchor),
             self.registerButton.heightAnchor.constraint(equalToConstant: 45),
-            
         ])
     }
-    
 }

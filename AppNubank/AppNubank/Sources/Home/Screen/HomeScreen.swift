@@ -9,7 +9,6 @@ import UIKit
 
 class HomeScreen: UIView {
     
-    
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -43,7 +42,6 @@ class HomeScreen: UIView {
         self.tableView.delegate = delegate
         self.tableView.dataSource = dataSource
     }
-
     
     private func configBackGround(){
         self.backgroundColor = UIColor(red: 130/255, green: 26/255, blue: 201/255, alpha: 1.0)
@@ -61,5 +59,4 @@ class HomeScreen: UIView {
             self.tableView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
         ])
     }
-    
 }

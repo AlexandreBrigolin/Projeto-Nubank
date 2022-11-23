@@ -49,7 +49,6 @@ class RegisterScreen: UIView {
             self.tableView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
         ])
     }
-    
 }
 
 

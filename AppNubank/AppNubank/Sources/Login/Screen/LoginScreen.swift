@@ -63,7 +63,6 @@ class LoginScreen: UIView {
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.autocorrectionType = .no
         tf.backgroundColor = .white
-        
         tf.borderStyle = .roundedRect
         tf.keyboardType = .default
         tf.isSecureTextEntry = true
@@ -81,7 +80,6 @@ class LoginScreen: UIView {
         button.clipsToBounds = true
         button.layer.cornerRadius = 7.5
         button.backgroundColor = UIColor(red: 107/255, green: 18/255, blue: 147/255, alpha: 1.0)
-        
         button.addTarget(self, action: #selector(self.tappedLoginButton), for: .touchUpInside)
         return button
     }()
@@ -109,13 +107,13 @@ class LoginScreen: UIView {
     }
     
     private func configSuperView() {
+        
         self.addSubview(self.sentenceLabel)
         self.addSubview(self.emailTextfield)
         self.addSubview(self.passwordTextfield)
         self.addSubview(self.loginButton)
         self.addSubview(self.registerButton)
         self.addSubview(self.logoAppImageView)
-        
     }
     
     public func configTextFieldDelegate(delegate: UITextFieldDelegate) {
@@ -142,7 +140,6 @@ class LoginScreen: UIView {
     }
     
     public func getEmail() -> String {
-        
         return self.emailTextfield.text ?? ""
     }
     
@@ -155,14 +152,12 @@ class LoginScreen: UIView {
     }
     
     private func setUpConstrains() {
-        
         NSLayoutConstraint.activate([
             
             self.logoAppImageView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 100),
             self.logoAppImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 60),
             self.logoAppImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -60),
             self.logoAppImageView.heightAnchor.constraint(equalToConstant: 200),
-            
             
             self.registerButton.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -5),
             self.registerButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
@@ -187,10 +182,6 @@ class LoginScreen: UIView {
             self.sentenceLabel.bottomAnchor.constraint(equalTo: self.emailTextfield.topAnchor, constant: -30),
             self.sentenceLabel.leadingAnchor.constraint(equalTo: self.emailTextfield.leadingAnchor),
             self.sentenceLabel.trailingAnchor.constraint(equalTo: self.emailTextfield.trailingAnchor)
-            
         ])
     }
 }
-
-
-

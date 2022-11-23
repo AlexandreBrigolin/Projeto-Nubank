@@ -50,15 +50,13 @@ class HomeVC: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
-    
     public func configReload() {
         self.refreshControl.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
         self.homeScreen?.tableView.addSubview(refreshControl)
-        
     }
     
     @objc func refresh(send: UIRefreshControl) {
-            self.viewModel.fetch(.request)
+        self.viewModel.fetch(.request)
     }
     
 }
@@ -129,13 +127,11 @@ extension  HomeVC: UITableViewDataSource {
         default:
             return UITableViewCell()
         }
-        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return viewModel.heightForRowAt(indexPath: indexPath)
     }
-    
 }
 
 extension HomeVC: ProfileTableViewCellScreenProtocol {

@@ -17,7 +17,6 @@ protocol RegisterTableViewCellProtocol: AnyObject{
 
 class RegisterTableViewCell: UITableViewCell {
     
-    //    static let identifier: String = "RegisterTableViewCell"
     static let identifier: String = String(describing: RegisterTableViewCell.self)
     
     var cpfMask: TLCustomMask?
@@ -56,16 +55,14 @@ class RegisterTableViewCell: UITableViewCell {
         
         screenCell.phoneTextField.delegate = self
         phoneMask = TLCustomMask(formattingPattern: "($$)$$$$$-$$$$")
-        
     }
     
     private func configBackGround() {
         self.contentView.backgroundColor = UIColor(red: 130/255, green: 26/255, blue: 201/255, alpha: 1.0)
     }
     
-    
     private func addSubView(){
-        self.contentView.addSubview(self.screenCell)        
+        self.contentView.addSubview(self.screenCell)
     }
     
     private func setUpConstraintsScreenCell() {
@@ -116,7 +113,6 @@ class RegisterTableViewCell: UITableViewCell {
             screenCell.registerButton.isEnabled = false
         }
     }
-    
 }
 
 extension RegisterTableViewCell: UITextFieldDelegate {
@@ -124,8 +120,6 @@ extension RegisterTableViewCell: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) { }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        // TODA A LOGICA DEVE SER FEITA NO DID END (LOGICA DE VALIDACAO)
-        
         if textField.text?.isEmpty ?? false {
             textField.layer.borderWidth = 1.5
             textField.layer.borderColor = UIColor.red.cgColor
@@ -136,7 +130,6 @@ extension RegisterTableViewCell: UITextFieldDelegate {
         switch textField {
         case self.screenCell.cpfTextField:
             
-            //             logica para verificar o CPF
             if  screenCell.cpfTextField.text?.count == 14 && BooleanValidator().validate(cpf: screenCell.cpfTextField.text ?? "") {
                 screenCell.cpfTextField.layer.borderWidth = 0
                 print("CPF valido!")
@@ -149,7 +142,6 @@ extension RegisterTableViewCell: UITextFieldDelegate {
             break
         case self.screenCell.passwordTextField:
             
-            // logica para validar password
             if (self.screenCell.passwordTextField.text ?? "").isValid(validType: .password) {
                 screenCell.passwordTextField.layer.borderWidth = 0
             } else {
@@ -158,7 +150,7 @@ extension RegisterTableViewCell: UITextFieldDelegate {
             }
             
         case self.screenCell.emailTextField:
-            // logica para verificar o Email
+            
             if (self.screenCell.emailTextField.text ?? "").isValid(validType: .email) {
                 screenCell.emailTextField.layer.borderWidth = 0
             } else {
@@ -167,7 +159,6 @@ extension RegisterTableViewCell: UITextFieldDelegate {
             }
             
         case self.screenCell.phoneTextField:
-            // logica para verificar o Phone
             
             if  screenCell.phoneTextField.text?.count == 14 {
                 screenCell.phoneTextField.layer.borderWidth = 0
@@ -226,7 +217,6 @@ extension RegisterTableViewCell: UITextFieldDelegate {
             return true
         }
     }
-    
 }
 
 extension RegisterTableViewCell: RegisterTableViewCellScreenProtocol {

@@ -468,7 +468,7 @@
 			path = Tela03;
 			sourceTree = "<group>";
 		};
-		3FA347F0292002270001123A /* Cells */ = {
+		3FA347F0292002270001123A /* CellsHome */ = {
 			isa = PBXGroup;
 			children = (
 				3FAC20352927CD980083DD53 /* DiscoverMoreCell */,
@@ -482,7 +482,7 @@
 				3FAC1FFC29234EFC0083DD53 /* BalanceCell */,
 				3FED2E33292295A500B188A2 /* ProfileCell */,
 			);
-			path = Cells;
+			path = CellsHome;
 			sourceTree = "<group>";
 		};
 		3FA347F1292002F10001123A /* Json */ = {
@@ -661,7 +661,7 @@
 				3F10145E292018490004F10D /* Service */,
 				3F81829C290EE70400D69E55 /* Login */,
 				3FA347E7291EECD70001123A /* MyTabBarController */,
-				3FA347F0292002270001123A /* Cells */,
+				3FA347F0292002270001123A /* CellsHome */,
 				3F8182A3290EE7DB00D69E55 /* Home */,
 				3FA347EA291FE9340001123A /* Tela02 */,
 				3FA347EB291FE9490001123A /* Tela03 */,

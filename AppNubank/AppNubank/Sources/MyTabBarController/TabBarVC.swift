@@ -33,15 +33,9 @@ class TabBarVC: UITabBarController {
         guard let items = tabBar.items else{return}
         
         items[0].image = UIImage(systemName: TabBarVCString.imageArrow.rawValue)
-        
         items[1].image = UIImage(systemName: TabBarVCString.imageDollar.rawValue)
-        
         items[2].image = UIImage(systemName: TabBarVCString.imageSuitcase.rawValue)
-        
-        
-        
     }
-    
 }
 
 

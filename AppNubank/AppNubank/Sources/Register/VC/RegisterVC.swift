@@ -9,6 +9,7 @@ import UIKit
 import Firebase
 
 enum AlertsFirebase: String {
+    
     case alert1 = "Indica que a vinculação da conta é necessária."
     case alert2 = "Indica que a operação é restrita."
     case alert3 = "Indica que o Aplicativo não está autorizado a usar a Autenticação firebase com a chave de API fornecida."
@@ -121,17 +122,11 @@ class RegisterVC: UIViewController  {
     }
     
     @objc func keyboardSubir(notification:Notification){
-        
-        //        print("O teclado mostrará: \(notification.name.rawValue)")
-        
         view.frame.origin.y = -90
         
     }
     
     @objc func keyboardOriginal(notification:Notification){
-        
-        //        print("O teclado mostrará: \(notification.name.rawValue)")
-        
         view.frame.origin.y = 0
     }
     
@@ -289,7 +284,6 @@ class RegisterVC: UIViewController  {
             return AlertsFirebase.alert75.rawValue
         }
     }
-    
 }
 
 extension RegisterVC: UITableViewDelegate {
@@ -310,7 +304,6 @@ extension RegisterVC: UITableViewDataSource {
         cell?.delegate(delegate: self)
         return cell ?? RegisterTableViewCell()
     }
-    
 }
 
 extension RegisterVC: RegisterTableViewCellProtocol {
@@ -333,6 +326,5 @@ extension RegisterVC: RegisterTableViewCellProtocol {
                 self.navigationController?.popViewController(animated: true)
             }
         }
-        
     }
 }
