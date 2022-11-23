@@ -11,10 +11,11 @@
         "title": "Conta",
         "balance": 1220
     },
-    "payment_services": [{
-        "name": "Área Pix",
-        "image": "staroflife"
-    },
+    "payment_services": [
+        {
+            "name": "Área Pix",
+            "image": "staroflife"
+        },
         {
             "name": "Pagar",
             "image": "lineweight"
