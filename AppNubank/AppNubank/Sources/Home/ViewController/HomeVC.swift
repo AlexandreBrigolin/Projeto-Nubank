@@ -28,6 +28,9 @@ class HomeVC: UIViewController {
     var homeScreen: HomeScreen?
     let viewModel: HomeViewModel = HomeViewModel()
     var refreshControl = UIRefreshControl()
+    var iconEyeClick: Bool = false
+    var profilecell: ProfileTableViewCellScreen = ProfileTableViewCellScreen()
+    var balanceCell: BalanceTableViewCellScreen = BalanceTableViewCellScreen()
     
     override func loadView() {
         self.homeScreen = HomeScreen()
@@ -39,6 +42,17 @@ class HomeVC: UIViewController {
         self.signatureDelegate()
         self.viewModel.fetch(.request)
         self.configReload()
+    }
+    
+    func enabledEyeButton() {
+        if self.iconEyeClick {
+            self.iconEyeClick = false
+            self.profilecell.eyeBalanceButton.setImage(UIImage(systemName: "eye"), for: .normal)
+            self.balanceCell.valueLabel.text = ""
+        } else {
+            self.profilecell.eyeBalanceButton.setImage(UIImage(systemName: "eye.slash"), for: .normal)
+            self.balanceCell.valueLabel.text = "••••"
+        }
     }
     
     
@@ -140,7 +154,9 @@ extension  HomeVC: UITableViewDataSource {
 
 extension HomeVC: ProfileTableViewCellScreenProtocol {
     func actionEyeBalance() {
+        enabledEyeButton()
         print(#function)
+        
     }
     
     func actionDoubt() {
