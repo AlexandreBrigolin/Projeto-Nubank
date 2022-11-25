@@ -17,7 +17,7 @@ enum RegisterTableViewCellScreenStrings: String {
     case cpf = "Digite seu CPF:"
     case password = "Digite sua senha:"
     case titleRegister = "Cadastrar"
-    case titleBackButton = "Botão Back"
+    case titleBackButton = "backButton"
 }
 
 protocol RegisterTableViewCellScreenProtocol: AnyObject {
