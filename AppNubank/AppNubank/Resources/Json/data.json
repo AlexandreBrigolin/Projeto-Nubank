@@ -11,10 +11,11 @@
         "title": "Conta",
         "balance": 1220
     },
-    "payment_services": [{
-        "name": "Área Pix",
-        "image": "staroflife"
-    },
+    "payment_services": [
+        {
+            "name": "Área Pix",
+            "image": "staroflife"
+        },
         {
             "name": "Pagar",
             "image": "lineweight"
@@ -90,10 +91,10 @@
         "title_discover_more": "Descubra mais",
         "discover_more": [
             {
-            "image": "nubank.image.8",
-            "title": "Nubank Celular Seguro",
-            "description": "100% cobertura, 0% estresse. Simule agora mesmo.",
-            "title_button": "Conhecer"
+                "image": "nubank.image.8",
+                "title": "Nubank Celular Seguro",
+                "description": "100% cobertura, 0% estresse. Simule agora mesmo.",
+                "title_button": "Conhecer"
             },
             {
                 "image": "nubank.image.1",
